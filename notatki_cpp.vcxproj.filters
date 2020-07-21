@@ -13,11 +13,20 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Pliki źródłowe\temp">
-      <UniqueIdentifier>{e893112a-6baa-4170-9fa6-39970275ef9d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\namespace">
       <UniqueIdentifier>{1c4fd58a-56dd-41ea-9eae-3df1a2a06295}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\data_types">
+      <UniqueIdentifier>{db568d1e-cb1c-499a-be60-9aa73a88acdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\cout_cin">
+      <UniqueIdentifier>{cbb2b973-8029-458f-91e8-a766d39b66c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\initialization">
+      <UniqueIdentifier>{024f1d3a-e19e-45b0-8b0f-f1c5e50be035}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\main">
+      <UniqueIdentifier>{f797ecb4-9c0c-4cce-8bc5-d1186eec23b9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -29,6 +38,24 @@
     </ClCompile>
     <ClCompile Include="using_declaration.cpp">
       <Filter>Pliki źródłowe\namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="temp.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="data_types_sizes.cpp">
+      <Filter>Pliki źródłowe\data_types</Filter>
+    </ClCompile>
+    <ClCompile Include="manipulators.cpp">
+      <Filter>Pliki źródłowe\cout_cin</Filter>
+    </ClCompile>
+    <ClCompile Include="number_initialization.cpp">
+      <Filter>Pliki źródłowe\initialization</Filter>
+    </ClCompile>
+    <ClCompile Include="main_function.cpp">
+      <Filter>Pliki źródłowe\main</Filter>
+    </ClCompile>
+    <ClCompile Include="wmain_function.cpp">
+      <Filter>Pliki źródłowe\main</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
