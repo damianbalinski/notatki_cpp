@@ -28,6 +28,12 @@
     <Filter Include="Pliki źródłowe\main">
       <UniqueIdentifier>{f797ecb4-9c0c-4cce-8bc5-d1186eec23b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\other">
+      <UniqueIdentifier>{8883dc32-9b87-41d3-9782-66d2227954eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\structure_union_enum">
+      <UniqueIdentifier>{1811ff08-123a-4112-b2f7-e61b78f01072}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -56,6 +62,12 @@
     </ClCompile>
     <ClCompile Include="wmain_function.cpp">
       <Filter>Pliki źródłowe\main</Filter>
+    </ClCompile>
+    <ClCompile Include="comments.cpp">
+      <Filter>Pliki źródłowe\other</Filter>
+    </ClCompile>
+    <ClCompile Include="enum.cpp">
+      <Filter>Pliki źródłowe\structure_union_enum</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
