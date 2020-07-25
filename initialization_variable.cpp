@@ -4,14 +4,25 @@ int main()
 {
 	using namespace std;
 
+	/*
+	 * POJEDYNCZE WYRAZENIE INICJALIZUJACE
+	 * 
+	 */
 	int x1 = 10;
+
+	/*
+	 * LISTA WYRAZEN INICJALIZUJACYCH
+	 * - lista wyrazen oddzielona przecinkami
+	 */
 	int y1(10);
 	int y2 = (10);
+
+	/*
+	 * LISTA INICJALIZUJACA
+	 * - jesli pusta, wartosc jest zerowana
+	 */
 	int z1{ 10 };	// nie zezwala na konwersje zawezajaca
 	int z2 = { 10 };
-
-	// int a1();
-	// int a2 = ();
 	int b1{};
 	int b2 = {};	// inicjalizacja do wartosci zerowej
 

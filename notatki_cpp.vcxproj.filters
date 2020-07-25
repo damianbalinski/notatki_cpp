@@ -34,6 +34,18 @@
     <Filter Include="Pliki źródłowe\structure_union_enum">
       <UniqueIdentifier>{1811ff08-123a-4112-b2f7-e61b78f01072}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\pointers">
+      <UniqueIdentifier>{e1bd0d84-0aee-4356-a0b6-4d0f0e3eb3c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\type_inference">
+      <UniqueIdentifier>{56530edd-9e66-4a5b-a810-b51c660eaffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\vector_array">
+      <UniqueIdentifier>{b828e470-2991-4345-a17c-5c6738f15313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\loops">
+      <UniqueIdentifier>{0c665e78-8daf-4f72-9749-4806a6fb16a6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -54,9 +66,6 @@
     <ClCompile Include="manipulators.cpp">
       <Filter>Pliki źródłowe\cout_cin</Filter>
     </ClCompile>
-    <ClCompile Include="number_initialization.cpp">
-      <Filter>Pliki źródłowe\initialization</Filter>
-    </ClCompile>
     <ClCompile Include="main_function.cpp">
       <Filter>Pliki źródłowe\main</Filter>
     </ClCompile>
@@ -68,6 +77,30 @@
     </ClCompile>
     <ClCompile Include="enum.cpp">
       <Filter>Pliki źródłowe\structure_union_enum</Filter>
+    </ClCompile>
+    <ClCompile Include="pointers_char.cpp">
+      <Filter>Pliki źródłowe\pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="auto.cpp">
+      <Filter>Pliki źródłowe\type_inference</Filter>
+    </ClCompile>
+    <ClCompile Include="vector.cpp">
+      <Filter>Pliki źródłowe\vector_array</Filter>
+    </ClCompile>
+    <ClCompile Include="array.cpp">
+      <Filter>Pliki źródłowe\vector_array</Filter>
+    </ClCompile>
+    <ClCompile Include="initialization_variable.cpp">
+      <Filter>Pliki źródłowe\initialization</Filter>
+    </ClCompile>
+    <ClCompile Include="initialization_structure.cpp">
+      <Filter>Pliki źródłowe\initialization</Filter>
+    </ClCompile>
+    <ClCompile Include="structure.cpp">
+      <Filter>Pliki źródłowe\structure_union_enum</Filter>
+    </ClCompile>
+    <ClCompile Include="loop_for.cpp">
+      <Filter>Pliki źródłowe\loops</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
