@@ -52,6 +52,9 @@
     <Filter Include="Pliki źródłowe\cout_cin\cin_methods">
       <UniqueIdentifier>{3e3eda83-f0b5-4b21-b257-8d18b34fd0aa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\operators">
+      <UniqueIdentifier>{32d3cdd4-2ed2-4c35-b71b-3c94990d2c1e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -119,6 +122,18 @@
     </ClCompile>
     <ClCompile Include="cin_get.cpp">
       <Filter>Pliki źródłowe\cout_cin\cin_methods</Filter>
+    </ClCompile>
+    <ClCompile Include="cin_fail.cpp">
+      <Filter>Pliki źródłowe\cout_cin\cin_methods</Filter>
+    </ClCompile>
+    <ClCompile Include="loop_while.cpp">
+      <Filter>Pliki źródłowe\loops</Filter>
+    </ClCompile>
+    <ClCompile Include="loop_do_while.cpp">
+      <Filter>Pliki źródłowe\loops</Filter>
+    </ClCompile>
+    <ClCompile Include="alternative_operator_names.cpp">
+      <Filter>Pliki źródłowe\operators</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
