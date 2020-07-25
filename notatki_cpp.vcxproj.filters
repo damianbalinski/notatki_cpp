@@ -46,6 +46,12 @@
     <Filter Include="Pliki źródłowe\loops">
       <UniqueIdentifier>{0c665e78-8daf-4f72-9749-4806a6fb16a6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\string">
+      <UniqueIdentifier>{ed467c39-6a78-4299-b31b-3308ce3fbb29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\cout_cin\cin_methods">
+      <UniqueIdentifier>{3e3eda83-f0b5-4b21-b257-8d18b34fd0aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -101,6 +107,18 @@
     </ClCompile>
     <ClCompile Include="loop_for.cpp">
       <Filter>Pliki źródłowe\loops</Filter>
+    </ClCompile>
+    <ClCompile Include="string.cpp">
+      <Filter>Pliki źródłowe\string</Filter>
+    </ClCompile>
+    <ClCompile Include="loop_range_based_for.cpp">
+      <Filter>Pliki źródłowe\loops</Filter>
+    </ClCompile>
+    <ClCompile Include="cin.cpp">
+      <Filter>Pliki źródłowe\cout_cin</Filter>
+    </ClCompile>
+    <ClCompile Include="cin_get.cpp">
+      <Filter>Pliki źródłowe\cout_cin\cin_methods</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
