@@ -19,9 +19,6 @@
     <Filter Include="Pliki źródłowe\data_types">
       <UniqueIdentifier>{db568d1e-cb1c-499a-be60-9aa73a88acdb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\cout_cin">
-      <UniqueIdentifier>{cbb2b973-8029-458f-91e8-a766d39b66c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\initialization">
       <UniqueIdentifier>{024f1d3a-e19e-45b0-8b0f-f1c5e50be035}</UniqueIdentifier>
     </Filter>
@@ -49,14 +46,26 @@
     <Filter Include="Pliki źródłowe\string">
       <UniqueIdentifier>{ed467c39-6a78-4299-b31b-3308ce3fbb29}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\cout_cin\cin_methods">
-      <UniqueIdentifier>{3e3eda83-f0b5-4b21-b257-8d18b34fd0aa}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\operators">
       <UniqueIdentifier>{32d3cdd4-2ed2-4c35-b71b-3c94990d2c1e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Pliki źródłowe\switch">
       <UniqueIdentifier>{b7540fba-3b7c-4c50-84a3-fd0dabda13c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\input_output">
+      <UniqueIdentifier>{cbb2b973-8029-458f-91e8-a766d39b66c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\input_output\cin">
+      <UniqueIdentifier>{3e3eda83-f0b5-4b21-b257-8d18b34fd0aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\input_output\cout">
+      <UniqueIdentifier>{fcfcc78b-484c-4143-b992-3c0c69e2d923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\input_output\ofstream">
+      <UniqueIdentifier>{f3e7ba1f-57d1-4f79-a75d-1e6d344ff60f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\input_output\ifstream">
+      <UniqueIdentifier>{e1c8e0cd-d532-4c33-a8f1-a222565238e4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -74,9 +83,6 @@
     </ClCompile>
     <ClCompile Include="data_types_sizes.cpp">
       <Filter>Pliki źródłowe\data_types</Filter>
-    </ClCompile>
-    <ClCompile Include="manipulators.cpp">
-      <Filter>Pliki źródłowe\cout_cin</Filter>
     </ClCompile>
     <ClCompile Include="main_function.cpp">
       <Filter>Pliki źródłowe\main</Filter>
@@ -120,14 +126,11 @@
     <ClCompile Include="loop_range_based_for.cpp">
       <Filter>Pliki źródłowe\loops</Filter>
     </ClCompile>
-    <ClCompile Include="cin.cpp">
-      <Filter>Pliki źródłowe\cout_cin</Filter>
-    </ClCompile>
     <ClCompile Include="cin_get.cpp">
-      <Filter>Pliki źródłowe\cout_cin\cin_methods</Filter>
+      <Filter>Pliki źródłowe\input_output\cin</Filter>
     </ClCompile>
     <ClCompile Include="cin_fail.cpp">
-      <Filter>Pliki źródłowe\cout_cin\cin_methods</Filter>
+      <Filter>Pliki źródłowe\input_output\cin</Filter>
     </ClCompile>
     <ClCompile Include="loop_while.cpp">
       <Filter>Pliki źródłowe\loops</Filter>
@@ -142,7 +145,22 @@
       <Filter>Pliki źródłowe\switch</Filter>
     </ClCompile>
     <ClCompile Include="cin_clear.cpp">
-      <Filter>Pliki źródłowe\cout_cin\cin_methods</Filter>
+      <Filter>Pliki źródłowe\input_output\cin</Filter>
+    </ClCompile>
+    <ClCompile Include="cin.cpp">
+      <Filter>Pliki źródłowe\input_output\cin</Filter>
+    </ClCompile>
+    <ClCompile Include="cout_manipulators.cpp">
+      <Filter>Pliki źródłowe\input_output\cout</Filter>
+    </ClCompile>
+    <ClCompile Include="ofstream.cpp">
+      <Filter>Pliki źródłowe\input_output\ofstream</Filter>
+    </ClCompile>
+    <ClCompile Include="ifstream.cpp">
+      <Filter>Pliki źródłowe\input_output\ifstream</Filter>
+    </ClCompile>
+    <ClCompile Include="ifstream_is_open.cpp">
+      <Filter>Pliki źródłowe\input_output\ifstream</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
