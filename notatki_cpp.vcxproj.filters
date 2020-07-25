@@ -55,6 +55,9 @@
     <Filter Include="Pliki źródłowe\operators">
       <UniqueIdentifier>{32d3cdd4-2ed2-4c35-b71b-3c94990d2c1e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\switch">
+      <UniqueIdentifier>{b7540fba-3b7c-4c50-84a3-fd0dabda13c2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -134,6 +137,12 @@
     </ClCompile>
     <ClCompile Include="alternative_operator_names.cpp">
       <Filter>Pliki źródłowe\operators</Filter>
+    </ClCompile>
+    <ClCompile Include="switch.cpp">
+      <Filter>Pliki źródłowe\switch</Filter>
+    </ClCompile>
+    <ClCompile Include="cin_clear.cpp">
+      <Filter>Pliki źródłowe\cout_cin\cin_methods</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
