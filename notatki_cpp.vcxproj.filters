@@ -67,6 +67,15 @@
     <Filter Include="Pliki źródłowe\input_output\ifstream">
       <UniqueIdentifier>{e1c8e0cd-d532-4c33-a8f1-a222565238e4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\functions">
+      <UniqueIdentifier>{ce5d640c-6f98-4e9a-b680-ff0298cdcb1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\prototypes">
+      <UniqueIdentifier>{fe4a8b17-8da9-4e7c-a5e2-c0d074675ad3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\const">
+      <UniqueIdentifier>{80551ebe-0fc2-4b8b-b940-b552a4981405}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -161,6 +170,24 @@
     </ClCompile>
     <ClCompile Include="ifstream_is_open.cpp">
       <Filter>Pliki źródłowe\input_output\ifstream</Filter>
+    </ClCompile>
+    <ClCompile Include="conditional_operator.cpp">
+      <Filter>Pliki źródłowe\operators</Filter>
+    </ClCompile>
+    <ClCompile Include="cast_function_type.cpp">
+      <Filter>Pliki źródłowe\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="prototypes.cpp">
+      <Filter>Pliki źródłowe\prototypes</Filter>
+    </ClCompile>
+    <ClCompile Include="template.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="const.cpp">
+      <Filter>Pliki źródłowe\const</Filter>
+    </ClCompile>
+    <ClCompile Include="const_value_pointer.cpp">
+      <Filter>Pliki źródłowe\const</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
