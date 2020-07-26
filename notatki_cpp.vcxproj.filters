@@ -189,5 +189,11 @@
     <ClCompile Include="const_value_pointer.cpp">
       <Filter>Pliki źródłowe\const</Filter>
     </ClCompile>
+    <ClCompile Include="array_table.cpp">
+      <Filter>Pliki źródłowe\vector_array</Filter>
+    </ClCompile>
+    <ClCompile Include="recursive_main.cpp">
+      <Filter>Pliki źródłowe\other</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
