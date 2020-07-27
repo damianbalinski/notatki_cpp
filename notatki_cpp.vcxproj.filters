@@ -31,9 +31,6 @@
     <Filter Include="Pliki źródłowe\structure_union_enum">
       <UniqueIdentifier>{1811ff08-123a-4112-b2f7-e61b78f01072}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\pointers">
-      <UniqueIdentifier>{e1bd0d84-0aee-4356-a0b6-4d0f0e3eb3c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\type_inference">
       <UniqueIdentifier>{56530edd-9e66-4a5b-a810-b51c660eaffb}</UniqueIdentifier>
     </Filter>
@@ -75,6 +72,12 @@
     </Filter>
     <Filter Include="Pliki źródłowe\const">
       <UniqueIdentifier>{80551ebe-0fc2-4b8b-b940-b552a4981405}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\references">
+      <UniqueIdentifier>{f233da9a-28c3-4ab7-ab61-aac3b95a4655}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\pointers">
+      <UniqueIdentifier>{e1bd0d84-0aee-4356-a0b6-4d0f0e3eb3c5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +200,24 @@
     </ClCompile>
     <ClCompile Include="pointers_to_functions.cpp">
       <Filter>Pliki źródłowe\pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="pointers_references.cpp">
+      <Filter>Pliki źródłowe\references</Filter>
+    </ClCompile>
+    <ClCompile Include="reference_to_structure.cpp">
+      <Filter>Pliki źródłowe\references</Filter>
+    </ClCompile>
+    <ClCompile Include="references_const.cpp">
+      <Filter>Pliki źródłowe\references</Filter>
+    </ClCompile>
+    <ClCompile Include="references_lvalue_rvalue.cpp">
+      <Filter>Pliki źródłowe\references</Filter>
+    </ClCompile>
+    <ClCompile Include="reference_to_const.cpp">
+      <Filter>Pliki źródłowe\references</Filter>
+    </ClCompile>
+    <ClCompile Include="pointers_references_return.cpp">
+      <Filter>Pliki źródłowe\references</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
