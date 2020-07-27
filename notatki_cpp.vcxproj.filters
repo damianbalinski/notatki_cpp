@@ -195,5 +195,8 @@
     <ClCompile Include="recursive_main.cpp">
       <Filter>Pliki źródłowe\other</Filter>
     </ClCompile>
+    <ClCompile Include="pointers_to_functions.cpp">
+      <Filter>Pliki źródłowe\pointers</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
