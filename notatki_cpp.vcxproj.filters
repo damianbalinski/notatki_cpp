@@ -79,6 +79,9 @@
     <Filter Include="Pliki źródłowe\pointers">
       <UniqueIdentifier>{e1bd0d84-0aee-4356-a0b6-4d0f0e3eb3c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\templates">
+      <UniqueIdentifier>{59e51f9d-4b2f-43bb-ac77-b97fec428a59}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -183,9 +186,6 @@
     <ClCompile Include="prototypes.cpp">
       <Filter>Pliki źródłowe\prototypes</Filter>
     </ClCompile>
-    <ClCompile Include="template.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="const.cpp">
       <Filter>Pliki źródłowe\const</Filter>
     </ClCompile>
@@ -218,6 +218,36 @@
     </ClCompile>
     <ClCompile Include="pointers_references_return.cpp">
       <Filter>Pliki źródłowe\references</Filter>
+    </ClCompile>
+    <ClCompile Include="default_arguments.cpp">
+      <Filter>Pliki źródłowe\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="function_overloading.cpp">
+      <Filter>Pliki źródłowe\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="function_overloading_reference.cpp">
+      <Filter>Pliki źródłowe\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="function_overloading_constant.cpp">
+      <Filter>Pliki źródłowe\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="templates.cpp">
+      <Filter>Pliki źródłowe\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="instantiation_specialization.cpp">
+      <Filter>Pliki źródłowe\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="template.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="templates_overloading_better_specialization.cpp">
+      <Filter>Pliki źródłowe\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="templates_declaration.cpp">
+      <Filter>Pliki źródłowe\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="partial_complete_specialization.cpp">
+      <Filter>Pliki źródłowe\templates</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
