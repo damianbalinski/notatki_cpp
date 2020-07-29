@@ -52,17 +52,6 @@ void func7(T t)
 	cout << "func7" << endl;
 }
 
-/*
- * Szablon z parametrem domyslnym.
- * Parametr domyslny ma sens dla szablonu klasy,
- * nie koniecznie dla szablonu funkcji.
- */
-template<typename T = double>
-void func8(T t)
-{
-	cout << "func8: " << typeid(T).name() << endl;
-}
-
 int main()
 {
 	func1(10);
@@ -83,7 +72,5 @@ int main()
 
 	func7<int, 10>(100);
 
-	func8<>(100);
-	func8<double>(100);
 	return 0;
 }

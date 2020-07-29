@@ -249,5 +249,14 @@
     <ClCompile Include="partial_complete_specialization.cpp">
       <Filter>Pliki źródłowe\templates</Filter>
     </ClCompile>
+    <ClCompile Include="trailing_return_type.cpp">
+      <Filter>Pliki źródłowe\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="template_trailing_return_type.cpp">
+      <Filter>Pliki źródłowe\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="templates_defaults_arguments.cpp">
+      <Filter>Pliki źródłowe\templates</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
