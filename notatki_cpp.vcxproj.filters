@@ -282,5 +282,20 @@
     <ClCompile Include="new_in_place.cpp">
       <Filter>Pliki źródłowe\new_delete</Filter>
     </ClCompile>
+    <ClCompile Include="namespace_nested.cpp">
+      <Filter>Pliki źródłowe\namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="namespace_nested2.cpp">
+      <Filter>Pliki źródłowe\namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="unnamed_namespace.cpp">
+      <Filter>Pliki źródłowe\namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="inline_unnamed_namespace.cpp">
+      <Filter>Pliki źródłowe\namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="using_declaration_directive.cpp">
+      <Filter>Pliki źródłowe\namespace</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
