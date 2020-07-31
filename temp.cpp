@@ -1,6 +1,6 @@
-#include <cmath>
-#include <climits>
-#include <cfloat>
+// #include <cmath>
+// #include <climits>
+// #include <cfloat>
 #include <iostream>
 
 using namespace std;
@@ -26,6 +26,7 @@ int main()
 	EOF;
 	true;
 	false;
+	int* ptr = NULL;
 
 	int tab[] = { 1, 2, 3 };
 	int n = 3;

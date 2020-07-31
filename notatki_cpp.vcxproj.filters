@@ -82,6 +82,15 @@
     <Filter Include="Pliki źródłowe\templates">
       <UniqueIdentifier>{59e51f9d-4b2f-43bb-ac77-b97fec428a59}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\storage_classes">
+      <UniqueIdentifier>{9402de8c-e80c-4e1e-b25c-3e7559d8bc06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\type_qualifiers">
+      <UniqueIdentifier>{8f8f9e3d-d385-4ace-8afd-225ac8760c2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\new_delete">
+      <UniqueIdentifier>{47146846-78d1-4808-900b-5af152c0a54a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -257,6 +266,21 @@
     </ClCompile>
     <ClCompile Include="templates_defaults_arguments.cpp">
       <Filter>Pliki źródłowe\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="static.cpp">
+      <Filter>Pliki źródłowe\storage_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="extern.cpp">
+      <Filter>Pliki źródłowe\storage_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="qualifier_const.cpp">
+      <Filter>Pliki źródłowe\type_qualifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="qualifier_mutable.cpp">
+      <Filter>Pliki źródłowe\type_qualifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="new_in_place.cpp">
+      <Filter>Pliki źródłowe\new_delete</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
