@@ -37,7 +37,6 @@ int main()
 	const int* p1 = &val;
 	//int* p2 = &val;		// ERROR
 
-
 	return 0;
 	using namespace 
 }

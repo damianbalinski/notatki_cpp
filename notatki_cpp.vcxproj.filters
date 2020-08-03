@@ -91,6 +91,12 @@
     <Filter Include="Pliki źródłowe\new_delete">
       <UniqueIdentifier>{47146846-78d1-4808-900b-5af152c0a54a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\oop">
+      <UniqueIdentifier>{cf4365b3-929a-4a93-a53c-0b62b49d948f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\operators_overloading">
+      <UniqueIdentifier>{6278c8ec-83f2-4ff6-854f-7cf7478d103a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -210,9 +216,6 @@
     <ClCompile Include="pointers_to_functions.cpp">
       <Filter>Pliki źródłowe\pointers</Filter>
     </ClCompile>
-    <ClCompile Include="pointers_references.cpp">
-      <Filter>Pliki źródłowe\references</Filter>
-    </ClCompile>
     <ClCompile Include="reference_to_structure.cpp">
       <Filter>Pliki źródłowe\references</Filter>
     </ClCompile>
@@ -296,6 +299,48 @@
     </ClCompile>
     <ClCompile Include="using_declaration_directive.cpp">
       <Filter>Pliki źródłowe\namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="constructor.cpp">
+      <Filter>Pliki źródłowe\oop</Filter>
+    </ClCompile>
+    <ClCompile Include="function_overloading_ambigious.cpp">
+      <Filter>Pliki źródłowe\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="class_constructor.cpp">
+      <Filter>Pliki źródłowe\oop</Filter>
+    </ClCompile>
+    <ClCompile Include="class_default_constructor.cpp">
+      <Filter>Pliki źródłowe\oop</Filter>
+    </ClCompile>
+    <ClCompile Include="class_decstructor.cpp">
+      <Filter>Pliki źródłowe\oop</Filter>
+    </ClCompile>
+    <ClCompile Include="class_simple.cpp">
+      <Filter>Pliki źródłowe\oop</Filter>
+    </ClCompile>
+    <ClCompile Include="class_const_method.cpp">
+      <Filter>Pliki źródłowe\oop</Filter>
+    </ClCompile>
+    <ClCompile Include="extern_const.cpp">
+      <Filter>Pliki źródłowe\storage_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="exterm_const2.cpp">
+      <Filter>Pliki źródłowe\storage_classes</Filter>
+    </ClCompile>
+    <ClCompile Include="pointer_reference_value.cpp">
+      <Filter>Pliki źródłowe\references</Filter>
+    </ClCompile>
+    <ClCompile Include="pointer_reference_value2.cpp">
+      <Filter>Pliki źródłowe\references</Filter>
+    </ClCompile>
+    <ClCompile Include="operators_overloading_incrementation.cpp">
+      <Filter>Pliki źródłowe\operators_overloading</Filter>
+    </ClCompile>
+    <ClCompile Include="operators_overloading_modif.cpp">
+      <Filter>Pliki źródłowe\operators_overloading</Filter>
+    </ClCompile>
+    <ClCompile Include="operators_overloading_non_modif.cpp">
+      <Filter>Pliki źródłowe\operators_overloading</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
