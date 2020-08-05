@@ -333,13 +333,19 @@
     <ClCompile Include="pointer_reference_value2.cpp">
       <Filter>Pliki źródłowe\references</Filter>
     </ClCompile>
-    <ClCompile Include="operators_overloading_incrementation.cpp">
+    <ClCompile Include="converting_constructor.cpp">
+      <Filter>Pliki źródłowe\oop</Filter>
+    </ClCompile>
+    <ClCompile Include="converting_constructor2.cpp">
+      <Filter>Pliki źródłowe\oop</Filter>
+    </ClCompile>
+    <ClCompile Include="interfix_operator_overloading.cpp">
       <Filter>Pliki źródłowe\operators_overloading</Filter>
     </ClCompile>
-    <ClCompile Include="operators_overloading_modif.cpp">
+    <ClCompile Include="prefix_operator_overloading.cpp">
       <Filter>Pliki źródłowe\operators_overloading</Filter>
     </ClCompile>
-    <ClCompile Include="operators_overloading_non_modif.cpp">
+    <ClCompile Include="sufix_operator_overloading.cpp">
       <Filter>Pliki źródłowe\operators_overloading</Filter>
     </ClCompile>
   </ItemGroup>
