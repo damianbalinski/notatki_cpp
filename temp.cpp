@@ -11,6 +11,7 @@ int foo1(int* tab, int n)
 	{
 		cout << i << " = " << *tab++ << endl;
 	}
+	return 0;
 }
 
 int foo2(int tab[], int n)
@@ -19,6 +20,7 @@ int foo2(int tab[], int n)
 	{
 		cout << i << " = " << *tab++ << endl;
 	}
+	return 0;
 }
 
 int main()
@@ -38,5 +40,4 @@ int main()
 	//int* p2 = &val;		// ERROR
 
 	return 0;
-	using namespace 
 }
