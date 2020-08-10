@@ -384,5 +384,8 @@
     <ClCompile Include="virtual_destructor.cpp">
       <Filter>Pliki źródłowe\class</Filter>
     </ClCompile>
+    <ClCompile Include="friend_function.cpp">
+      <Filter>Pliki źródłowe\friend</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

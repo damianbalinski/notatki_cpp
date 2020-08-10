@@ -47,13 +47,18 @@ int main()
 
 	t1.print();
 	printf("%c\n", t1[0]);
+	printf("%c\n", t1.operator[](0));
 
 	t2.print();
 	printf("%c\n", t2[0]);
+	printf("%c\n", t2.operator[](0));
 	putchar('\n');
 
 	t1[0] = 'z';
-	//t2[0] = 'z';		// ERROR - assignment to const
+	t1.operator[](0) = 'z';
+
+	//t2[0] = 'z';			// ERROR - assignment to const
+	//t2.operator[](0) = 'a';	// ERROR - assignment to const
 
 	t1.print();
 	printf("%c\n", t1[0]);
