@@ -1,9 +1,6 @@
 #include <iostream>
+#include <cstdio>
 
-/*
- * brak automatycznego przekazywania informacji
- * do bezposredniej wirtualnej klasy bazowej
- */
 class A
 {
 public:
@@ -35,10 +32,28 @@ public:
 
 int main()
 {
-	D d(0);
-	d.A::foo();
+	A a;
+	B b;
+	C c;
+	D d;
+
+	// PRZYPISANIE - niejednoznacznosc
+	A a1 = (B)d;
+	A a2 = (C)d;
+	A* a3 = (B*)&d;
+	A* a4 = (C*)&d;
+	A& a5 = (B&)d;
+	A& a6 = (C&)d;
+
+	// DOSTEP DO METODY - niejednoznacznosc
 	d.B::foo();
 	d.C::foo();
+	((B)d).foo();
+	((C)d).foo();
+
+	// DOSTEP DO PODOBIEKTU
+	a = (A)(B)d;
+	a = (A)(C)d;
 
 	return 0;
 }

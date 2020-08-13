@@ -399,9 +399,6 @@
     <ClCompile Include="inheritance_private.cpp">
       <Filter>Pliki źródłowe\class\inheritance</Filter>
     </ClCompile>
-    <ClCompile Include="multi_inheritance.cpp">
-      <Filter>Pliki źródłowe\class\inheritance</Filter>
-    </ClCompile>
     <ClCompile Include="abstract_class.cpp">
       <Filter>Pliki źródłowe\class\abstract_class</Filter>
     </ClCompile>
@@ -412,6 +409,9 @@
       <Filter>Pliki źródłowe\class\inheritance</Filter>
     </ClCompile>
     <ClCompile Include="single_inheritance.cpp">
+      <Filter>Pliki źródłowe\class\inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="multiple_inheritance_mixed.cpp">
       <Filter>Pliki źródłowe\class\inheritance</Filter>
     </ClCompile>
   </ItemGroup>

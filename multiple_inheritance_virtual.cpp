@@ -35,8 +35,21 @@ public:
 
 int main()
 {
-	D d(0);
+	A a;
+	B b;
+	C c;
+	D d;
+
+	// PRZYPISANIE
+	A a1 = d;
+	A* a3 = &d;
+	A& a5 = d;
+
+	// DOSTEP DO METODY
 	d.foo();
+
+	// DOSTEP DO PODOBIEKTU
+	a = (A)d;
 
 	return 0;
 }
