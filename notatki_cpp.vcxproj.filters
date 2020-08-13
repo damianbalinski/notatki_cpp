@@ -112,6 +112,12 @@
     <Filter Include="Pliki źródłowe\friend">
       <UniqueIdentifier>{71d99f64-e8a4-428e-b6e3-95135f94b50b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\class\inheritance">
+      <UniqueIdentifier>{f8c33983-c80f-4253-9f75-bdb19b5985bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\class\abstract_class">
+      <UniqueIdentifier>{18148c42-e791-4428-bc51-529165c50bf3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -386,6 +392,27 @@
     </ClCompile>
     <ClCompile Include="friend_function.cpp">
       <Filter>Pliki źródłowe\friend</Filter>
+    </ClCompile>
+    <ClCompile Include="inheritance_public.cpp">
+      <Filter>Pliki źródłowe\class\inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="inheritance_private.cpp">
+      <Filter>Pliki źródłowe\class\inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="multi_inheritance.cpp">
+      <Filter>Pliki źródłowe\class\inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="abstract_class.cpp">
+      <Filter>Pliki źródłowe\class\abstract_class</Filter>
+    </ClCompile>
+    <ClCompile Include="multiple_inheritance_virtual.cpp">
+      <Filter>Pliki źródłowe\class\inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="multiple_inheritance_normal.cpp">
+      <Filter>Pliki źródłowe\class\inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="single_inheritance.cpp">
+      <Filter>Pliki źródłowe\class\inheritance</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

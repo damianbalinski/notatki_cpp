@@ -3,8 +3,10 @@
 class Base
 {
 public:
-	~Base() { printf("base\n"); }
+	~Base();	// { printf("base\n"); }
 };
+
+Base::~Base() {}
 
 class Derived : public Base
 {
@@ -15,10 +17,10 @@ public:
 int main()
 {
 	{
-		Base* b1 = new Base();
+		//Base* b1 = new Base();
 		Base* b2 = new Derived();
 
-		delete b1;
+		//delete b1;
 		delete b2;
 	}
 
