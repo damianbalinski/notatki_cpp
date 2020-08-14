@@ -26,6 +26,11 @@ void func2();
 template<typename T, typename U = double>
 void func2();
 
+template<int I = 10>
+void func3()
+{
+	cout << I << endl;
+}
 
 int main()
 {
@@ -49,5 +54,7 @@ int main()
 	func2<double, int>();
 	func2<double, double>();
 
+	func3();
+	func3<5>();
 	return 0;
 }

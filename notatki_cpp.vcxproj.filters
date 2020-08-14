@@ -64,9 +64,6 @@
     <Filter Include="Pliki źródłowe\input_output\ifstream">
       <UniqueIdentifier>{e1c8e0cd-d532-4c33-a8f1-a222565238e4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\functions">
-      <UniqueIdentifier>{ce5d640c-6f98-4e9a-b680-ff0298cdcb1b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\prototypes">
       <UniqueIdentifier>{fe4a8b17-8da9-4e7c-a5e2-c0d074675ad3}</UniqueIdentifier>
     </Filter>
@@ -79,17 +76,11 @@
     <Filter Include="Pliki źródłowe\pointers">
       <UniqueIdentifier>{e1bd0d84-0aee-4356-a0b6-4d0f0e3eb3c5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\templates">
-      <UniqueIdentifier>{59e51f9d-4b2f-43bb-ac77-b97fec428a59}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\storage_classes">
       <UniqueIdentifier>{9402de8c-e80c-4e1e-b25c-3e7559d8bc06}</UniqueIdentifier>
     </Filter>
     <Filter Include="Pliki źródłowe\type_qualifiers">
       <UniqueIdentifier>{8f8f9e3d-d385-4ace-8afd-225ac8760c2d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\new_delete">
-      <UniqueIdentifier>{47146846-78d1-4808-900b-5af152c0a54a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Pliki źródłowe\operators_overloading">
       <UniqueIdentifier>{6278c8ec-83f2-4ff6-854f-7cf7478d103a}</UniqueIdentifier>
@@ -117,6 +108,18 @@
     </Filter>
     <Filter Include="Pliki źródłowe\class\abstract_class">
       <UniqueIdentifier>{18148c42-e791-4428-bc51-529165c50bf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\function_templates">
+      <UniqueIdentifier>{59e51f9d-4b2f-43bb-ac77-b97fec428a59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\class_templates">
+      <UniqueIdentifier>{58f66d5a-f8d6-4f79-9fa6-e4aa0bf50f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\operators\new_delete">
+      <UniqueIdentifier>{47146846-78d1-4808-900b-5af152c0a54a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\function">
+      <UniqueIdentifier>{ce5d640c-6f98-4e9a-b680-ff0298cdcb1b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -217,7 +220,7 @@
       <Filter>Pliki źródłowe\operators</Filter>
     </ClCompile>
     <ClCompile Include="cast_function_type.cpp">
-      <Filter>Pliki źródłowe\functions</Filter>
+      <Filter>Pliki źródłowe\function</Filter>
     </ClCompile>
     <ClCompile Include="prototypes.cpp">
       <Filter>Pliki źródłowe\prototypes</Filter>
@@ -253,43 +256,37 @@
       <Filter>Pliki źródłowe\references</Filter>
     </ClCompile>
     <ClCompile Include="default_arguments.cpp">
-      <Filter>Pliki źródłowe\functions</Filter>
+      <Filter>Pliki źródłowe\function</Filter>
     </ClCompile>
     <ClCompile Include="function_overloading.cpp">
-      <Filter>Pliki źródłowe\functions</Filter>
+      <Filter>Pliki źródłowe\function</Filter>
     </ClCompile>
     <ClCompile Include="function_overloading_reference.cpp">
-      <Filter>Pliki źródłowe\functions</Filter>
+      <Filter>Pliki źródłowe\function</Filter>
     </ClCompile>
     <ClCompile Include="function_overloading_constant.cpp">
-      <Filter>Pliki źródłowe\functions</Filter>
+      <Filter>Pliki źródłowe\function</Filter>
     </ClCompile>
     <ClCompile Include="templates.cpp">
-      <Filter>Pliki źródłowe\templates</Filter>
+      <Filter>Pliki źródłowe\function_templates</Filter>
     </ClCompile>
     <ClCompile Include="instantiation_specialization.cpp">
-      <Filter>Pliki źródłowe\templates</Filter>
+      <Filter>Pliki źródłowe\function_templates</Filter>
     </ClCompile>
     <ClCompile Include="template.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="templates_overloading_better_specialization.cpp">
-      <Filter>Pliki źródłowe\templates</Filter>
-    </ClCompile>
-    <ClCompile Include="templates_declaration.cpp">
-      <Filter>Pliki źródłowe\templates</Filter>
-    </ClCompile>
     <ClCompile Include="partial_complete_specialization.cpp">
-      <Filter>Pliki źródłowe\templates</Filter>
+      <Filter>Pliki źródłowe\function_templates</Filter>
     </ClCompile>
     <ClCompile Include="trailing_return_type.cpp">
-      <Filter>Pliki źródłowe\functions</Filter>
+      <Filter>Pliki źródłowe\function</Filter>
     </ClCompile>
     <ClCompile Include="template_trailing_return_type.cpp">
-      <Filter>Pliki źródłowe\templates</Filter>
+      <Filter>Pliki źródłowe\function_templates</Filter>
     </ClCompile>
     <ClCompile Include="templates_defaults_arguments.cpp">
-      <Filter>Pliki źródłowe\templates</Filter>
+      <Filter>Pliki źródłowe\function_templates</Filter>
     </ClCompile>
     <ClCompile Include="static.cpp">
       <Filter>Pliki źródłowe\storage_classes</Filter>
@@ -304,7 +301,7 @@
       <Filter>Pliki źródłowe\type_qualifiers</Filter>
     </ClCompile>
     <ClCompile Include="new_in_place.cpp">
-      <Filter>Pliki źródłowe\new_delete</Filter>
+      <Filter>Pliki źródłowe\operators\new_delete</Filter>
     </ClCompile>
     <ClCompile Include="namespace_nested.cpp">
       <Filter>Pliki źródłowe\namespace</Filter>
@@ -322,7 +319,7 @@
       <Filter>Pliki źródłowe\namespace</Filter>
     </ClCompile>
     <ClCompile Include="function_overloading_ambigious.cpp">
-      <Filter>Pliki źródłowe\functions</Filter>
+      <Filter>Pliki źródłowe\function</Filter>
     </ClCompile>
     <ClCompile Include="class_decstructor.cpp">
       <Filter>Pliki źródłowe\class</Filter>
@@ -413,6 +410,33 @@
     </ClCompile>
     <ClCompile Include="multiple_inheritance_mixed.cpp">
       <Filter>Pliki źródłowe\class\inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="class_templates.cpp">
+      <Filter>Pliki źródłowe\class_templates</Filter>
+    </ClCompile>
+    <ClCompile Include="partial_specialization.cpp">
+      <Filter>Pliki źródłowe\function_templates</Filter>
+    </ClCompile>
+    <ClCompile Include="class_templates_nested.cpp">
+      <Filter>Pliki źródłowe\class_templates</Filter>
+    </ClCompile>
+    <ClCompile Include="class_templates_instantiation_specialization.cpp">
+      <Filter>Pliki źródłowe\class_templates</Filter>
+    </ClCompile>
+    <ClCompile Include="class_templates_inheritence.cpp">
+      <Filter>Pliki źródłowe\class_templates</Filter>
+    </ClCompile>
+    <ClCompile Include="class_templates_parameters.cpp">
+      <Filter>Pliki źródłowe\class_templates</Filter>
+    </ClCompile>
+    <ClCompile Include="class_templates_partial_full_specialization.cpp">
+      <Filter>Pliki źródłowe\class_templates</Filter>
+    </ClCompile>
+    <ClCompile Include="class_templates_specialization_overloading.cpp">
+      <Filter>Pliki źródłowe\class_templates</Filter>
+    </ClCompile>
+    <ClCompile Include="templates_parameters.cpp">
+      <Filter>Pliki źródłowe\function_templates</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
