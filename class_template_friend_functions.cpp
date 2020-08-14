@@ -62,11 +62,9 @@ void func1()
 
 /* AFTER CLASS - JEDEN DO JEDNEGO
  * ZALEZNA FUNKCJA ZAPRZYJAZNIONA
- * funkcja zaprzyjazniona z podana konkretyzacja sz-
- * ablonu
+ * funkcja zaprzyjazniona z podana specjalizacja szablonu
  * func1 nie jest szablonem, dlatego nalezy zdefiniowac
- * specjalizacje dla kazdego wariantu funkcji za-
- * przyjaznionej
+ * specjalizacje dla kazdego wariantu funkcji zaprzyjaznionej
  */
 void func2(A<int> a)
 {
