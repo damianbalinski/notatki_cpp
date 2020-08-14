@@ -1,15 +1,15 @@
 #include <iostream>
 #include <cstdio>
 
-// TEMPLATE 1
+// 1 - POJEDYNCZY PARAMETR
 template<typename T>
-class A
+class A1
 {
 public:
-	void foo() { printf("foo\n"); }
+	void foo() { printf("foo1\n"); }
 };
 
-// TEMPLATE 2
+// 2 - WIELE MARAMETROW
 template<typename T, typename U>
 class A2
 {
@@ -17,35 +17,49 @@ public:
 	void foo() { printf("foo2\n"); }
 };
 
-// TEMPLATE PARAMETER 1
-template<template<typename T> class U>
-class B
+// 3 - SZABLON JAKO PARAMETR
+template<template<typename T> class C, typename T>
+class A3
 {
 public:
-	U<int> b1;
+	C<T> a3;
 };
 
-// TEMPLATE PARAMETER 2
-template<template<typename T, typename V> class U>
-class B2
+// 4 - SZABLON JAKO PARAMETR
+template<template<typename T, typename U> class C, typename T, typename U>
+class A4
 {
 public:
-	U<int, int> b2;
+	C<T,U> a4;
+};
+
+// 5 - SZABLON REKURENCYJNY
+template<typename T>
+class A5
+{
+
+public:
+	T a5;
 };
 
 int main()
 {
-	A<int> a1;
+	A1<int> a1;
 	a1.foo();
 
 	A2<int, int> a2;
 	a2.foo();
 
-	B<A> b1;
-	b1.b1.foo();
+	A3<A1, int> a3;
+	a3.a3.foo();
 
-	B2<A2> b2;
-	b2.b2.foo();
+	A4<A2, int, int> a4;
+	a4.a4.foo();
+
+	// szablon rekurencyjny
+	A5<A1<int>> a5;
+	a5.a5.foo();
+
 
 	return 0;
 }
