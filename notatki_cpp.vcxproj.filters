@@ -124,6 +124,9 @@
     <Filter Include="Pliki źródłowe\class_templates\class_template_friend_functions">
       <UniqueIdentifier>{d7c0d7f1-843b-4109-9e0b-11f525c6ebbd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\typedef_using">
+      <UniqueIdentifier>{2859247e-6dbd-46ed-8f73-9bc6921a3c01}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -446,6 +449,9 @@
     </ClCompile>
     <ClCompile Include="class_template_friend_functions.cpp">
       <Filter>Pliki źródłowe\class_templates\class_template_friend_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="typedef_using.cpp">
+      <Filter>Pliki źródłowe\typedef_using</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
