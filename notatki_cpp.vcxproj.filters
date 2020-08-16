@@ -121,11 +121,11 @@
     <Filter Include="Pliki źródłowe\function">
       <UniqueIdentifier>{ce5d640c-6f98-4e9a-b680-ff0298cdcb1b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\class_templates\class_template_friend_functions">
-      <UniqueIdentifier>{d7c0d7f1-843b-4109-9e0b-11f525c6ebbd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\typedef_using">
       <UniqueIdentifier>{2859247e-6dbd-46ed-8f73-9bc6921a3c01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\class\nested_class_template">
+      <UniqueIdentifier>{a5ab493e-7b3b-4da3-900c-dbbc8c60b81d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -447,11 +447,38 @@
     <ClCompile Include="class_template_automatic_type_deduction.cpp">
       <Filter>Pliki źródłowe\class_templates</Filter>
     </ClCompile>
-    <ClCompile Include="class_template_friend_functions.cpp">
-      <Filter>Pliki źródłowe\class_templates\class_template_friend_functions</Filter>
-    </ClCompile>
     <ClCompile Include="typedef_using.cpp">
       <Filter>Pliki źródłowe\typedef_using</Filter>
+    </ClCompile>
+    <ClCompile Include="class_template_friend_functions.cpp">
+      <Filter>Pliki źródłowe\friend</Filter>
+    </ClCompile>
+    <ClCompile Include="friend_class.cpp">
+      <Filter>Pliki źródłowe\friend</Filter>
+    </ClCompile>
+    <ClCompile Include="friend_method.cpp">
+      <Filter>Pliki źródłowe\friend</Filter>
+    </ClCompile>
+    <ClCompile Include="shared_friend_function.cpp">
+      <Filter>Pliki źródłowe\friend</Filter>
+    </ClCompile>
+    <ClCompile Include="mutual_friend_classes.cpp">
+      <Filter>Pliki źródłowe\friend</Filter>
+    </ClCompile>
+    <ClCompile Include="mutual_friend_methods.cpp">
+      <Filter>Pliki źródłowe\friend</Filter>
+    </ClCompile>
+    <ClCompile Include="class_int_class.cpp">
+      <Filter>Pliki źródłowe\class\nested_class_template</Filter>
+    </ClCompile>
+    <ClCompile Include="class_in_template.cpp">
+      <Filter>Pliki źródłowe\class\nested_class_template</Filter>
+    </ClCompile>
+    <ClCompile Include="template_in_class.cpp">
+      <Filter>Pliki źródłowe\class\nested_class_template</Filter>
+    </ClCompile>
+    <ClCompile Include="template_in_template.cpp">
+      <Filter>Pliki źródłowe\class\nested_class_template</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
