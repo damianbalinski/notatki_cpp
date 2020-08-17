@@ -489,5 +489,11 @@
     <ClCompile Include="handling_exceptions.cpp">
       <Filter>Pliki źródłowe\exceptions</Filter>
     </ClCompile>
+    <ClCompile Include="exception_hierarchy.cpp">
+      <Filter>Pliki źródłowe\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="new_delete_nothrow.cpp">
+      <Filter>Pliki źródłowe\operators\new_delete</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

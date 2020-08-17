@@ -1,4 +1,7 @@
 #include <iostream>
+#include <exception>
+
+// SPECYFIKACJA WYJATKOW
 
 using std::cout;
 using std::endl;

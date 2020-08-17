@@ -1,8 +1,13 @@
 #include <iostream>
 #include <cstdio>
+#include <exception>
 using std::cout, std::endl;
 
-class MyException {};
+// TWORZENIE WLAZNEGO WYJATKU
+// wyjatek uzytkownika moze, ale nie musi dziedziczyc po
+// klasie exception
+class MyException : public std::exception
+{};
 
 void func()
 {
