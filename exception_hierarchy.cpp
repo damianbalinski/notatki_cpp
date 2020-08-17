@@ -43,4 +43,7 @@ int main()
 	// brak mozliwosci alokacji pamieci
 	// exception ->
 	std::bad_alloc c1;
+
+	// nieparawidlowy wyjatek
+	std::bad_exception;
 }

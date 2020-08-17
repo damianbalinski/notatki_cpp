@@ -495,5 +495,14 @@
     <ClCompile Include="new_delete_nothrow.cpp">
       <Filter>Pliki źródłowe\operators\new_delete</Filter>
     </ClCompile>
+    <ClCompile Include="unexpected_exception.cpp">
+      <Filter>Pliki źródłowe\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="uncaught_exception.cpp">
+      <Filter>Pliki źródłowe\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="exception_handling.cpp">
+      <Filter>Pliki źródłowe\exceptions</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
