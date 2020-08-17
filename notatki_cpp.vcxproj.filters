@@ -127,6 +127,9 @@
     <Filter Include="Pliki źródłowe\class\nested_class_template">
       <UniqueIdentifier>{a5ab493e-7b3b-4da3-900c-dbbc8c60b81d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\exceptions">
+      <UniqueIdentifier>{901e145b-2cf3-4f6a-84cb-b264a419f0da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -479,6 +482,12 @@
     </ClCompile>
     <ClCompile Include="template_in_template.cpp">
       <Filter>Pliki źródłowe\class\nested_class_template</Filter>
+    </ClCompile>
+    <ClCompile Include="exception_specifications.cpp">
+      <Filter>Pliki źródłowe\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="handling_exceptions.cpp">
+      <Filter>Pliki źródłowe\exceptions</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
