@@ -130,6 +130,12 @@
     <Filter Include="Pliki źródłowe\exceptions">
       <UniqueIdentifier>{901e145b-2cf3-4f6a-84cb-b264a419f0da}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\RTTI">
+      <UniqueIdentifier>{96b30a92-3de8-4caa-b9a7-27e1eb464952}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\casting">
+      <UniqueIdentifier>{9b45a4d5-8b5e-4c8c-bafc-12f65a426b74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -503,6 +509,12 @@
     </ClCompile>
     <ClCompile Include="exception_handling.cpp">
       <Filter>Pliki źródłowe\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamic_cast.cpp">
+      <Filter>Pliki źródłowe\casting</Filter>
+    </ClCompile>
+    <ClCompile Include="typeid.cpp">
+      <Filter>Pliki źródłowe\operators</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

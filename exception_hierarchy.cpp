@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <stdexcept>
 #include <exception>
+#include <typeinfo>
 #include <new>
 
 // HIERARCHIA WYJATKOW
@@ -46,4 +47,16 @@ int main()
 
 	// nieparawidlowy wyjatek
 	std::bad_exception;
+
+	///////////////////////////
+	// RZUTOWANIE TYPOW / RTTI/
+	///////////////////////////
+
+	// nieprawidlowe rzutowanie, rzucane przez dynamic_cast
+	// #include <typeinfo>
+	std::bad_cast;
+
+	// rzucany, jesli argumentem operatora typeid jest wskaznik pusty
+	// #include <typeinfo>
+	std::bad_typeid;
 }
