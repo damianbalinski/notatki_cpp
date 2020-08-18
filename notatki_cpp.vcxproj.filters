@@ -510,11 +510,20 @@
     <ClCompile Include="exception_handling.cpp">
       <Filter>Pliki źródłowe\exceptions</Filter>
     </ClCompile>
-    <ClCompile Include="dynamic_cast.cpp">
-      <Filter>Pliki źródłowe\casting</Filter>
-    </ClCompile>
     <ClCompile Include="typeid.cpp">
       <Filter>Pliki źródłowe\operators</Filter>
+    </ClCompile>
+    <ClCompile Include="const_cast.cpp">
+      <Filter>Pliki źródłowe\casting</Filter>
+    </ClCompile>
+    <ClCompile Include="static_cast.cpp">
+      <Filter>Pliki źródłowe\casting</Filter>
+    </ClCompile>
+    <ClCompile Include="reinterpret_cast.cpp">
+      <Filter>Pliki źródłowe\casting</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamic_cast.cpp">
+      <Filter>Pliki źródłowe\casting</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
