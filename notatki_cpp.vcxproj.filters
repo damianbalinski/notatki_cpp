@@ -525,5 +525,11 @@
     <ClCompile Include="dynamic_cast.cpp">
       <Filter>Pliki źródłowe\casting</Filter>
     </ClCompile>
+    <ClCompile Include="string_constructor.cpp">
+      <Filter>Pliki źródłowe\string</Filter>
+    </ClCompile>
+    <ClCompile Include="string_member_functions.cpp">
+      <Filter>Pliki źródłowe\string</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -57,5 +57,10 @@ int main()
 	const int& r21 = reinterpret_cast<int&>(r1);
 	const int& r22 = reinterpret_cast<const int&>(r1);
 
+	// VALUE
+	int val;
+	int res;
+	res = reinterpret_cast<int>(val);
+
 	return 0;
 }
