@@ -23,8 +23,19 @@ int foo2(int tab[], int n)
 	return 0;
 }
 
+const char* foo()
+{
+
+}
+
+typename void func() { return; }
+
+class A {};
 int main()
 {
+	typename char mychar;
+
+
 	//EOF;
 	//true;
 	//false;

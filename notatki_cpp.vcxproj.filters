@@ -534,5 +534,14 @@
     <ClCompile Include="getline.cpp">
       <Filter>Pliki źródłowe\input_output</Filter>
     </ClCompile>
+    <ClCompile Include="string_operators.cpp">
+      <Filter>Pliki źródłowe\string</Filter>
+    </ClCompile>
+    <ClCompile Include="temp_c.c">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="string_types.cpp">
+      <Filter>Pliki źródłowe\string</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

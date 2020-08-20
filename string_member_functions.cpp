@@ -23,21 +23,6 @@ int main()
 	const char* arr;
 	GLOBAL = str;
 
-	/********************
-	/* MEMBER OPERATORS *
-	/********************/
-
-	//operator= wypelnia string podanymi znakami, lancuchem znakow, innym stringiem
-	str = 'A';					print();
-	str = str1;					print();
-	str = { 'x', 'y', 'z' };	print();
-
-	// operator[] - dostep do podanego elementu BEZ sprawdzania poprawnosci zakresu
-	c = str[NUM];
-	
-	// operator+= - dodaje znak, wiele znakow, lancuch znakow, inny string na koniec lancucha
-	str += "abc";
-
 	/************************
 	/* CONVERSION FUNCTIONS *
 	/************************/
@@ -46,34 +31,37 @@ int main()
 	 * OTHER MEMBER FUNCTIONS *
 	 **************************/
 	str.assign(str2);		// wypelnia string podanymi znakami, lancuchem znakow, innym stringiem
-	str.get_allocator();	// zwraca alokator powiazany ze stringiem
+	str.get_allocator();	// kopia alokatora powiazany z stringiem, sluzy do alokowania pamieci
 	str.swap(str1);			// zamienia miejscami lancuchy
 
 	// DOSTEP DO ELEMENTOW
 	c = str.at(NUM);			// dostep do podanego elementu ze sprawdzaniem poprawnosci zakresu
 	c = str.front();			// referencja do pierwszego znaku
 	c = str.back();				// referencja do ostatniego znaku
-	arr = str.data();				// wskaznik do pierwszego znaku
-	arr = str.c_str();			// zwraca wskaznik do stalego lancucha znakowego zakonczonego znakiem pustym
+	arr = str.data();			// wskaznik do stalego lancucha, nie musi zawierac znaku pustego
+	arr = str.c_str();			// wskaznik do stalego lancucha, zawiera na koncu znak pusty
 	
 	// KOPIOWANIE
 	str.substr(0, 5);			// zwraca podciag
 	//str.copy(tab, 0, 5);		// kopiuje podciag do lancucha znakowego, nie dodaje znaku pustego na koniec
 
 	// ITERATORY
-	// STALY & ZMIENNY	// STALY
-	str.begin();		str.cbegin();	// iterator do pierwszego znaku
-	str.end();			str.cend();		// iterator do znaku nastepujacego po ostatnim znaku lancucha
-	str.rbegin();		str.crbegin();	// iterator do pierwszego znaku w odwroconym lancuchu
-	str.rend();			str.crend();	// iterator do znaku nastepujacego po ostatnim znaku w odwroconym lancuchy
-	
+	// MOD. & NIEMOD.	// NIEMOD.
+	str.begin();		str.cbegin();	// -> // iterator do pierwszego znaku lancucha
+	str.end();			str.cend();		// <- // iterator do znaku nastepujacego po ostatnim znaku lancucha
+	str.rbegin();		str.crbegin();	// -> // iterator do pierwszego znaku w odwroconym lancuchu
+	str.rend();			str.crend();	// <- // iterator do znaku nastepujacego po ostatnim znaku w odwroconym lancuchy
+	// MOD. - modyfikujacy, NIEMOD. - niemodyfikujacy
+	// -> iterator postepujacy
+	// -> iterator odwrotny
+
 	// POJEMNOSC
 	str.empty();			// zwraca true jesli napis jest pusty
-	str.length();			// liczba znakow lanuchu
-	str.size();				// liczba znakow w lancuchu
-	str.max_size();			// maksymalna dlugosc napisu
+	str.length();			// liczba elementow w lancuchu
+	str.size();				// liczba elementow w lancuchu
+	str.max_size();			// maksymalna liczba elementow w lancuchu
 	str.reserve(10);			// informuje obiekt o planowanej zmianie dlugosci napisu, aby ten mogl z wyprzedzeniem zaalokowac pamiec
-	str.capacity();			// zwraca liczbe znakow, ktore moga zostac zapisane w obecnie zaalokowanym obszarze
+	str.capacity();			// liczba zaalokowanych elementow w lancuchu
 	str.shrink_to_fit();		// zwalnia zaalokowana, ale niewykozystana pamiec
 	
 	// OPERACJE NA LANCUCHU
@@ -92,7 +80,8 @@ int main()
 	str.ends_with("c");		// sprawdza, czy konczy sie podanym znakiem, lancuchem, stringiem
 	
 	// WYSZUKIWANIE
-	str.find("abc", 5);		// wyszukuje podciagu 
+	str.find("abc", 5);		// find(const string& str)	// wyszukuje pierwszego wystapienia podciagu str, zwraca indeks pierwszego wystapienia lub sting::npos
+
 
 	// TEST
 	string s1 = "abc";

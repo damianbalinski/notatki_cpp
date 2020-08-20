@@ -19,12 +19,12 @@ private:
 	int x;
 public:
 	Test operator=(Test& t) { printf("przypisanie\n"); this->x = t.x; };
-private:
+public:
 	Test(int x_n = 0);				// DOMYSLNY
-private:
-	explicit Test(const Test& t);	// KOPIUJACY
-private:
-	explicit Test(const Test&& t);	// PRZENOSZACY (MOVE CONSTS.)
+public:
+	Test(const Test& t);			// KOPIUJACY
+public:
+	Test(const Test&& t);			// PRZENOSZACY (MOVE CONSTS.)
 public:
 	Test(double x_n);				// KONWERTUJACY
 public:
@@ -110,8 +110,6 @@ int main()
 	//Test t = 10;
 	//static const Test t2;
 
-	cout << endl;
-
 	// WIAZANIE STATYCZNE
 
 	// DOMYSLNY
@@ -131,27 +129,32 @@ int main()
 	//Test b6 = { t };
 
 	// PRZENOSZACY
-	//Test e1(t2);
-	//Test e2{ t2 };
+	Test e1(Test());
+	//Test t1;
+	Test t1{ Test() };
+	Test t2 = {Test() };
+	Test t3 = Test();
+	//Test e2{ Test() };
 	//Test e3 = Test(t2);
 	//Test e4 = Test{ t2 };
 	//Test e5 = t2;
+	cout << "test" << endl;
 
 	// KOWERTUJACY
-	Test c1(10.0);
-	Test c5{ 10.0 };
-	Test c3 = Test(10.0);
-	Test c6 = Test{ 10.0 };
-	Test c2 = 10.0;
-	Test c9 = (10.0);
-	Test c4 = { 10.0 };
+	//Test c1(10.0);
+	//Test c5{ 10.0 };
+	//Test c3 = Test(10.0);
+	//Test c6 = Test{ 10.0 };
+	//Test c2 = 10.0;
+	//Test c9 = (10.0);
+	//Test c4 = { 10.0 };
 
 	// KONWERTUJACY WIELOPARAMETROWY
-	Test f1(1.0, 2.0);
-	Test f2{ 1.0, 2.0 };
-	Test f3 = Test(1.0, 2.0);
-	Test f4 = Test{ 1.0, 2.0 };
-	Test f5 = { 1.0, 2.0 };
+	//Test f1(1.0, 2.0);
+	//Test f2{ 1.0, 2.0 };
+	//Test f3 = Test(1.0, 2.0);
+	//Test f4 = Test{ 1.0, 2.0 };
+	//Test f5 = { 1.0, 2.0 };
 
 	// TEST
 	//Test h1 = { .x_n = 20 };
