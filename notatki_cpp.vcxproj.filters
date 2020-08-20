@@ -531,5 +531,8 @@
     <ClCompile Include="string_member_functions.cpp">
       <Filter>Pliki źródłowe\string</Filter>
     </ClCompile>
+    <ClCompile Include="getline.cpp">
+      <Filter>Pliki źródłowe\input_output</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

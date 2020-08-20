@@ -35,15 +35,15 @@ int main()
 	string s6(s0, 1, 2);	// string(const string&, size_type, size_type)		
 							// przy uzyciu innego stringa, zaczynajac od indeksu 1, kopiuje co najwyzej 2 znaki
 	
-	string s8(ITER, ITER + 6); // template<class T> string(T first, T last)		
-							   // od poczatku iteratora do ostatniego elementu przed iteratorem
+	string s8(ITER, ITER + 6); // template<class T> string(T begin, T end)		
+							   // inicjalizuje obiekt wartosciami iteratora w zbiorze [begin, end)
 
 	string s10 = { 'A', 'B', 'C' };	//string(initializer_list<char>)			
 									// lista inicjalizacyjna
 
 	// template<class T> string(const T&)
 	// template<class T> string<const T&, size_type, size_type)
-	//string(string && ref);		// konstruktor przenoszacy
+	//string(string && ref);		// konstruktor przenoszacy, obiekt zrodlowy moze byc zmodyfikowany
 
 	string::allocator_type;
 
