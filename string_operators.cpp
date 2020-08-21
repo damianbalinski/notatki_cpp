@@ -15,12 +15,18 @@ int main()
 
 	// MEMBER OPERATORS
 
-	//operator= wypelnia string podanymi znakami, lancuchem znakow, innym stringiem
+	// OK	operator= przypisanie wartosci
+	str.operator=(str0);				str = str0;					// = str;
+	str.operator=("abc");				str = "abc";				// = arr;
+	str.operator=('A');					str = 'A';					// = c;
+	str.operator=(string());										// operator=(str_ref);
+	str.operator=({ 'a', 'b', 'c' });	str = { 'a', 'b', 'c' };	// operator=(list);
+	//																// operator=(t);
 	str = 'A';
 	str = str0;
 	str = { 'x', 'y', 'z' };
 
-	// operator[] - dostep do podanego elementu BEZ sprawdzania poprawnosci zakresu
+	// operator[] - pobiera/modyfikuje element o podanym indeksie, NIE sprawdza poprawnosc zakresu
 	str[0];
 
 	// operator+= - dodaje znak, wiele znakow, lancuch znakow, inny string na koniec lancucha

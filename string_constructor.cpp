@@ -79,7 +79,7 @@ int main()
 	// t === const T& t							- parametr szablonowy
 
 
-	// PARAMETRY DOMYSLNY
+	// PARAMETRY DOMYSLNE
 	// (alloc) == = const Allocator & alloc = Allocator()	- alokator domyslny
 	// (n) === size_type n = string::npos
 

@@ -136,6 +136,9 @@
     <Filter Include="Pliki źródłowe\casting">
       <UniqueIdentifier>{9b45a4d5-8b5e-4c8c-bafc-12f65a426b74}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\string\string_member_functions">
+      <UniqueIdentifier>{ee32bdf2-f9be-4956-bfd6-5a2d5fa9711d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -542,6 +545,9 @@
     </ClCompile>
     <ClCompile Include="string_types.cpp">
       <Filter>Pliki źródłowe\string</Filter>
+    </ClCompile>
+    <ClCompile Include="string_member_functions_find.cpp">
+      <Filter>Pliki źródłowe\string\string_member_functions</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
