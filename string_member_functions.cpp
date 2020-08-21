@@ -77,7 +77,6 @@ int main()
 	
 
 	// POROWNYWANIE
-	str.compare("abc");		// porownyje z lancuchem, znakami, stringiem
 	str.starts_with("abc");	// sprawdza, czy zaczyna sie podanym znakiem, lancuchem, stringiem
 	str.ends_with("c");		// sprawdza, czy konczy sie podanym znakiem, lancuchem, stringiem
 	

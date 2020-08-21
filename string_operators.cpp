@@ -35,12 +35,15 @@ int main()
 	str += 'A';
 	str += {'x', 'y', 'z'};
 
+	// OPERATORY POROWNANIA
+	// dzialaja dla(str, str), (str, arr), (arr, str)
 	str == str0;
 	str != str0;
 	str < str0;
 	str <= str0;
 	str > str0;
 	str >= str0;
+	operator<(str, str);
 
 	cin >> str;
 	cout << str;

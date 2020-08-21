@@ -549,5 +549,8 @@
     <ClCompile Include="string_member_functions_find.cpp">
       <Filter>Pliki źródłowe\string\string_member_functions</Filter>
     </ClCompile>
+    <ClCompile Include="string_member_functions_compare.cpp">
+      <Filter>Pliki źródłowe\string\string_member_functions</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
