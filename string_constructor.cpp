@@ -13,27 +13,28 @@ int main()
 
 	// OK DOC
 	// string((alloc)) - domyslny, rozmiar alokowanego obszaru jest nieokreslony
-	string s1;
+	//string s1(std::allocator<char>());
+	
+	// OK DOC
+	// string(n, c, (alloc)) - n kopii znaku c
+	string s4(10, 'A');
 
 	// OK DOC
 	// string(arr, (alloc)) - konwertujacy lancuch znakowy
 	string s2("abc");									
 
 	// OK DOC
-	// string(arr, n, (alloc)) - konwertujacy, kopiuje dokladnie n znakow (nawet jezeli n przekracza rozmiar lancucha)
-	string s7("abc", 10);
+	// string(arr, n, (alloc)) - konwertujacy, kopiuje dokladnie n znakow (nawet jesli n wychodzi poza zakres)
+	string s3("abc", 10);
 
-	// OK DOC
-	// string(n, c, (alloca)) - n kopii znaku c
-	string s3(10, 'A');
 
 	// OK DOC
 	// string(str) - kopiujacy bez alokatora
-	string s4(s0);
+	string s5(s0);
 
 	// OK DOC
 	// string(str, alloc) - kopiujacy z alokatorem
-	string s4(s0, std::allocator<char>());
+	string s6(s0, std::allocator<char>());
 
 	// OK DOC
 	// string(str_ref) - przenoszacy bez alokatora
@@ -43,19 +44,19 @@ int main()
 
 	// OK DOC
 	// string(str, i, (alloc)) - kopiujacy, kopiuje zaczynajac od i-tego indeksu, nie wychodzi poza zakres
-	string s6(s0, 0);
-	
+	string s9(s0, 0);
+
 	// OK DOC
 	// string(str, i, n, (alloc)) - kopiujacy, kopiuje co najwyzej n znakow zaczynajac od i-tego indeksu, nie wychodzi poza zakres
-	string s5(s0, 10, 2);
+	string s10(s0, 10, 2);
 	
 	// OK DOC
 	// template<class T> 
 	// string(T iter1, T iter2, (alloc)) - pobiera zakres okreslony iteratorami w zbiorze [iter1, iter2)
-	string s8(ITER, ITER + 6);
+	string s11(ITER, ITER + 6);
 
 	// string(list, (alloc)) - lista inicjalizacyjna
-	string s10 = { 'A', 'B', 'C' };
+	string s12 = { 'A', 'B', 'C' };
 
 	// OK DOC
 	// template<class T>

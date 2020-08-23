@@ -13,7 +13,9 @@ int main()
 	string str0 = "xyz";
 	char arr[MAX] = "abc";
 
-	// MEMBER OPERATORS
+	/********************/
+	/* MEMBER OPERATORS */
+	/********************/
 
 	// OK	operator= przypisanie wartosci
 	str.operator=(str0);				str = str0;					// = str;
@@ -29,21 +31,38 @@ int main()
 	// operator[] - pobiera/modyfikuje element o podanym indeksie, NIE sprawdza poprawnosc zakresu
 	str[0];
 
-	// operator+= - dodaje znak, wiele znakow, lancuch znakow, inny string na koniec lancucha
+	// operator+= - dolacza na koniec pojedynczy znak, wiele znakow, lancuch znakow, string
 	str += "abc";
 	str += str;
 	str += 'A';
 	str += {'x', 'y', 'z'};
+	str += (string("asda") + string("asvsa"));
+
+
+
+	/************************/
+	/* NON-MEMBER OPERATORS */
+	/************************/
+
+	// operator+ - (NIE MODYFIKUJACY, NON-MEMBER)	konkatenacja lancuchow
+	// dolaczanie string, lancucha znakowego, 
 
 	// OPERATORY POROWNANIA
-	// dzialaja dla(str, str), (str, arr), (arr, str)
+	// porownuja (str, str), (str, arr), (arr, str)
 	str == str0;
 	str != str0;
 	str < str0;
 	str <= str0;
 	str > str0;
 	str >= str0;
+
+	operator<(string(), string("abc"));
+
 	operator<(str, str);
+	"abc" < str;
+	operator<("abc", str);
+	str < "abc";
+	operator<(str, "abc");
 
 	cin >> str;
 	cout << str;

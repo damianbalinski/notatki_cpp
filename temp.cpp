@@ -2,6 +2,7 @@
 // #include <climits>
 // #include <cfloat>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -23,18 +24,12 @@ int foo2(int tab[], int n)
 	return 0;
 }
 
-const char* foo()
-{
-
-}
-
 typename void func() { return; }
 
 class A {};
 int main()
 {
 	typename char mychar;
-
 
 	//EOF;
 	//true;
@@ -49,6 +44,9 @@ int main()
 	//const int val = 100;
 	//const int* p1 = &val;
 	//int* p2 = &val;		// ERROR
+
+	cout << std::basic_string<char>::npos << endl;
+	cout << std::basic_string<wchar_t>::npos << endl;
 
 	return 0;
 }

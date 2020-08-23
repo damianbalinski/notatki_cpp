@@ -139,6 +139,9 @@
     <Filter Include="Pliki źródłowe\string\string_member_functions">
       <UniqueIdentifier>{ee32bdf2-f9be-4956-bfd6-5a2d5fa9711d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\string\string_non_member_functions">
+      <UniqueIdentifier>{daaf893f-5ded-4562-a8d8-bf089ae65dfd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -191,9 +194,6 @@
     </ClCompile>
     <ClCompile Include="loop_for.cpp">
       <Filter>Pliki źródłowe\loops</Filter>
-    </ClCompile>
-    <ClCompile Include="string.cpp">
-      <Filter>Pliki źródłowe\string</Filter>
     </ClCompile>
     <ClCompile Include="loop_range_based_for.cpp">
       <Filter>Pliki źródłowe\loops</Filter>
@@ -531,9 +531,6 @@
     <ClCompile Include="string_constructor.cpp">
       <Filter>Pliki źródłowe\string</Filter>
     </ClCompile>
-    <ClCompile Include="string_member_functions.cpp">
-      <Filter>Pliki źródłowe\string</Filter>
-    </ClCompile>
     <ClCompile Include="getline.cpp">
       <Filter>Pliki źródłowe\input_output</Filter>
     </ClCompile>
@@ -546,10 +543,31 @@
     <ClCompile Include="string_types.cpp">
       <Filter>Pliki źródłowe\string</Filter>
     </ClCompile>
-    <ClCompile Include="string_member_functions_find.cpp">
+    <ClCompile Include="string_append.cpp">
       <Filter>Pliki źródłowe\string\string_member_functions</Filter>
     </ClCompile>
-    <ClCompile Include="string_member_functions_compare.cpp">
+    <ClCompile Include="string_compare.cpp">
+      <Filter>Pliki źródłowe\string\string_member_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="string_find.cpp">
+      <Filter>Pliki źródłowe\string\string_member_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="string_member_functions.cpp">
+      <Filter>Pliki źródłowe\string\string_member_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="string_assign.cpp">
+      <Filter>Pliki źródłowe\string\string_member_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="string_insert.cpp">
+      <Filter>Pliki źródłowe\string\string_member_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="string_erase.cpp">
+      <Filter>Pliki źródłowe\string\string_member_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="string_replace.cpp">
+      <Filter>Pliki źródłowe\string\string_member_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="string_getline.cpp">
       <Filter>Pliki źródłowe\string\string_member_functions</Filter>
     </ClCompile>
   </ItemGroup>
