@@ -142,6 +142,9 @@
     <Filter Include="Pliki źródłowe\string\string_non_member_functions">
       <UniqueIdentifier>{daaf893f-5ded-4562-a8d8-bf089ae65dfd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\smart_pointers">
+      <UniqueIdentifier>{56f954e5-2f7c-4d17-b672-813acd368c5c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -569,6 +572,21 @@
     </ClCompile>
     <ClCompile Include="string_getline.cpp">
       <Filter>Pliki źródłowe\string\string_member_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="smart_pointers.cpp">
+      <Filter>Pliki źródłowe\smart_pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="auto_ptr.cpp">
+      <Filter>Pliki źródłowe\smart_pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="unique_ptr.cpp">
+      <Filter>Pliki źródłowe\smart_pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="shared_ptr.cpp">
+      <Filter>Pliki źródłowe\smart_pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="weak_ptr.cpp">
+      <Filter>Pliki źródłowe\smart_pointers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

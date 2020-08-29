@@ -30,6 +30,7 @@ class A {};
 int main()
 {
 	typename char mychar;
+	//weak_ptr a;
 
 	//EOF;
 	//true;
