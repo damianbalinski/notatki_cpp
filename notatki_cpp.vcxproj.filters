@@ -633,12 +633,6 @@
     <ClCompile Include="container_operators.cpp">
       <Filter>Pliki źródłowe\containers\operators</Filter>
     </ClCompile>
-    <ClCompile Include="container_types.cpp">
-      <Filter>Pliki źródłowe\containers\types</Filter>
-    </ClCompile>
-    <ClCompile Include="container_constructors.cpp">
-      <Filter>Pliki źródłowe\containers\constructors</Filter>
-    </ClCompile>
     <ClCompile Include="methods_temp.cpp">
       <Filter>Pliki źródłowe\containers\methods</Filter>
     </ClCompile>
@@ -646,6 +640,21 @@
       <Filter>Pliki źródłowe\containers\methods</Filter>
     </ClCompile>
     <ClCompile Include="methods_list_test.cpp">
+      <Filter>Pliki źródłowe\containers\methods</Filter>
+    </ClCompile>
+    <ClCompile Include="constructors_all.cpp">
+      <Filter>Pliki źródłowe\containers\constructors</Filter>
+    </ClCompile>
+    <ClCompile Include="types_all.cpp">
+      <Filter>Pliki źródłowe\containers\types</Filter>
+    </ClCompile>
+    <ClCompile Include="methods_queue.cpp">
+      <Filter>Pliki źródłowe\containers\methods</Filter>
+    </ClCompile>
+    <ClCompile Include="constructors_queue.cpp">
+      <Filter>Pliki źródłowe\containers\constructors</Filter>
+    </ClCompile>
+    <ClCompile Include="methods_stack.cpp">
       <Filter>Pliki źródłowe\containers\methods</Filter>
     </ClCompile>
   </ItemGroup>

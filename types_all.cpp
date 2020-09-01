@@ -1,6 +1,8 @@
 // typy zdefiniowane dla kontenerow
 #include <iostream>
 #include <vector>
+#include <set>
+#include <map>
 
 int main()
 {
@@ -16,6 +18,12 @@ int main()
 	// odwracalne (reversible)
 	std::vector<int>::reverse_iterator;			// iterator odwrotny
 	std::vector<int>::const_reverse_iterator;	// iterator odwrotny niemodyfikujacy
+
+	// asocjacyjne (associative)
+	std::set<int>::key_type;					// typ klucza
+	std::set<int>::key_compare;					// obiekt porownaniam sluzy do porownywania wartosci klucza
+	std::set<int>::value_compare;				// dla zbiorow rownowazny z key_compare, dla map rownowazny z pair<const Key, T>
+	std::map<int, int>::mapped_type;			// MMu typ skojarzonych danych
 
 	return 0;
 }

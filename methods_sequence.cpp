@@ -93,7 +93,7 @@ int main()
 	v.data();			// OK VA	(T*) niemodyfikowalna tablica elementow (wskaznik na pierwszy element)
 
 	// SWAP/FILL
-	v.swap(containerv);		// OK - (void) zamienia miejscami z kontenerem tedo samego typu
+	v.swap(containerv);		// OK - (void) zamienia miejscami kontenery tego samego typu
 	a.fill(val);			// OK A (void) wypelnia kontener podanym elementem			
 	v.get_allocator();		// OK VDLF (allocator) zwraca kopie alokatora
 
@@ -144,9 +144,9 @@ int main()
 	v.clear();				// OK VDLF (void) usuwa wszystkie elementy
 
 	// MODYFIKACJA LISTY
-	l.splice(iterl, list);					// OK L (void) przenosi zawartosc listy, wstawia ja przed iter
+	l.splice(iterl, list);					// OK L (void) przenosi wszystkie elementy z listy, wstawia ja przed iter
 	l.splice(iterl, rlist);					// kopiowane sa wskazniki do elementow, a nie elementy, lista zrodlowa staje sie pusta
-	l.splice(iterl, list, iterl1);			// przenosi ement iter1 z listy, wstawia go przed iter;
+	l.splice(iterl, list, iterl1);			// przenosi element iter1 z listy, wstawia go przed iter;
 	l.splice(iterl, rlist, iterl1);
 	l.splice(iterl, list, iterl1, iterl2);	// przenosi elementy z zakresu [iter1, iter2) z listy, wstawia je przed iter
 	l.splice(iterl, rlist, iterl1, iterl2);

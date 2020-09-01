@@ -1,4 +1,7 @@
 PODZIAL KONTENEROW
 
-odwracalne (reversible)
+odwracalny (reversible)
 vector, array, list, deque, queue, set, map
+
+sekwencyjny ()
+vector,

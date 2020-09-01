@@ -29,7 +29,7 @@ int main()
 	v1 = list;					// przypisanie listy inicjalizujacej
 	
 	// vector, deque, array
-	v1[n];
+	v1[n];						// referencja do elementu o podanym indeksie, NIE sprawdza poprawnosc indeksowania
 
 	return 0;
 }

@@ -23,7 +23,6 @@ int main()
 	std::vector<int> v3 = v1;		// kopiujacy
 	std::vector<int> v4(std::vector<int>{});	// przenoszacy
 	std::vector<int> v5 = std::vector<int>();	// przenoszacy
-	(&v5)->~vector<int>();			// destruktor aplikowany do kazdego elementu
 
 	// sekwencyjne oprocz array (sequence other than array)
 	std::vector<int> w1(n ,a);			// n kopii elementu a
@@ -32,9 +31,6 @@ int main()
 	std::vector<int> w2(iter1, iter2);	// z zakresu [iter1, iter2), anonimowy
 	std::vector<int> w3(list);			// z listy inicjalizujacej
 	std::vector<int> (list);			// z listy inicjalizujacej, anonimowy
-	
-										// TEST
-	//for (auto i : w1) cout << i << ", ";
 
 	return 0;
 }
