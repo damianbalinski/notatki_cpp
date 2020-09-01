@@ -7,11 +7,21 @@
 #include <list>
 #include <forward_list>
 
-#define list {1, 2, 3, 4, 5}
+//#define list {1, 2, 3, 4, 5}
 
 bool comp(int v1, int v2)
 {
 	return v1 < v2;
+}
+
+bool pred1(int val)
+{
+	return val == 1;
+}
+
+bool pred2(int val1, int val2)
+{
+	return val1 == val2;
 }
 
 int main()
@@ -34,10 +44,12 @@ int main()
 	std::array<int, 10> array;
 	std::deque<int> d;
 	std::deque<int> deque;
-	//std::list<int> l;
-	//std::list<int> list;
-	std::forward_list<int> f;
-	std::forward_list<int> forw_list;
+	std::list<int> l;
+	std::list<int> list;
+	std::list<int> rlist;
+	std::forward_list<int> f = { 1, 2, 3 };
+	std::forward_list<int> forw_list = { 4, 5, 6 };
+	std::forward_list<int> rforw_list = { 4, 5, 6 };
 
 	// dane
 	int n = 2;
@@ -45,9 +57,14 @@ int main()
 	int rval = 10;
 	auto args = { 1, 2, 3, 4, 5 };
 	auto iterv = v.begin();
+	auto iterl = l.begin();
 	auto iterf = f.begin();
-	auto iter1 = v.begin();
-	auto iter2 = v.end();
+	auto iterv1 = v.begin();
+	auto iterv2 = v.end();
+	auto iterl1 = list.begin();
+	auto iterl2 = list.end();
+	auto iterf1 = forw_list.begin();
+	auto iterf2 = forw_list.end();
 
 	// ITERATORY
 	// MODYFIKUJACY		// NIEMODYFIKUJACY
@@ -90,20 +107,20 @@ int main()
 	
 	// MODYFIKACJA
 	v.assign(n, val);		// OK VDLF (void) zastepuje zawartosc kontenera podanymi elementami
-	v.assign(iter1, iter2);
-	v.assign(list);
+	v.assign(iterv1, iterv2);
+	//v.assign(list);
 
 	v.insert(iterv, val);	// OK VDL (iterator) wstawia element/elementy przed pozycja iter
 	v.insert(iterv, rval);	// zwraca iterator do pierwszego wstawionego elementu
 	v.insert(iterv, n, val);
-	v.insert(iterv, iter1, iter2);
-	v.insert(iterv, list);
+	v.insert(iterv, iterv1, iterv2);
+	//v.insert(iterv, list);
 
 	f.insert_after(iterf, val);		// OK F (iterator) wstawia element/elementy za pozycja iter
 	f.insert_after(iterf, rval);	// zwraca iterator do ostatniego wstawionego elementu
 	f.insert_after(iterf, n, val);
-	f.insert_after(iterf, iter1, iter2);
-	f.insert_after(iterf, list);
+	f.insert_after(iterf, iterv1, iterv2);
+	//f.insert_after(iterf, list);
 
 	v.emplace(iterv, args);	// OK VDL (iterator) wstawia element przed pozycja iter, inicjalizuje go pakietem argumentow
 							// zwraca iterator do wstawionego elementu
@@ -119,7 +136,7 @@ int main()
 
 
 	v.erase(iterv);			// OK VDL (iterator) usuwa element iter lub elementy z zakresu [iter1, iter2)
-	v.erase(iter1, iter2);	// zwraca iterator za ostatni usuniety element
+	v.erase(iterv1, iterv2);	// zwraca iterator za ostatni usuniety element
 
 	f.erase_after(iterf);	// TODO OK F (iterator) usuwa element za iter lub elementy zzakresu (iter1, iter2)
 							// zwraca iterator za ostatni usuniety element
@@ -127,24 +144,38 @@ int main()
 	v.clear();				// OK VDLF (void) usuwa wszystkie elementy
 
 	// MODYFIKACJA LISTY
-	l1.splice(iter_l1, l2);	// przenosi zawartosc listy l2, wstawia ja przed iter
-	l1.splice(iter_l1, rl2);
-	l1.splice(iter_l1, l2, iter_l2);	// przenosi ilement iter2 z listy list, wstawia go przed iter1;
-	l1.splice(iter_l1, l2, iter_l21, iter_l22);// przenosi elementy z zakresu [iter1, iter2), wstawia je przed iter
+	l.splice(iterl, list);					// OK L (void) przenosi zawartosc listy, wstawia ja przed iter
+	l.splice(iterl, rlist);					// kopiowane sa wskazniki do elementow, a nie elementy, lista zrodlowa staje sie pusta
+	l.splice(iterl, list, iterl1);			// przenosi ement iter1 z listy, wstawia go przed iter;
+	l.splice(iterl, rlist, iterl1);
+	l.splice(iterl, list, iterl1, iterl2);	// przenosi elementy z zakresu [iter1, iter2) z listy, wstawia je przed iter
+	l.splice(iterl, rlist, iterl1, iterl2);
 
-	l1.remove(val);			// usuwa wszystkie elementy val
-	l1.remove_if(pred);		// usuwa wszystkie elementy i, takie ze pred(*i) daje wartosc true (spelniajace predykat pred)
-	
-	l1.unique();			// usuwa zduplikowane elementy
-	l1.unique(pred);		// usuwa zduplikowane elementy i, takie ze pred(*i, *(i-1) daje wartosc true (spelniajace predykat pred)
-	
-	l1.merge(l2);			// scala dwie posortowane rosnaco listy, po scaleniu list2 jest pusta, przy porownywaniu elementow kozysta
-	l1.merge(l2, comp);		// z operatora < lub, jesli podano z funkcji porownujacej comp, 
+	f.splice_after(iterf, forw_list);			// OK F (void) przenosi zawartosc listy, wstawia ja za iter
+	f.splice_after(iterf, rforw_list);			// kopiowane sa wskazniki do elemenot, a nie elementy, lista zrodlowa staje sie pusta
+	f.splice_after(iterf, forw_list, iterf1);	// przenosi ement iter1 z listy, wstawia go za iter;
+	f.splice_after(iterf, rforw_list, iterf1);
+	f.splice_after(iterf, forw_list, iterf1, iterf2);// przenosi elementy z zakresu (iter1, iter2) z listy, wstawia je za iter
+	f.splice_after(iterf, rforw_list, iterf1, iterf2);
 
-	l1.sort();				// sortuje liste, kozysta z operatora < lub, jesli podano, z funkcji porownujacej comp
-	l1.sort(comp);
-	
-	l1.reverse();			// odwraca kolejnosc elementow
+	l.remove(val);			// OK LF (size_type) usuwa wszystkie wystapienia val
+							// zwraca liczbe usunietych elementow
+	l.remove_if(pred1);		// OK LF (size_type) usuwa wszystkie elementy i, takie ze pred(i) daje wartosc true (spelniajace predykat pred)
+							// zwraca liczbe usunietych elementow
 
+	l.reverse();			// OK LF (void )odwraca kolejnosc elementow
+
+	l.unique();				// OK LF (size_type) usuwa zduplikowane sasiednie elementy
+							// zwraca liczbe usunietych elementow
+	l.unique(pred2);		// usuwa zduplikowane sasiednie elementy i, takie ze pred(i, (i-1)) daje wartosc true (spelniajace predykat pred)
+
+	l.merge(list);			// OK LF (void) scala dwie posortowane rosnaco listy, po scaleniu list2 jest pusta, przy porownywaniu elementow kozysta
+	l.merge(rlist);			// z operatora < lub, jesli podano z funkcji porownujacej comp, 
+	l.merge(list, comp);	
+	l.merge(rlist, comp);	
+
+	l.sort();				// OK LF (void) sortuje liste, korzysta z operatora < lub, jesli podano, z funkcji porownujacej comp
+	l.sort(comp);
+	
 	return 0;
 }

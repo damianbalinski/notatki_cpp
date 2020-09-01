@@ -645,6 +645,9 @@
     <ClCompile Include="methods_sequence.cpp">
       <Filter>Pliki źródłowe\containers\methods</Filter>
     </ClCompile>
+    <ClCompile Include="methods_list_test.cpp">
+      <Filter>Pliki źródłowe\containers\methods</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="container_types.txt">
