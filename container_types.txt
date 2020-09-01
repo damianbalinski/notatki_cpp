@@ -1,0 +1,4 @@
+PODZIAL KONTENEROW
+
+odwracalne (reversible)
+vector, array, list, deque, queue, set, map

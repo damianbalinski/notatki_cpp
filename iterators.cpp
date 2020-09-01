@@ -6,45 +6,63 @@ using std::vector;
 int main()
 {
 	// ITERATOR WEJSCIOWY -> (1)
-	// tylko odczyt
-	// nie gwaratuje zachowania tej samoej kolejnosci przy wielokrotnym
-	// odwiedzaniu elementow
+	// odczyt
+	// kolejnosc NO
+	// dostep NO
 
 	// ITERATOR WYJSCIOWY -> (1)
-	// tylko zapis
-	// nie gwaratuje zachowania tej samej kolejnosci przy wielokrotnym
-	// odwiedzaniu elementow
+	// zapis
+	// kolejnosc NO
+	// dostep NO
 
 	// ITERATOR POSTEPUJACY -> (8)
 	// odczyt/zapis
-	// kolejnosc odwiedzanych elementow jest zawsze taka sama
+	// kolejnosc OK
+	// dostep NO
 
 	// ITERATOR DWUKIERUNKOWY <-> (8)
 	// odczyt/zapis
-	// kolejnosc odwiedzanych elementow jest zawsze taka sama
+	// kolejnosc OK
+	// dostep NO
 
 	// ITERATOR DOSTEPU SWOBODNEGO <-> (8)
-	// umozliwia dostep swobodny
 	// odczyt/zapis
-	// kolejnosc odwiedzanych elementow jest zawsze taka sama
+	// kolejnosc OK
+	// dostep OK
+
+	// ITERATOR CIAGLY <-> (8)
+	// odczyt/zapis
+	// kolejnosc OK
+	// dostep OK
+	// kolejne elementy sa przechowywane w sasiadujacych komorkach pamieci
+
+	// WSKAZNIK <-> (8)
+	// odczyt/zapis
+	// kolejnosc OK
+	// dostep OK
+
 
 	// SYMBOLE
+
+	// odczyt - tylko odczyt (dostep do elementu)
+	// zapis - tylko zapis (modyfikowanie wartosci elementu)
+	// odczyt/zapis - odczyt oraz zapis
+
 	// ->	- jednokierunkowy mozna zwiekszyc, nie mozna zmniejszyc jego wartosci
 	// <->	- dwukierunkowy, mozna zwiekszyc lub zmniejszyc jego wartosc
-	// (1)	- dla algorytmow jednoprzebiegowych (single-pass algorithm), nie gwarantuje mozliwosci dostepu
+	
+	// (1)	- dla algorytmow jednoprzebiegowych (single-pass algorithm), nie gwarantuje dostepu
 	//		do wartosci iteratorow z poprzednich przebiegow
-	// (8)	- dla algorytmow wieloprzebiegowych, gwarantuje mozliwosc dostepu
+	// (8)	- dla algorytmow wieloprzebiegowych, gwarantuje dostepu
 	//		do wartosci iteratorow z poprzednich przebiegow
 	
-	// TEST
-	vector<int> vec = { 1, 2, 3, 4, 5 };
-	auto iter = vec.begin();
+	// kolejnosc NO - nie gwaratuje zachowania tej samej kolejnosci przy wielokrotnym
+	//		odwiedzaniu elementu
+	// kolejnosc OK - gwarantuje zachowanie tej samej kolejnosci przy wielokrotnym
+	//		odwiedzaniu elementu
 
-	vector<int>::reference;
-	vector<int>::value_type;
-
-	int* val1 = new int(1);
-	int* val2 = new int(2);
+	// dostep NO - nie umozliwia dostepu swobodnego
+	// dostep OK - umozliwia dostep swobodny
 
 	return 0;
 }

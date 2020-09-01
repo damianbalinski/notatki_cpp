@@ -148,6 +148,18 @@
     <Filter Include="Pliki źródłowe\iterators">
       <UniqueIdentifier>{6c6e61fa-ec94-48a2-a781-83ef05b25978}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\containers\types">
+      <UniqueIdentifier>{ca09f17c-fdf2-4e63-ae58-d4b15807e204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\containers\methods">
+      <UniqueIdentifier>{901082b1-9d8f-4dc5-acb6-4f8bbfe413f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\containers\constructors">
+      <UniqueIdentifier>{f7fa8854-01ff-4c36-aeac-a5dbef3b902c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\containers\operators">
+      <UniqueIdentifier>{44b71104-8f3f-4bca-8f0c-d06c1971a6bd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -600,5 +612,43 @@
     <ClCompile Include="predefined_iterators.cpp">
       <Filter>Pliki źródłowe\iterators</Filter>
     </ClCompile>
+    <ClCompile Include="iterator_functions.cpp">
+      <Filter>Pliki źródłowe\iterators</Filter>
+    </ClCompile>
+    <ClCompile Include="input_iterator.cpp">
+      <Filter>Pliki źródłowe\iterators</Filter>
+    </ClCompile>
+    <ClCompile Include="template_iterator.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="forward_iterator.cpp">
+      <Filter>Pliki źródłowe\iterators</Filter>
+    </ClCompile>
+    <ClCompile Include="output_iterator.cpp">
+      <Filter>Pliki źródłowe\iterators</Filter>
+    </ClCompile>
+    <ClCompile Include="template_container.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="container_operators.cpp">
+      <Filter>Pliki źródłowe\containers\operators</Filter>
+    </ClCompile>
+    <ClCompile Include="container_types.cpp">
+      <Filter>Pliki źródłowe\containers\types</Filter>
+    </ClCompile>
+    <ClCompile Include="container_constructors.cpp">
+      <Filter>Pliki źródłowe\containers\constructors</Filter>
+    </ClCompile>
+    <ClCompile Include="methods_temp.cpp">
+      <Filter>Pliki źródłowe\containers\methods</Filter>
+    </ClCompile>
+    <ClCompile Include="methods_sequence.cpp">
+      <Filter>Pliki źródłowe\containers\methods</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="container_types.txt">
+      <Filter>Pliki źródłowe\containers</Filter>
+    </Text>
   </ItemGroup>
 </Project>
