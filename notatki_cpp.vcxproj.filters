@@ -160,6 +160,9 @@
     <Filter Include="Pliki źródłowe\containers\operators">
       <UniqueIdentifier>{44b71104-8f3f-4bca-8f0c-d06c1971a6bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\containers\methods\adaptors">
+      <UniqueIdentifier>{c66c1066-066b-4872-b50b-e6e519ee07f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -633,28 +636,28 @@
     <ClCompile Include="container_operators.cpp">
       <Filter>Pliki źródłowe\containers\operators</Filter>
     </ClCompile>
-    <ClCompile Include="methods_temp.cpp">
-      <Filter>Pliki źródłowe\containers\methods</Filter>
-    </ClCompile>
-    <ClCompile Include="methods_sequence.cpp">
-      <Filter>Pliki źródłowe\containers\methods</Filter>
-    </ClCompile>
-    <ClCompile Include="methods_list_test.cpp">
-      <Filter>Pliki źródłowe\containers\methods</Filter>
-    </ClCompile>
     <ClCompile Include="constructors_all.cpp">
       <Filter>Pliki źródłowe\containers\constructors</Filter>
     </ClCompile>
     <ClCompile Include="types_all.cpp">
       <Filter>Pliki źródłowe\containers\types</Filter>
     </ClCompile>
-    <ClCompile Include="methods_queue.cpp">
-      <Filter>Pliki źródłowe\containers\methods</Filter>
-    </ClCompile>
     <ClCompile Include="constructors_queue.cpp">
       <Filter>Pliki źródłowe\containers\constructors</Filter>
     </ClCompile>
+    <ClCompile Include="set.cpp">
+      <Filter>Pliki źródłowe\containers</Filter>
+    </ClCompile>
+    <ClCompile Include="methods_associative.cpp">
+      <Filter>Pliki źródłowe\containers\methods</Filter>
+    </ClCompile>
+    <ClCompile Include="methods_queue.cpp">
+      <Filter>Pliki źródłowe\containers\methods\adaptors</Filter>
+    </ClCompile>
     <ClCompile Include="methods_stack.cpp">
+      <Filter>Pliki źródłowe\containers\methods\adaptors</Filter>
+    </ClCompile>
+    <ClCompile Include="methods_sequential.cpp">
       <Filter>Pliki źródłowe\containers\methods</Filter>
     </ClCompile>
   </ItemGroup>

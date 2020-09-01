@@ -27,14 +27,13 @@ bool pred2(int val1, int val2)
 int main()
 {
 	/* 
-	 * OZNACZENIAA
+	 * OZNACZENIA
 	 * V vector
 	 * A array
 	 * D deque
 	 * L list
 	 * F forward list
 	 * - all
-	 * ^ definition upper
 	 */
 
 	// kontenery
@@ -92,10 +91,10 @@ int main()
 	v.back();			// OK VADL	(reference) referencja do ostatniego elementu
 	v.data();			// OK VA	(T*) niemodyfikowalna tablica elementow (wskaznik na pierwszy element)
 
-	// SWAP/FILL
+	// ROZNE
 	v.swap(containerv);		// OK - (void) zamienia miejscami kontenery tego samego typu
 	a.fill(val);			// OK A (void) wypelnia kontener podanym elementem			
-	v.get_allocator();		// OK VDLF (allocator) zwraca kopie alokatora
+	v.get_allocator();		// OK VDLF (allocator_type) zwraca kopie alokatora
 
 	// POP/PUSH
 	v.push_back(val);		// OK VDL (void) wstawia element na koniec
@@ -133,7 +132,6 @@ int main()
 
 	f.emplace_after(iterf, args);	// OK F (iterator) wstawia element za pozycja iter, inicjalizuje go pakietem argumentow
 							// zwraca referencje do wstawionego elemetnu
-
 
 	v.erase(iterv);			// OK VDL (iterator) usuwa element iter lub elementy z zakresu [iter1, iter2)
 	v.erase(iterv1, iterv2);	// zwraca iterator za ostatni usuniety element

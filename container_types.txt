@@ -3,5 +3,10 @@ PODZIAL KONTENEROW
 odwracalny (reversible)
 vector, array, list, deque, queue, set, map
 
-sekwencyjny ()
+sekwencyjne (sequential) - uporzadkowane elementy
+
+asocjacyjny uporzadkowany (associative) - laczy wartosc z kluczem, uzywa klucza do wyszukiwania wartosci
 vector,
+
+asocjacyjny nieuporzadkowany (unordered associative)
+unordered_set, unordered_multiset, unordered_map, unordered_multimap

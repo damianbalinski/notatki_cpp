@@ -1,7 +1,8 @@
 // konstruktory zdefiniowane dla kontenerow
 #include <iostream>
 #include <vector>
-
+#include <map>
+#include <set>
 using std::cout;
 using std::endl;
 
@@ -32,5 +33,10 @@ int main()
 	std::vector<int> w3(list);			// z listy inicjalizujacej
 	std::vector<int> (list);			// z listy inicjalizujacej, anonimowy
 
+	// asocjacyjne
+	std::set<int>;
+	std::set<int, std::less<int>> s1;	// typ wartosci, funkcja/obiekt porownujacy elementy
+	std::multimap<int, double> m1;		// <typ klucza, typ wartosci>
+	std::multimap<int, double, std::less<int> > m2;		// <typ klucza, typ wartosci, funkcja/obiekt porownujacy elementy>
 	return 0;
 }
