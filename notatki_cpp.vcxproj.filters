@@ -163,6 +163,15 @@
     <Filter Include="Pliki źródłowe\containers\methods\adaptors">
       <UniqueIdentifier>{c66c1066-066b-4872-b50b-e6e519ee07f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\containers\containers_test">
+      <UniqueIdentifier>{7c0a8ad7-1b73-4039-bbbc-1fb1d13652e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\containers_functions">
+      <UniqueIdentifier>{b9b9b4c1-f276-4e2f-82b4-2e235c4d6397}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\containers\templates">
+      <UniqueIdentifier>{4498e2ff-231c-46cc-926f-e06e3ffcb5a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -597,18 +606,6 @@
     <ClCompile Include="weak_ptr.cpp">
       <Filter>Pliki źródłowe\smart_pointers</Filter>
     </ClCompile>
-    <ClCompile Include="vector.cpp">
-      <Filter>Pliki źródłowe\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="array.cpp">
-      <Filter>Pliki źródłowe\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="array_table.cpp">
-      <Filter>Pliki źródłowe\containers</Filter>
-    </ClCompile>
-    <ClCompile Include="containers_functions.cpp">
-      <Filter>Pliki źródłowe\containers</Filter>
-    </ClCompile>
     <ClCompile Include="iterators.cpp">
       <Filter>Pliki źródłowe\iterators</Filter>
     </ClCompile>
@@ -645,9 +642,6 @@
     <ClCompile Include="constructors_queue.cpp">
       <Filter>Pliki źródłowe\containers\constructors</Filter>
     </ClCompile>
-    <ClCompile Include="set.cpp">
-      <Filter>Pliki źródłowe\containers</Filter>
-    </ClCompile>
     <ClCompile Include="methods_associative.cpp">
       <Filter>Pliki źródłowe\containers\methods</Filter>
     </ClCompile>
@@ -659,6 +653,30 @@
     </ClCompile>
     <ClCompile Include="methods_sequential.cpp">
       <Filter>Pliki źródłowe\containers\methods</Filter>
+    </ClCompile>
+    <ClCompile Include="containers_functions.cpp">
+      <Filter>Pliki źródłowe\containers_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="vector.cpp">
+      <Filter>Pliki źródłowe\containers\containers_test</Filter>
+    </ClCompile>
+    <ClCompile Include="set.cpp">
+      <Filter>Pliki źródłowe\containers\containers_test</Filter>
+    </ClCompile>
+    <ClCompile Include="array.cpp">
+      <Filter>Pliki źródłowe\containers\containers_test</Filter>
+    </ClCompile>
+    <ClCompile Include="unordered_set.cpp">
+      <Filter>Pliki źródłowe\containers\containers_test</Filter>
+    </ClCompile>
+    <ClCompile Include="template_parameters_all.cpp">
+      <Filter>Pliki źródłowe\containers\templates</Filter>
+    </ClCompile>
+    <ClCompile Include="stack.cpp">
+      <Filter>Pliki źródłowe\containers\containers_test</Filter>
+    </ClCompile>
+    <ClCompile Include="span.cpp">
+      <Filter>Pliki źródłowe\containers\containers_test</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

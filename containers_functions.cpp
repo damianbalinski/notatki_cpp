@@ -4,6 +4,10 @@
 #include <algorithm>
 #define SIZE 5
 
+// TODO set_union
+// TODO set_intersection
+// TODO set_differebce
+
 using std::vector;
 using std::array;
 using std::cout;

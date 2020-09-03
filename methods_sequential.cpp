@@ -32,7 +32,7 @@ int main()
 	 * A array
 	 * D deque
 	 * L list
-	 * F forward list
+	 * F forward_list
 	 * - all
 	 */
 
@@ -141,7 +141,7 @@ int main()
 
 	v.clear();				// OK VDLF (void) usuwa wszystkie elementy
 
-	// MODYFIKACJA LISTY
+	// LISTY
 	l.splice(iterl, list);					// OK L (void) przenosi wszystkie elementy z listy, wstawia ja przed iter
 	l.splice(iterl, rlist);					// kopiowane sa wskazniki do elementow, a nie elementy, lista zrodlowa staje sie pusta
 	l.splice(iterl, list, iterl1);			// przenosi element iter1 z listy, wstawia go przed iter;
