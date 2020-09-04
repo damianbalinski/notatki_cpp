@@ -166,11 +166,14 @@
     <Filter Include="Pliki źródłowe\containers\containers_test">
       <UniqueIdentifier>{7c0a8ad7-1b73-4039-bbbc-1fb1d13652e0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\containers_functions">
-      <UniqueIdentifier>{b9b9b4c1-f276-4e2f-82b4-2e235c4d6397}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\containers\templates">
       <UniqueIdentifier>{4498e2ff-231c-46cc-926f-e06e3ffcb5a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\functors">
+      <UniqueIdentifier>{3e3d7676-d39a-4572-9da3-90cb7f0e6748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\algorithms">
+      <UniqueIdentifier>{b9b9b4c1-f276-4e2f-82b4-2e235c4d6397}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -654,9 +657,6 @@
     <ClCompile Include="methods_sequential.cpp">
       <Filter>Pliki źródłowe\containers\methods</Filter>
     </ClCompile>
-    <ClCompile Include="containers_functions.cpp">
-      <Filter>Pliki źródłowe\containers_functions</Filter>
-    </ClCompile>
     <ClCompile Include="vector.cpp">
       <Filter>Pliki źródłowe\containers\containers_test</Filter>
     </ClCompile>
@@ -677,6 +677,18 @@
     </ClCompile>
     <ClCompile Include="span.cpp">
       <Filter>Pliki źródłowe\containers\containers_test</Filter>
+    </ClCompile>
+    <ClCompile Include="predefined_functors.cpp">
+      <Filter>Pliki źródłowe\functors</Filter>
+    </ClCompile>
+    <ClCompile Include="binders.cpp">
+      <Filter>Pliki źródłowe\functors</Filter>
+    </ClCompile>
+    <ClCompile Include="sequential_nonmodif.cpp">
+      <Filter>Pliki źródłowe\algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithms_temp.cpp">
+      <Filter>Pliki źródłowe\algorithms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

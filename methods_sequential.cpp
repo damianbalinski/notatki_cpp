@@ -9,17 +9,12 @@
 
 //#define list {1, 2, 3, 4, 5}
 
-bool comp(int v1, int v2)
-{
-	return v1 < v2;
-}
-
-bool pred1(int val)
+bool pred(int val)
 {
 	return val == 1;
 }
 
-bool pred2(int val1, int val2)
+bool predb(int val1, int val2)
 {
 	return val1 == val2;
 }
@@ -156,24 +151,24 @@ int main()
 	f.splice_after(iterf, forw_list, iterf1, iterf2);// przenosi elementy z zakresu (iter1, iter2) z listy, wstawia je za iter
 	f.splice_after(iterf, rforw_list, iterf1, iterf2);
 
+	l.reverse();			// OK LF (void )odwraca kolejnosc elementow
+
 	l.remove(val);			// OK LF (size_type) usuwa wszystkie wystapienia val
 							// zwraca liczbe usunietych elementow
-	l.remove_if(pred1);		// OK LF (size_type) usuwa wszystkie elementy i, takie ze pred(i) daje wartosc true (spelniajace predykat pred)
+	l.remove_if(pred);		// OK LF (size_type) usuwa wszystkie elementy i, spelniajace predykat unarny pred
 							// zwraca liczbe usunietych elementow
-
-	l.reverse();			// OK LF (void )odwraca kolejnosc elementow
 
 	l.unique();				// OK LF (size_type) usuwa zduplikowane sasiednie elementy
 							// zwraca liczbe usunietych elementow
-	l.unique(pred2);		// usuwa zduplikowane sasiednie elementy i, takie ze pred(i, (i-1)) daje wartosc true (spelniajace predykat pred)
+	l.unique(predb);		// usuwa zduplikowane sasiednie elementy i, takie ze para(i, (i-1)) spelnia predykat binarny predb
 
 	l.merge(list);			// OK LF (void) scala dwie posortowane rosnaco listy, po scaleniu list2 jest pusta, przy porownywaniu elementow kozysta
-	l.merge(rlist);			// z operatora < lub, jesli podano z funkcji porownujacej comp, 
-	l.merge(list, comp);	
-	l.merge(rlist, comp);	
+	l.merge(rlist);			// z operatora < lub, jesli podano z predykatu binarnego comp, 
+	l.merge(list, predb);	
+	l.merge(rlist, predb);
 
-	l.sort();				// OK LF (void) sortuje liste, korzysta z operatora < lub, jesli podano, z funkcji porownujacej comp
-	l.sort(comp);
+	l.sort();				// OK LF (void) sortuje liste, korzysta z operatora < lub, jesli podano, z predykatu binarnego comp
+	l.sort(predb);
 	
 	return 0;
 }
