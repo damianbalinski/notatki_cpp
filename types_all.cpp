@@ -35,7 +35,6 @@ int main()
 	 * - all
 	 */
 
-
 	// adaptatory
 	std::stack<int>::container_type;	// [St Q P] kontener
 
@@ -44,21 +43,21 @@ int main()
 
 	// prawie wszystkie [s S us uS m M um uM VADLF]
 	std::vector<int>::value_type;		// [St Q P Sp] element
-	std::vector<int>::size_type;		// [St Q P Sp] rozmiar danych
+	std::vector<int>::size_type;		// [St Q P Sp] rozmiar
 	std::vector<int>::difference_type;	// [Sp] odleglosc pomiedzy iteratorami
 	std::vector<int>::reference;		// [St Q P Sp] referencja do elementu
 	std::vector<int>::const_reference;	// [St Q P Sp] referencja do elementu niemodyfikowalnego
 	std::vector<int>::pointer;			// [Sp] wskaznik do elemetnu
 	std::vector<int>::const_pointer;	// [Sp] wskaznik do elementu niemodyfikowalnego
-	std::vector<int>::iterator;			// [Sp] iterator postepujacy
-	std::vector<int>::const_iterator;	// [Sp] niemodyfikujacy iterator postepujacy
-
-	// prawie wszystkie porocz array [s S us uS m M um uM VDLF]
-	std::vector<int>::allocator_type;	// [VDLF] alokator
+	std::vector<int>::iterator;			// [Sp] iterator
+	std::vector<int>::const_iterator;	// [Sp] niemodyfikujacy iterator
 
 	// odwracalne
 	std::vector<int>::reverse_iterator;			// [s S m M VADL Sp] odwrotny iterator postepujacy
 	std::vector<int>::const_reverse_iterator;	// [s S m M VADL Sp] niemodyfikujacy odwrotny iterator postepujacy
+
+	// prawie wszystkie porocz array [s S us uS m M um uM VDLF]
+	std::vector<int>::allocator_type;	// [VDLF] alokator
 
 	// asocjacyjne uporzadkowane
 	std::set<int>::key_type;				// [s S us uS m M um uM] klucz

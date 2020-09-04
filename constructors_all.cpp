@@ -8,6 +8,7 @@
 #include <list>
 #include <stack>
 #include <queue>
+#include <span>
 
 using std::cout;
 using std::endl;
@@ -61,6 +62,7 @@ int main()
 	const std::vector<int> cont2;
 	const std::vector<int> rcont2;
 	std::stack<int> stack;
+	std::span<int> span;
 
 	// wszystkie (alloc bez array)
 	std::vector<int> v1;												// [St Q P sSmM us uS um uM AVDLF] domyslny, pusty kontener
