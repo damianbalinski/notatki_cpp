@@ -19,6 +19,8 @@ int main()
 	s.push(rval);
 	s.pop();		// OK (void) zdejmuje element z wierzchu stosu
 
+	s.swap(stack);	// OK (void) zamienia miejscami kontenery tego samego typu
+
 	s.emplace();	// OK (reference) dodaje element na szczyt stosu, inicjalizuje go pakietem argumentow
 
 	return 0;
