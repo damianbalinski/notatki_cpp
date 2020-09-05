@@ -690,6 +690,9 @@
     <ClCompile Include="algorithms_temp.cpp">
       <Filter>Pliki źródłowe\algorithms</Filter>
     </ClCompile>
+    <ClCompile Include="algorithms_permutation.cpp">
+      <Filter>Pliki źródłowe\algorithms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="container_types.txt">
