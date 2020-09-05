@@ -5,14 +5,13 @@
 #include <functional>
 
 /*
- * ALGORYTMY SEKWENCYJNE NIEMODYFIKUJACE
+ * ALGORYTMY SEKWENCYJNE NIEMODYFIKUJACE (NIEMUTUJACE)
  */
 
 using namespace std;
 
 bool pred(int a) { return a <= 3; }
-bool predb(int a, int b) { return true; };
-
+bool predb(int a, int b) { return true; }
 void func(int& a){ /*a *= 10;*/}
 
 void print(vector<int> vec)
@@ -211,9 +210,10 @@ int main()
 	
 	/*	
 	 * SLOWNIK
-	 * first, last - iteratory danych wejsciowych
-	 * first2, last2 - iteratory danych wejsciowych
-	 * rfirst, rlast - iteratory danych wyjsciowych
+	 * first, last - iteratory zakresu zrodlowego
+	 * first2, last2 - iteratory zakresu docelowego
+	 * rfirst, rlast - iteratory zakresu docelowego
+	 * first3, last3 - iteratory zakresu docelowego
 	 * pred - predykat
 	 * predb - predykat binarny
 	 * func - funktor jednoargumentowy
@@ -233,8 +233,11 @@ int main()
 	 * B - dwukierunkowy
 	 * R - dostepu swobodnego
 	 * C - ciagly
+	 *
 	 * 1 - predykat/funktor unarny
 	 * 2 - predykat/funktor binarny
+	 *
+	 * NOT-COPY - zakres docelowy nie moze sie pokrywac z zakresem zrodlowym
 	 */
 
 	// TEST

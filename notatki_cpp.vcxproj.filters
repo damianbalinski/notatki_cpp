@@ -690,7 +690,16 @@
     <ClCompile Include="algorithms_temp.cpp">
       <Filter>Pliki źródłowe\algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms_permutation.cpp">
+    <ClCompile Include="permutation.cpp">
+      <Filter>Pliki źródłowe\algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="sequentional_modif.cpp">
+      <Filter>Pliki źródłowe\algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="idioms.cpp">
+      <Filter>Pliki źródłowe\algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="partition.cpp">
       <Filter>Pliki źródłowe\algorithms</Filter>
     </ClCompile>
   </ItemGroup>
