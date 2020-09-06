@@ -24,12 +24,6 @@ void print(vector<int> vec)
 	cout << endl;
 }
 
-void print(list<int> lis)
-{
-	for (auto i : lis) cout << i << ", ";
-	cout << endl;
-}
-
 int main()
 {
 	/*
@@ -312,45 +306,7 @@ int main()
 	//random_shuffle(first, last);					// (R, R)	void
 	//random_shuffle(first, last, func_rand);		// (R, R)	void
 
-
-	/*
-	 * SLOWNIK
-	 * first, middle, last - iteratory zakresu zrodlowego
-	 * first2, last2 - iteratory zakresu docelowego
-	 * rfirst, rlast - iteratory zakresu docelowego
-	 * pred - predykat
-	 * predb - predykat binarny
-	 * func - funktor jednoargumentowy
-	 * funcb - funktor dwuargumentowy
-	 * gener - generator
-	 * gener_rand - rownomierny generator losowy
-	 * policy -
-	 * search -
-	 * n - ilosc/dlugosc
-	 */
-
-	 /*
-	  * SYMBOLE / ITERATORY
-	  * M - funkcja dzialajaca w miejscu
-	  * K - funkcja kopiujaca
-	  * I - wejsciowy
-	  * O - wyjsciowy
-	  * F - postepujacy
-	  * B - dwukierunkowy
-	  * R - dostepu swobodnego
-	  * C - ciagly
-	  *
-	  * 1 - predykat/funktor unarny
-	  * 2 - predykat/funktor binarny
-	  *
-	  * () - zakres zrodlowy, [] - zakres docelowy
-	  * COPY	   ([  ]) - zakres docelowy moze sie pokrywac z zakresem zrodlowym
-	  * COPY-NOT   ()  [] - zakres docelowy nie moze sie pokrywac z zakresem zrodlowym
-	  * COPY_RIGHT [ (] ) - poczotek zakresu docelowego musi sie znajdowac poza zakresem zrodlowym
-	  * COPY-RIGHT ( [) ] - koniec zakresu docelowego musi sie znajdowac poza zakresem zrodlowym
-	  */
-
-	  // TEST
+	// TEST
 	vector<int> v1 = { 1, 2, 3, 4, 5, 6};
 	vector<int> v2 = { 7, 7, 7, 7, 8, 9};
 	

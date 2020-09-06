@@ -173,7 +173,7 @@ int main()
 
 	s.lower_bound(key);		// [s S m M] (iterator) iterator na pierwszy element, wiekszy/rowny od podanego klucza
 	s.upper_bound(key);		// [s S m M] (iterator) iterator na pierwszy element, wiekszy od podanego klucza
-	s.equal_range(key);		// [s S m M us uS um uM] (pair<iterator,iterator>) zwraca iteratory na zakres elementow w postaci pary (lower_boud(), upper_dound())  
+	s.equal_range(key);		// [s S m M us uS um uM] (pair<iterator,iterator>) zwraca pair<lower_bound(), upper_bound()> 
 
 	// OBSERWATORZY
 	s.key_comp();			// [s S m M] (key_compare) obiekt funkcyjny porownujacy klucze

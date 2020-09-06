@@ -87,7 +87,7 @@ int main()
 	for_each(policy, first, last, func);	// (-, F, F, 1)	Functor
 	
 
-	// for_each_n()	NOT_COPY
+	// for_each_n()	COPY-NOT
 	// stosuje funktor func dla kazdego elemetnu
 	// z zakresu [first, first+n)
 	for_each_n(first, n, func);				// (I, -, 1)	iterator
@@ -208,38 +208,6 @@ int main()
 	search_n(first, last, n, val, predb);			// (F, F, -, -, 2)	iterator
 	search_n(policy, first, last, n, val, predb);	// (-, F, F, -, -, 2)	iterator
 	
-	/*	
-	 * SLOWNIK
-	 * first, last - iteratory zakresu zrodlowego
-	 * first2, last2 - iteratory zakresu docelowego
-	 * rfirst, rlast - iteratory zakresu docelowego
-	 * first3, last3 - iteratory zakresu docelowego
-	 * pred - predykat
-	 * predb - predykat binarny
-	 * func - funktor jednoargumentowy
-	 * funcb - funktor dwuargumentowy
-	 * policy - 
-	 * search - 
-	 * n - ilosc/dlugosc
-	 */
-
-	/*
-	 * SYMBOLE / ITERATORY
-	 * M - funkcja dzialajaca w miejscu
-	 * K - funkcja kopiujaca
-	 * I - wejsciowy
-	 * O - wyjsciowy
-	 * F - postepujacy
-	 * B - dwukierunkowy
-	 * R - dostepu swobodnego
-	 * C - ciagly
-	 *
-	 * 1 - predykat/funktor unarny
-	 * 2 - predykat/funktor binarny
-	 *
-	 * NOT-COPY - zakres docelowy nie moze sie pokrywac z zakresem zrodlowym
-	 */
-
 	// TEST
 	vector<int> v = { 0, 1, 4, 2, 1, 1, 3};
 	vector<int> v2 = { 2, 3};

@@ -175,6 +175,12 @@
     <Filter Include="Pliki źródłowe\algorithms">
       <UniqueIdentifier>{b9b9b4c1-f276-4e2f-82b4-2e235c4d6397}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\algorithms\other">
+      <UniqueIdentifier>{44bfc75f-d467-45d9-b62d-29953043a1e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\algorithms\algorithm_idioms">
+      <UniqueIdentifier>{4361cdbd-7102-4a59-9611-4f9d5615f2f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -690,17 +696,29 @@
     <ClCompile Include="algorithms_temp.cpp">
       <Filter>Pliki źródłowe\algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="permutation.cpp">
-      <Filter>Pliki źródłowe\algorithms</Filter>
-    </ClCompile>
     <ClCompile Include="sequentional_modif.cpp">
       <Filter>Pliki źródłowe\algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="idioms.cpp">
-      <Filter>Pliki źródłowe\algorithms</Filter>
+    <ClCompile Include="binary_search.cpp">
+      <Filter>Pliki źródłowe\algorithms\other</Filter>
     </ClCompile>
     <ClCompile Include="partition.cpp">
+      <Filter>Pliki źródłowe\algorithms\other</Filter>
+    </ClCompile>
+    <ClCompile Include="permutation.cpp">
+      <Filter>Pliki źródłowe\algorithms\other</Filter>
+    </ClCompile>
+    <ClCompile Include="sorting.cpp">
+      <Filter>Pliki źródłowe\algorithms\other</Filter>
+    </ClCompile>
+    <ClCompile Include="idioms.cpp">
+      <Filter>Pliki źródłowe\algorithms\algorithm_idioms</Filter>
+    </ClCompile>
+    <ClCompile Include="algorithm_signs.txt">
       <Filter>Pliki źródłowe\algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="set_operations.cpp">
+      <Filter>Pliki źródłowe\algorithms\other</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

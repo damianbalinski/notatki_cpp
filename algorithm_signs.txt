@@ -1,0 +1,47 @@
+/*
+ * SLOWNIK
+ * first, middle, last - iteratory zakresu zrodlowego
+ * first2, last2 - iteratory zakresu docelowego
+ * first3, last3 - iteratory zakresu docelowego
+ * rfirst, rlast - iteratory zakresu docelowego rwartosciowe
+ * pred - predykat unarny
+ * predb - predykat binarny
+ * func - funktor unarny
+ * funcb - funktor binarny
+ * gener - generator
+ * gener_rand - rownomierny generator losowy
+ * policy -
+ * search -
+ * n - ilosc/dlugosc
+ */
+
+/*
+ * SYMBOLE / ITERATORY
+ * M - funkcja dzialajaca w miejscu
+ * K - funkcja kopiujaca
+ * 
+ * I - wejsciowy
+ * O - wyjsciowy
+ * F - postepujacy
+ * B - dwukierunkowy
+ * R - dostepu swobodnego
+ * C - ciagly
+ *
+ * 1 - predykat/funktor unarny
+ * 2 - predykat/funktor binarny
+ *
+ * () - zakres zrodlowy, [] - zakres docelowy
+ * COPY		  ([  ]) - zakres docelowy moze sie pokrywac z zakresem zrodlowym
+ * COPY-NOT   ()  [] - zakres docelowy nie moze sie pokrywac z zakresem zrodlowym
+ * COPY_RIGHT [ (] ) - poczotek zakresu docelowego musi sie znajdowac poza zakresem zrodlowym
+ * COPY-RIGHT ( [) ] - koniec zakresu docelowego musi sie znajdowac poza zakresem zrodlowym
+ *
+ * SORT   - zakres zrodlowy musi byc posortowany rosnaco
+ * STABLE - kolejnosc rownowaznych elementow pozostaje zachowana (najpierw pierwszy zakres, potem drugi)
+ *
+ * <	 - do porownywania elementow uzywa operatora <
+ * predb - do porownywania elementow uzywa predykatu binarnego predb
+ */
+
+1 - SORTOWANIE
+2 - WYSZUKIWANIE BINARNE

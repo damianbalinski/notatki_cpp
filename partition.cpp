@@ -3,6 +3,9 @@
 #include <vector>
 #include <execution>
 
+/*
+ * PARTYCJE
+ */
 using namespace std;
 
 bool pred(int a) { return a < 3; }
@@ -64,7 +67,7 @@ int main()
 	// stable_partition()
 	// umieszcza wszystkie elementy z [first, last) spelniajaca predykat pred
 	// przed wszystkimi elementami nie spelniajacymi tego predykatu,
-	// zachowuje porzodek obydwu grup elementow
+	// zachowuje porzadek obydwu grup elementow
 	// zwraca iterator za ostatni element spelniajacy predykat
 	stable_partition(first, last, pred);			// (B, B, 1)	iterator
 	stable_partition(policy, first, last, pred);	// (-, B, B, 1)	iterator
@@ -83,44 +86,6 @@ int main()
 	// zwraca iterator za ostatni element spelniajacy predykat pred
 	// (za ostatni element pierwszej partycji)
 	partition_point(first, last, pred);				// (F, F, 1)	iterator
-
-	/*
-	 * SLOWNIK
-	 * first, middle, last - iteratory zakresu zrodlowego
-	 * first2, last2 - iteratory zakresu docelowego
-	 * first3, last3 - iteratory zakresu docelowego
-	 * rfirst, rlast - iteratory zakresu docelowego
-	 * pred - predykat
-	 * predb - predykat binarny
-	 * func - funktor jednoargumentowy
-	 * funcb - funktor dwuargumentowy
-	 * gener - generator
-	 * gener_rand - rownomierny generator losowy
-	 * policy -
-	 * search -
-	 * n - ilosc/dlugosc
-	 */
-
-	/*
-	 * SYMBOLE / ITERATORY
-	 * M - funkcja dzialajaca w miejscu
-	 * K - funkcja kopiujaca
-	 * I - wejsciowy
-	 * O - wyjsciowy
-	 * F - postepujacy
-	 * B - dwukierunkowy
-	 * R - dostepu swobodnego
-	 * C - ciagly
-	 *
-	 * 1 - predykat/funktor unarny
-	 * 2 - predykat/funktor binarny
-	 *
-	 * () - zakres zrodlowy, [] - zakres docelowy
-	 * COPY	   ([  ]) - zakres docelowy moze sie pokrywac z zakresem zrodlowym
-	 * COPY-NOT   ()  [] - zakres docelowy nie moze sie pokrywac z zakresem zrodlowym
-	 * COPY_RIGHT [ (] ) - poczotek zakresu docelowego musi sie znajdowac poza zakresem zrodlowym
-	 * COPY-RIGHT ( [) ] - koniec zakresu docelowego musi sie znajdowac poza zakresem zrodlowym
-	 */
 
 	// TEST
 	vector<int> v1 = { 1, 4, 1, 5, 1, 6 };
