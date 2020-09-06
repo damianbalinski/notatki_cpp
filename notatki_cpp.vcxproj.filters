@@ -720,6 +720,9 @@
     <ClCompile Include="set_operations.cpp">
       <Filter>Pliki źródłowe\algorithms\other</Filter>
     </ClCompile>
+    <ClCompile Include="heap_operations.cpp">
+      <Filter>Pliki źródłowe\algorithms\other</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="container_types.txt">

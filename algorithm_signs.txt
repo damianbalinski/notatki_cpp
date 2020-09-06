@@ -36,7 +36,8 @@
  * COPY_RIGHT [ (] ) - poczotek zakresu docelowego musi sie znajdowac poza zakresem zrodlowym
  * COPY-RIGHT ( [) ] - koniec zakresu docelowego musi sie znajdowac poza zakresem zrodlowym
  *
- * SORT   - zakres zrodlowy musi byc posortowany rosnaco
+ * SORT   - zakres zrodlowy jest posortowany rosnaco
+ * HEAP	  - zakres zrodlowy jest kopcem maksymalnym
  * STABLE - kolejnosc rownowaznych elementow pozostaje zachowana (najpierw pierwszy zakres, potem drugi)
  *
  * <	 - do porownywania elementow uzywa operatora <
