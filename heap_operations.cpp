@@ -11,12 +11,7 @@
 
 using namespace std;
 
-bool pred(int a) { return true; }
-bool predb(int a, int b) { return a < b; }
-int func(int& a) { return a * 10; }
-int funcb(int& a, int& b) { return a + b; }
-int gener_rand() { return rand() % 6; }
-int gener() { return 9; }
+bool compb(int a, int b) { return a < b; }
 
 void print(vector<int> vec)
 {
@@ -57,51 +52,51 @@ int main()
 	// make_heap()
 	// przeksztalca [first, last) w kopiec maksymalny (rodzic wiekszy od dziecka)
 	make_heap(first, last);						// (R, R)		void		<
-	make_heap(first, last, predb);				// (R, R)		void		predb (2)
+	make_heap(first, last, compb);				// (R, R)		void		compb
 
 	// is_heap()
 	// sprawdza czy [first, last) jest kopcem maksymalnym
 	is_heap(first, last);						// (R, R)		bool		<
 	is_heap(policy, first, last);				// (-, R, R)	bool		<
-	is_heap(first, last, predb);				// (R, R)		bool		predb (2)
-	is_heap(policy, first, last, predb);		// (-, R, R)	bool		predb (2)
+	is_heap(first, last, compb);				// (R, R)		bool		compb
+	is_heap(policy, first, last, compb);		// (-, R, R)	bool		compb
 
 	// is_heap_until()
 	// zwraca iterator iter, taki ze [first, iter) jest najwiekszym
 	// mozliwym kopcem maksymalnym
 	is_heap_until(first, last);					// (R, R)		iterator	<
 	is_heap_until(policy, first, last);			// (-, R, R)	iterator	<
-	is_heap_until(first, last, predb);			// (R, R)		iterator	predb (2)
-	is_heap_until(policy, first, last, predb);	// (-, R, R)	iterator	predb (2)
+	is_heap_until(first, last, compb);			// (R, R)		iterator	compb
+	is_heap_until(policy, first, last, compb);	// (-, R, R)	iterator	compb
 
 	// push_heap() HEAP
 	// dodaje element do kopca, 
 	// umieszcza w kopcu [first, last-1) element z pozycji last-1
 	push_heap(first, last);						// (R, R)		void		<
-	push_heap(first, last, predb);				// (R, R)		void		predb (2)
+	push_heap(first, last, compb);				// (R, R)		void		compb
 
 	// pop_heap() HEAP
 	// zdejmuje najwiekszy element z kopca
 	// zamienia miejscami elementy z pozycji first oraz last-1,
 	// przeksztalca [first, last-1) w kopiec maksymalny
 	pop_heap(first, last);				// (R, R)	void	<
-	pop_heap(first, last, predb);		// (R, R)	void	predb (2)
+	pop_heap(first, last, compb);		// (R, R)	void	compb
 
 	// sort_heap() HEAP
 	// zamienia kopiec [first, last) na posortowany rosnaco ciag,
 	// posortowany ciag przestaje byc kopcem
 	//sort_heap(first, last);				// (R, R)	void	<
-	//sort_heap(first, last, predb);		// (R, R)	void	predb (2)
+	//sort_heap(first, last, compb);		// (R, R)	void	compb
 
 	// TEST
-	vector<int> v1 = { 1, 2, 3, -1, -2, -3, 30, 31, 7, 8, 9, 11 };
-	print(v1);
-	cout << is_heap(v1.begin(), v1.end()) << endl;
-	make_heap(v1.begin(), v1.end());
-	cout << is_heap(v1.begin(), v1.end()) << endl;
-	sort_heap(v1.begin(), v1.end());
-	cout << is_heap(v1.begin(), v1.end()) << endl;
-	print(v1);
+	//vector<int> v1 = { 1, 2, 3, -1, -2, -3, 30, 31, 7, 8, 9, 11 };
+	//print(v1);
+	//cout << is_heap(v1.begin(), v1.end()) << endl;
+	//make_heap(v1.begin(), v1.end());
+	//cout << is_heap(v1.begin(), v1.end()) << endl;
+	//sort_heap(v1.begin(), v1.end());
+	//cout << is_heap(v1.begin(), v1.end()) << endl;
+	//print(v1);
 
 	return 0;
 }

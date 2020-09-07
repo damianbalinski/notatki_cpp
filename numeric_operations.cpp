@@ -139,7 +139,7 @@ int main()
 	reduce(first, last, val, sumb);				// (I, I)			T	sumb
 	reduce(policy, first, last, val, sumb);		// (-, F, F)		T	sumb
 	
-	// transform_reduce()
+	// TODO transform_reduce()
 
 	// TEST
 	vector<int> v1 = { 1, 2, 3, 4, 5, 6 };

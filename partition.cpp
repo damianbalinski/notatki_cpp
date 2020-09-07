@@ -9,11 +9,6 @@
 using namespace std;
 
 bool pred(int a) { return a < 3; }
-bool predb(int a, int b) { return true; }
-int func(int& a) { return a * 10; }
-int funcb(int& a, int& b) { return a + b; }
-int gener_rand() { return rand() % 6; }
-int gener() { return 9; }
 
 void print(vector<int> vec)
 {
@@ -50,8 +45,8 @@ int main()
 	auto policy = std::execution::par;
 
 	// is_partitioned()
-	// zwraca true jesli zakres [first, last) jest pusty
-	// lub jest podzielony na bazie predykatu pred,
+	// sprawdza czy zakres [first, last) jest podzielony na bazie 
+	// predykatu pred lub jest zakresem pustym
 	// wszystkie elementy spelniajace predykat znajduja sie
 	// przed wszystkimi elementami nie spelniajacymi predykatu
 	is_partitioned(first, last, pred);			// (I, I, 1)	bool
@@ -61,14 +56,16 @@ int main()
 	// umieszcza wszystkie elementy z [first, last) spelniajace predykat pred
 	// przed wszystkimi elementami nie spelniajacymi tego predykatu,
 	// zwraca iterator za ostatni element spelniajacy predykat
+	// (za ostatni element pierwszej partycji)
 	partition(first, last, pred);				// (F, F, 1)	iterator
 	partition(policy, first, last, pred);		// (-, F, F, 1)	iterator
 	
-	// stable_partition()
+	// stable_partition() STABLE
 	// umieszcza wszystkie elementy z [first, last) spelniajaca predykat pred
 	// przed wszystkimi elementami nie spelniajacymi tego predykatu,
 	// zachowuje porzadek obydwu grup elementow
 	// zwraca iterator za ostatni element spelniajacy predykat
+	// (za ostatni element pierwszej partycji)
 	stable_partition(first, last, pred);			// (B, B, 1)	iterator
 	stable_partition(policy, first, last, pred);	// (-, B, B, 1)	iterator
 
@@ -81,20 +78,19 @@ int main()
 	partition_copy(first, last, first2, first2, pred);			// (I, I, O, O, 1)		pair<iterator, iterator>
 	partition_copy(policy, first, last, first2, first3, pred);	// (-, F, F, F, F, 1)	pair<iterator, iterator>
 
-	// partition_point()
-	// jesli [first, last) jest partycjonowany na bazie predykatu pred,
+	// partition_point() PARTITION
 	// zwraca iterator za ostatni element spelniajacy predykat pred
 	// (za ostatni element pierwszej partycji)
 	partition_point(first, last, pred);				// (F, F, 1)	iterator
 
 	// TEST
-	vector<int> v1 = { 1, 4, 1, 5, 1, 6 };
-	vector<int> v2 = { 7, 7, 7, 7 };
-	print(v1);
-	auto it = partition_point(v1.begin(), v1.end(), pred);
-	print(v1);
+	//vector<int> v1 = { 1, 4, 1, 5, 1, 6 };
+	//vector<int> v2 = { 7, 7, 7, 7 };
+	//print(v1);
+	//auto it = partition_point(v1.begin(), v1.end(), pred);
+	//print(v1);
 
-	cout << *it << endl;
+	//cout << *it << endl;
 
 	return 0;
 }

@@ -11,12 +11,7 @@
 
 using namespace std;
 
-bool pred(int a) { return true; }
-bool predb(int a, int b) { return a < b; }
-int func(int& a) { return a * 10; }
-int funcb(int& a, int& b) { return a + b; }
-int gener_rand() { return rand() % 6; }
-int gener() { return 9; }
+bool compb(int a, int b) { return a < b; }
 
 void print(vector<int> vec)
 {
@@ -63,23 +58,23 @@ int main()
 	// zwraca iterator na ostatni skopiowany element w zakresie docelowym
 	merge(first, last, first2, last2, first3);				// (I, I, I, I, O)			iterator	<
 	merge(policy, first, last, first2, last2, first3);		// (-, F, F, F, F, F)		iterator	<
-	merge(first, last, first2, last2, first3, predb);		// (I, I, I, I, O, 2)		iterator	predb (2)
-	merge(policy, first, last, first2, last2, first3, predb);// (-, F, F, F, F, F, 2)	iterator	predb (2)
+	merge(first, last, first2, last2, first3, compb);		// (I, I, I, I, O, 2)		iterator	compb
+	merge(policy, first, last, first2, last2, first3, compb);// (-, F, F, F, F, F, 2)	iterator	compb
 
 	// implace_merge() SORT | STABLE
 	// scala posortowane zakresy [first, middle) oraz [middle, last) w
 	// pojedynyczy posortowany zakres [first, last)
 	inplace_merge(first, middle, last);						// (B, B, B)		void	<
 	inplace_merge(policy, first, middle, last);				// (-, B, B, B)		void	<
-	inplace_merge(first, middle, last, predb);				// (B, B, B)		void	compb
-	inplace_merge(policy, first, middle, last, predb);		// (-, B, B, B)		void	compb
+	inplace_merge(first, middle, last, compb);				// (B, B, B)		void	compb
+	inplace_merge(policy, first, middle, last, compb);		// (-, B, B, B)		void	compb
 
 	// includes() SORT
-	// zwraca true, jesli [first2, last2) jest podzbiorem [first, last)
+	// sprawdza, czy [first2, last2) jest podzbiorem [first, last)
 	includes(first, last, first2, last2);					// (I, I, I, I)			bool	<
 	includes(policy, first, last, first2, last2);			// (-, F, F, F, F)		bool	<
-	includes(first, last, first2, last2, predb);			// (I, I, I, I)			bool	predb (2)
-	includes(policy, first, last, first2, last2, predb);	// (-, F, F, F, F)		bool	predb (2)
+	includes(first, last, first2, last2, compb);			// (I, I, I, I)			bool	compb
+	includes(policy, first, last, first2, last2, compb);	// (-, F, F, F, F)		bool	compb
 
 	// set_union() SORT | COPY-NOT | STABLE
 	// umieszcza sume zbiorow [first, last) oraz [first2, last2) pod [first3, ...)
@@ -88,8 +83,8 @@ int main()
 	// element e wystapi max(a, b) razy w [first3, ...)
 	set_union(first, last, first2, last2, first3);					// (I, I, I, I, O)			iterator	<
 	set_union(policy, first, last, first2, last2, first3);			// (-, F, F, F, F, F, F)	iteraotor	<
-	set_union(first, last, first2, last2, first3, predb);			// (I, I, I, I, O)			iterator	predb (2)
-	set_union(policy, first, last, first2, last2, first3, predb);	// (-, F, F, F, F, F, F)	iteraotor	predb (2)
+	set_union(first, last, first2, last2, first3, compb);			// (I, I, I, I, O)			iterator	compb
+	set_union(policy, first, last, first2, last2, first3, compb);	// (-, F, F, F, F, F, F)	iteraotor	compb
 
 	// set_intersection() SORT | COPY-NOT | STABLE
 	// umieszcza przeciecie zbiorow [first, last) oraz [first2, last2) pod [first3, ...)
@@ -98,8 +93,8 @@ int main()
 	// element e wystapi min(a, b) razy w [first3, ...)
 	set_intersection(first, last, first2, last2, first3);					// (I, I, I, I, O)		iterator	<
 	set_intersection(policy, first, last, first2, last2, first3);			// (-, F, F, F, F, F)	iteraotor	<
-	set_intersection(first, last, first2, last2, first3, predb);			// (I, I, I, I, O)		iterator	predb (2)
-	set_intersection(policy, first, last, first2, last2, first3, predb);	// (-, F, F, F, F, F)	iteraotor	predb (2)
+	set_intersection(first, last, first2, last2, first3, compb);			// (I, I, I, I, O)		iterator	predb (2)
+	set_intersection(policy, first, last, first2, last2, first3, compb);	// (-, F, F, F, F, F)	iteraotor	predb (2)
 	
 	// set_difference() SORT | COPY-NOT | STABLE
 	// umieszcza roznice zbiorow [first, last) oraz [first2, last2) pod [first3, ...)
@@ -108,8 +103,8 @@ int main()
 	// element e wystapi max(a-b, 0) razy w [first3, ...)
 	set_difference(first, last, first2, last2, first3);					// (I, I, I, I, O)		iterator	<
 	set_difference(policy, first, last, first2, last2, first3);			// (-, F, F, F, F, F)	iteraotor	<
-	set_difference(first, last, first2, last2, first3, predb);			// (I, I, I, I, O)		iterator	predb (2)
-	set_difference(policy, first, last, first2, last2, first3, predb);	// (-, F, F, F, F, F)	iteraotor	predb (2)
+	set_difference(first, last, first2, last2, first3, compb);			// (I, I, I, I, O)		iterator	compb
+	set_difference(policy, first, last, first2, last2, first3, compb);	// (-, F, F, F, F, F)	iteraotor	compb
 
 	// set_symmetric_difference() SORT | COPY-NOT | STABLE
 	// umieszcza roznice symbetryczna zbiorow [first, last) oraz [first2, last2) pod [first3, ...)
@@ -118,19 +113,18 @@ int main()
 	// element e wystapi max(a-b, b-a) razy w [first3, ...)
 	set_symmetric_difference(first, last, first2, last2, first3);					// (I, I, I, I, O)		iterator	<
 	set_symmetric_difference(policy, first, last, first2, last2, first3);			// (-, F, F, F, F, F)	iteraotor	<
-	set_symmetric_difference(first, last, first2, last2, first3, predb);			// (I, I, I, I, O)		iterator	predb (2)
-	set_symmetric_difference(policy, first, last, first2, last2, first3, predb);	// (-, F, F, F, F, F)	iteraotor	predb (2)
-
+	set_symmetric_difference(first, last, first2, last2, first3, compb);			// (I, I, I, I, O)		iterator	compb
+	set_symmetric_difference(policy, first, last, first2, last2, first3, compb);	// (-, F, F, F, F, F)	iteraotor	compb
 
 	// TEST
-	vector<int> v1 = { 1, 1, 1, 2, 2, 2};
-	vector<int> v2 = { 1, 1, 2, 2, 2, 2};
-	vector<int> v3 = { 7 ,7 ,7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
+	//vector<int> v1 = { 1, 1, 1, 2, 2, 2};
+	//vector<int> v2 = { 1, 1, 2, 2, 2, 2};
+	//vector<int> v3 = { 7 ,7 ,7, 7, 7, 7, 7, 7, 7, 7, 7, 7};
 
-	print(v3);
-	auto it = set_symmetric_difference(v1.begin(), v1.end(), v2.begin(), v2.end(), v3.begin());
-	print(v3);
-	cout << it - v3.begin();
+	//print(v3);
+	//auto it = set_symmetric_difference(v1.begin(), v1.end(), v2.begin(), v2.end(), v3.begin());
+	//print(v3);
+	//cout << it - v3.begin();
 
 	return 0;
 }

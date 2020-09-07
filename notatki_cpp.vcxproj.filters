@@ -690,12 +690,6 @@
     <ClCompile Include="binders.cpp">
       <Filter>Pliki źródłowe\functors</Filter>
     </ClCompile>
-    <ClCompile Include="sequential_nonmodif.cpp">
-      <Filter>Pliki źródłowe\algorithms</Filter>
-    </ClCompile>
-    <ClCompile Include="sequentional_modif.cpp">
-      <Filter>Pliki źródłowe\algorithms</Filter>
-    </ClCompile>
     <ClCompile Include="binary_search.cpp">
       <Filter>Pliki źródłowe\algorithms\other</Filter>
     </ClCompile>
@@ -725,6 +719,12 @@
     </ClCompile>
     <ClCompile Include="numeric_operations.cpp">
       <Filter>Pliki źródłowe\algorithms\other</Filter>
+    </ClCompile>
+    <ClCompile Include="sequential_nonmodif.cpp">
+      <Filter>Pliki źródłowe\algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="sequential_modif.cpp">
+      <Filter>Pliki źródłowe\algorithms</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

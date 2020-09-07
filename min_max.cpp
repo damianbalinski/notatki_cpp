@@ -58,42 +58,42 @@ int main()
 	// zwraca najmniejszy element z podanej pary/listy
 	// jesli najmniejszych elementow jest wiele, zwraca pierwsze wystapienie
 	min(val1, val2);							// T&		<
-	min(val1, val2, compb);						// T&		compb (2)
+	min(val1, val2, compb);						// T&		compb
 	min(list);									// T		<
-	min(list, compb);							// T		compb (2)
+	min(list, compb);							// T		compb
 
 	// max()
 	// zwraca najwiekszy element z podanej pary/listy
 	// jesli najmniejszych elementow jest wiele, zwraca pierwsze wystapienie
 	max(val1, val2);							// T&		<
-	max(val1, val2, compb);						// T&		compb (2)
+	max(val1, val2, compb);						// T&		compb
 	max(list);									// T		<
-	max(list, compb);							// T		compb (2)
+	max(list, compb);							// T		compb
 
 	// minmax()
 	// zwrca pair<min(), max()>
 	// jesli najmniejszych elementow jest wiele, zwraca pierwsze wystapienie
 	// jesli najwiekszych elementow jest wiele, zwraca ostatnie wystapienie
 	minmax(val1, val2);							// pair<T&, T&>		<
-	minmax(val1, val2, compb);					// pair<T&, T&>		compb (2)
+	minmax(val1, val2, compb);					// pair<T&, T&>		compb
 	minmax(list);								// pair<T, T>		<
-	minmax(list, compb);						// pair<T, T>		compb (2)
+	minmax(list, compb);						// pair<T, T>		compb
 
 	// min_element()
 	// zwraca iterator na najmniejszy element z [first, last)
 	// jesli najmniejszych elementow jest wiele, zwraca pierwsze wystapienie
 	min_element(first, last);					// (F, F)		iterator		<
 	min_element(policy, first, last);			// (-, F, F)	iterator		<
-	min_element(first, last, compb);			// (F, F)		iterator		compb (2)
-	min_element(policy, first, last, compb);	// (-, F, F)	iterator		compb (2)
+	min_element(first, last, compb);			// (F, F)		iterator		compb
+	min_element(policy, first, last, compb);	// (-, F, F)	iterator		compb
 
 	// max_element()
 	// zwraca iterator na najwiekszy element z [first, last)
 	// jesli najwiekszych elementow jest wiele, zwraca pierwsze wystapienie
 	max_element(first, last);					// (F, F)		iterator		<
 	max_element(policy, first, last);			// (-, F, F)	iterator		<
-	max_element(first, last, compb);			// (F, F)		iterator		compb (2)
-	max_element(policy, first, last, compb);	// (-, F, F)	iterator		compb (2)
+	max_element(first, last, compb);			// (F, F)		iterator		compb
+	max_element(policy, first, last, compb);	// (-, F, F)	iterator		compb
 
 	// minmax_element()
 	// zwraca pair<min_element(), max_element()>
@@ -101,20 +101,20 @@ int main()
 	// jesli najwiekszych elementow jest wiele, zwraca ostatnie wystapienie
 	minmax_element(first, last);					// (F, F)		pair<iterator, iterator>		<
 	minmax_element(policy, first, last);			// (-, F, F)	pair<iterator, iterator>		<
-	minmax_element(first, last, compb);				// (F, F)		pair<iterator, iterator>		compb (2)
-	minmax_element(policy, first, last, compb);		// (-, F, F)	pair<iterator, iterator>		compb (2)
+	minmax_element(first, last, compb);				// (F, F)		pair<iterator, iterator>		compb
+	minmax_element(policy, first, last, compb);		// (-, F, F)	pair<iterator, iterator>		compb
 
 	// clamp()
 	// zwraca element srodkowy pomiedzy val1, val2, val3
 	// val2 musi byc mniejsze niz val2
 	clamp(val1, val2, val3);						// T&	<
-	clamp(val1, val2, val3, compb);					// T&	compb (2)
+	clamp(val1, val2, val3, compb);					// T&	compb
 
 	// TEST
-	vector<int> v1 = { 1, 1, 1, 2, 2, 2 };
-	cout << clamp(1, 2, 3) << endl;
-	cout << clamp(2, 1, 3) << endl;
-	cout << clamp(3, 1, 2) << endl;
+	//vector<int> v1 = { 1, 1, 1, 2, 2, 2 };
+	//cout << clamp(1, 2, 3) << endl;
+	//cout << clamp(2, 1, 3) << endl;
+	//cout << clamp(3, 1, 2) << endl;
 
 	return 0;
 }

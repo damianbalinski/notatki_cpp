@@ -13,6 +13,7 @@ using namespace std;
 
 bool pred(int a) { return true; }
 bool predb(int a, int b) { return true; }
+bool compb(int a, int b) { return a < b; }
 int func(int& a) { return a * 10; }
 int funcb(int& a, int& b) { return a + b; }
 int gener_rand() { return rand()%6; }
@@ -85,7 +86,7 @@ int main()
 	int& val1 = vec.at(0);
 	int& val2 = vec.at(1);
 
-	// copy() NOT_COPY
+	// copy() COPY-LEFT
 	// kopiuje elementy z [first, last) do [first2, ...)
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
 	copy(first, last, first2);					// (I, I, O)		iterator
@@ -114,11 +115,10 @@ int main()
 	copy_backward(policy, first, last, last2);	// (- B, B, B)		iterator
 	
 	// move() COPY-LEFT
-	// przenosi elementy z [first, last) do [first, ...)
+	// przenosi elementy z [first, last) do [first2, ...)
 	// zwraca iterator za ostatni przeniesiony element w zakresie docelowym
-	// 
-	move(first, last, first);					// (I, I, O)		iterator
-	move(policy, first, last, first);			// (-, F, F, F)		iterator
+	move(first, last, first2);					// (I, I, O)		iterator
+	move(policy, first, last, first2);			// (-, F, F, F)		iterator
 
 	// move_backward() COPY-RIGHT
 	// przenosi elementy z [first, last) do [..., last2),
@@ -145,15 +145,15 @@ int main()
 	swap_ranges(policy, first, last, first2);	// (-, F, F, F)	iterator
 
 	// transform()
-	// stosuje funktor do kazdego elementu w [first, last), przypisuje
+	// stosuje funktor func do kazdego elementu w [first, last), przypisuje
 	// zwrocona wartosc odpowiedniemu elementowi w [first2, ...)
-	// zwraca itarator za ostatni przeksztalcony element
+	// zwraca itarator za ostatni przeksztalcony element w zakresie docelowym
 	transform(first, last, first2, func);					// (I, I, O, 1)		iterator
 	transform(policy, first, last, first2, func);			// (-, F, F, F,1)	iterator
 	// stosuje funktor binarny do kazdej pary elementow z [first, last) 
 	// oraz [first2, ...), przypisuje zwrocona wartosc odpowiedniemu 
 	// elementowi w [first3, ...), zwraca iterator za ostatni
-	// przeksztalcony element
+	// przeksztalcony element w zakresie docelowym
 	transform(first, last, first2, first3, funcb);			// (I, I, I, O, 2)	iterator
 	transform(policy, first, last, first2, first3, funcb);	// (-, F, F, F, F, 2)	iterator
 
@@ -169,14 +169,14 @@ int main()
 	replace_if(first, last, pred, val2);			// (F, F, 1)	void
 	replace_if(policy, first, last, pred, val2);	// (-, F, F, 1) void
 
-	// replace_copy()
+	// replace_copy() COPY-NOT
 	// kopiuje elementy z [first, last) do [first2, ...)
 	// zastepuje wszystkie wystapienia val na val2
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
 	replace_copy(first, last, first2, val1, val2);			// (I, I, O)	iterator
 	replace_copy(policy, first, last, first2, val1, val2);	// (-, F, F, F)	iterator
 
-	// replace_copy_if()
+	// replace_copy_if() COPY-NOT
 	// kopiuje elementy z [first, last) do [first2, ...)
 	// zastepuje elementy spelniajace predykat pred na val2,
 	// zwraca iterator za ostani skopiowany element w zakresie docelowym
@@ -207,7 +207,7 @@ int main()
 	generate_n(first, n, gener);			// (O)			iterator
 	generate_n(policy, first, n, gener);	// (- F)		iterator
 
-	// remove()
+	// remove() STABLE
 	// usuwa wszystkie elementy val w [first, last)
 	// nie zmienia rozmiaru kontenera, elementy nieusuwane sa
 	// przesuwane na poczatek zakresu
@@ -215,7 +215,7 @@ int main()
 	remove(first, last, val);				// (F, F)		iterator
 	remove(policy, first, last, val);		// (-, F, F)	iterator
 
-	// remove_if()
+	// remove_if() STABLE
 	// usuwa wszystkie elementy w [first, last) spelniajace
 	// predykat pred, 
 	// nie zmienia rozmiaru kontenera, elementy nieusuwane sa
@@ -224,14 +224,14 @@ int main()
 	remove_if(first, last, pred);			// (F, F, 1)	iterator
 	remove_if(policy, first, last, pred);	// (-, F, F, 1)	iterator
 
-	//remove_copy()
+	//remove_copy() COPY-NOT | STABLE
 	// kopiuje elementy z [first, last) do [first2, ...)
 	// pomija wszystkie elementy val
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
 	remove_copy(first, last, first2, val);			// (I, I, O)	iterator
 	remove_copy(policy, first, last, first2, val);	// (-, F, F, F)	iterator
 
-	// remove_copy_if()
+	// remove_copy_if() COPY-NOT | STABLE
 	// kopiuje elementy z [first, last) do [first2, ...)
 	// pomija elementy dla ktorych predykat pred jest prawdziwy,
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
@@ -240,35 +240,30 @@ int main()
 
 	// unique()
 	// usuwa zduplikowane sasiednie elementy w [first, last)
-	// elementy sa porownywanie operatorem == lub,
-	// jesli podano, predykatem bianrnym predb
 	// nie zmienia rozmiaru kontenera, elementy 
 	// nieusuwane sa przesuwane na poczatek zakresu
 	// zwraca iterator za ostatni element nowego zakresu po przesunieciu
-	unique(first, last);				// (F, F)		iterator
-	unique(policy, first, last);		// (-, F, F)	iterator
-	unique(first, last, predb);			// (F, F, 2)	iterator
-	unique(policy, first, last, predb);	// (-, F, F, 2)	iterator
+	unique(first, last);				// (F, F)		iterator	==
+	unique(policy, first, last);		// (-, F, F)	iterator	==
+	unique(first, last, compb);			// (F, F, 2)	iterator	compb
+	unique(policy, first, last, compb);	// (-, F, F, 2)	iterator	compb
 
 	// unique_copy()
 	// kopiuje elementy z [first, last) do [first2, ...)
 	// pomija zduplikowane elementy sasiednie
-	// elementy sa porownywanie operatorem == lub,
-	// jesli podano, predykatem bianrnym predb
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
-	unique_copy(first, last, first2);				// (I, I, O)	iterator
-	unique_copy(policy, first, last, first2);		// (-, F, F, F)	iterator
-	unique_copy(first, last, first2, predb);		// (I, I, O, 2)	iterator
-	unique_copy(policy, first, last, first2, predb);// (-, F, F, F, 2)	iterator
+	unique_copy(first, last, first2);				// (I, I, O)	iterator		==
+	unique_copy(policy, first, last, first2);		// (-, F, F, F)	iterator		==
+	unique_copy(first, last, first2, compb);		// (I, I, O, 2)	iterator		compb
+	unique_copy(policy, first, last, first2, compb);// (-, F, F, F, 2)	iterator	compb
 
 	// reverse()
 	// odwraca kolejnosc elementow w [first, last)
-	reverse(first, last);			// (B, B)	void
-	reverse(policy, first, last);	// (B, B) void
+	reverse(first, last);				// (B, B)	void
+	reverse(policy, first, last);		// (B, B)	void
 	
 	// reverse_copy()
-	// kopiuje elementy z [first, last) do [first, ...)
-	// w odwrotnej kolejnosci
+	// kopiuje elementy z [first, last) do [first2, ...) w odwrotnej kolejnosci
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
 	reverse_copy(first, last, first2);			// (B, B, O)	iterator
 	reverse_copy(policy, first, last, first2);	// (-, B, B, F)	iterator
@@ -276,13 +271,12 @@ int main()
 	// rotate()
 	// wykonuje przesuniecie cykliczne w lewo, zamienia miejscami
 	// zakresy [first, middle) oraz [middle, last)
-	// zwraca iterator na nowa pozycje pierwszego elementu
-	// z pierwotnego zakresu
+	// zwraca iterator na nowa pozycje pierwszego elementu z pierwotnego zakresu
 	rotate(first, middle, last);				// (F, F, F)	iterator
 	rotate(policy, first, middle, last);		// (-, F, F, F) iterator
 
 	// rotate_copy()
-	// kopiuje elementy z[first, last) do[first, ...)
+	// kopiuje elementy z[first, last) do [first2, ...)
 	// wykonuje przesuniecie cykliczne w lewo, zamienia miejscami
 	// zakresy [first, middle) oraz [middle, last)
 	// zwraca iterator na nowa pozycje pierwszego elementu

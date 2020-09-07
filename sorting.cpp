@@ -10,12 +10,7 @@
 
 using namespace std;
 
-bool pred(int a) { return true; }
-bool predb(int a, int b) { return a < b; }
-int func(int& a) { return a * 10; }
-int funcb(int& a, int& b) { return a + b; }
-int gener_rand() { return rand() % 6; }
-int gener() { return 9; }
+bool compb(int a, int b) { return a < b; }
 
 void print(vector<int> vec)
 {
@@ -26,12 +21,12 @@ void print(vector<int> vec)
 int main()
 {
 	/*
-	 * sort					DONE	DONE	DONE
-	 * stable_sort			DONE	DONE	DONE
+	 * sort					DONE	DONE	DONE	1
+	 * stable_sort			DONE	DONE	DONE	2
 	 * partial_sort			DONE	DONE	DONE
 	 * partial_sort_copy	DONE	DONE	DONE
-	 * is_sorted			DONE	DONE	DONE
-	 * is_sorted_unit		DONE	DONE	DONE
+	 * is_sorted			DONE	DONE	DONE	3
+	 * is_sorted_unit		DONE	DONE	DONE	4
 	 * nth_element			DONE	DONE	DONE
 	 */
 
@@ -52,93 +47,62 @@ int main()
 
 	// sort()
 	// sortuje rosnaco zakres [first, last)
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	sort(first, last);					// (R, R)		void
-	sort(policy, first, last);			// (-, R, R)	void
-	sort(first, last, predb);			// (R, R, 2)	void
-	sort(policy, first, last, predb);	// (-, R, R, 2)	void
+	sort(first, last);					// (R, R)		void	<
+	sort(policy, first, last);			// (-, R, R)	void	<
+	sort(first, last, compb);			// (R, R, 2)	void	compb
+	sort(policy, first, last, compb);	// (-, R, R, 2)	void	compb
 
 	// stable_sort()
 	// sortuje rosnaco zakres [first, last)
 	// zachowuje porzadek elementow rownowaznych
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	stable_sort(first, last);					// (R, R)		void
-	stable_sort(policy, first, last);			// (-, R, R)	void
-	stable_sort(first, last, predb);			// (R, R, 2)	void
-	stable_sort(policy, first, last, predb);	// (-, R, R, 2)	void
+	stable_sort(first, last);					// (R, R)		void	<
+	stable_sort(policy, first, last);			// (-, R, R)	void	<
+	stable_sort(first, last, compb);			// (R, R, 2)	void	compb
+	stable_sort(policy, first, last, compb);	// (-, R, R, 2)	void	compb
 
 	// partial_sort()
 	// czesciowo sortuje rosnaco zakres [first, last) tak, ze 
 	// [first, middle) jest posortowany oraz 
 	// wszystkie elementy w [first, middle) sa mniejsze/rowne od wszystkich
 	// elementow w [middle, last)
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	partial_sort(first, middle, last);					// (R, R, R)		void
-	partial_sort(policy, first, middle, last);			// (-, R, R, R)		void
-	partial_sort(first, middle, last, predb);			// (R, R, R, 2)		void
-	partial_sort(policy, first, middle, last, predb);	// (-, R, R, R, 2)	void
+	partial_sort(first, middle, last);					// (R, R, R)		void	<
+	partial_sort(policy, first, middle, last);			// (-, R, R, R)		void	<
+	partial_sort(first, middle, last, compb);			// (R, R, R, 2)		void	compb
+	partial_sort(policy, first, middle, last, compb);	// (-, R, R, R, 2)	void	compb
 
 	// partial_sort_copy()
 	// kopiuje czesciowo posortowany rosnaco zakres tak, ze
 	// [first2, ...) zawiera n najmniejszych posortowanych elementow, gdzie
 	//  n = min(last-first, last2-first2)
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	partial_sort_copy(first, last, first2, last2);			// (I, I, R, R)	iterator
-	partial_sort_copy(policy, first, last, first2, last2);	// (-, F, F, R, R)	iterator
-	partial_sort_copy(first, last, first2, last2, predb);			// (I, I, R, R, 2)	iterator
-	partial_sort_copy(policy, first, last, first2, last2, predb);	// (-, F, F, R, R, 2)	iterator
+	partial_sort_copy(first, last, first2, last2);					// (I, I, R, R)			iterator	<
+	partial_sort_copy(policy, first, last, first2, last2);			// (-, F, F, R, R)		iterator	<
+	partial_sort_copy(first, last, first2, last2, compb);			// (I, I, R, R, 2)		iterator	compb
+	partial_sort_copy(policy, first, last, first2, last2, compb);	// (-, F, F, R, R, 2)	iterator	compb
 
 	// is_sorted()
 	// sprawdza, czy [first, last) jest posortowany rosnaco
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	is_sorted(first, last);					// (F, F)		bool
-	is_sorted(policy, first, last);			// (-, F, F)	bool
-	is_sorted(first, last, predb);			// (F, F, 2)	bool
-	is_sorted(policy, first, last, predb);	// (-, F, F, 2)	bool
+	is_sorted(first, last);					// (F, F)		bool	<
+	is_sorted(policy, first, last);			// (-, F, F)	bool	<
+	is_sorted(first, last, compb);			// (F, F, 2)	bool	compb
+	is_sorted(policy, first, last, compb);	// (-, F, F, 2)	bool	compb
 
 	// is_sorted_unit()
 	// zwraca iterator iter, taki ze [first, iter) jest najwiekszym
 	// mozliwym zakresem posortowanym rosnaco
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	is_sorted_until(first, last);					// (F, F)		iterator
-	is_sorted_until(policy, first, last);			// (-, F, F)	iterator
-	is_sorted_until(first, last, predb);			// (F, F, 2)	iterator
-	is_sorted_until(policy, first, last, predb);	// (-, F, F, 2)	iterator
+	is_sorted_until(first, last);					// (F, F)		iterator	<
+	is_sorted_until(policy, first, last);			// (-, F, F)	iterator	<
+	is_sorted_until(first, last, compb);			// (F, F, 2)	iterator	compb
+	is_sorted_until(policy, first, last, compb);	// (-, F, F, 2)	iterator	compb
 
 	// nth_element()
 	// znajduje n-ty najmniejszy element oraz umieszcza go w nth,
-	// wszystkie elementy w [first, nth) sa mniejsze/rowne od wszystkich
-	// elementow w [nth, last)
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	nth_element(first, nth, last);					// (R, R, R)		void
-	nth_element(policy, first, nth, last);			// (-, R, R, R)		void
-	nth_element(first, nth, last, predb);			// (R, R, R, 2)		void
-	nth_element(policy, first, nth, last, predb);	// (-, R, R, R, 2)	void
-
-	/*
-	 * SLOWNIK
-	 * first, middle, last - iteratory zakresu zrodlowego
-	 * first2, last2 - iteratory zakresu docelowego
-	 * rfirst, rlast - iteratory zakresu docelowego
-	 * nth - iterator na n-ta element w zakresie
-	 * pred - predykat
-	 * predb - predykat binarny
-	 * func - funktor jednoargumentowy
-	 * funcb - funktor dwuargumentowy
-	 * gener - generator
-	 * gener_rand - rownomierny generator losowy
-	 * policy -
-	 * search -
-	 * n - ilosc/dlugosc
-	 */
+	// wszystkie elementy w [first, nth) sa mniejsze/rowne od kazdego
+	// elementu z [nth, last)
+	nth_element(first, nth, last);					// (R, R, R)		void	<
+	nth_element(policy, first, nth, last);			// (-, R, R, R)		void	<
+	nth_element(first, nth, last, compb);			// (R, R, R, 2)		void	compb
+	nth_element(policy, first, nth, last, compb);	// (-, R, R, R, 2)	void	compb
 
 	// TEST
 	vector<int> v1 = { 6, 7, 8, 5, 4, 3, 2, 1 };

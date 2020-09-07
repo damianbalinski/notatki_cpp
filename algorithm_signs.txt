@@ -4,6 +4,7 @@
  * first2, last2 - iteratory zakresu docelowego
  * first3, last3 - iteratory zakresu docelowego
  * rfirst, rlast - iteratory zakresu docelowego rwartosciowe
+ * nth - iterator na n-ty element w zakresie
  * pred - predykat unarny
  * predb - predykat binarny
  * func - funktor unarny
@@ -40,8 +41,9 @@
  *
  * SORT   - zakres zrodlowy jest posortowany rosnaco
  * HEAP	  - zakres zrodlowy jest kopcem maksymalnym
+ * PARTITION - zakres zrodlowy jest podzielony na bazie predykatu
  * STABLE - kolejnosc rownowaznych elementow pozostaje zachowana (najpierw pierwszy zakres, potem drugi)
- *
+ * 
  * <	 - do porownywania elementow uzywa operatora <
  * ==	 - do porownywania elementow uzywa operatora ==
  * predb - do porownywania elementow uzywa predykatu binarnego predb
@@ -54,11 +56,13 @@
  * multb - do mnozenia elementow uzywa multiplikatora binarnego multb
  */
 
-1 - SORTOWANIE
-2 - WYSZUKIWANIE BINARNE
-3 - KOPCE
-4 - ZBIORY
-5 - PERMUTACJE		PEND, moze usunac OK, NO?
-6 - PARTYCJE
-7 - MIN_MAX			PEND
+A - SEKWENCYJNE NIEMUTUJACE			DONE
+B - SEKWENCYJNE MUTUJACE			DONE
+1 - SORTOWANIE						DONE
+2 - WYSZUKIWANIE BINARNE			DONE
+3 - KOPCE							DONE
+4 - ZBIORY							DONE
+5 - PERMUTACJE						DONE
+6 - PARTYCJE						DONE
+7 - MIN_MAX							DONE
 8 - NUMERYCZNE

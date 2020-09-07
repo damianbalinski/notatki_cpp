@@ -11,12 +11,7 @@
 
 using namespace std;
 
-bool pred(int a) { return true; }
-bool predb(int a, int b) { return a < b; }
-int func(int& a) { return a * 10; }
-int funcb(int& a, int& b) { return a + b; }
-int gener_rand() { return rand() % 6; }
-int gener() { return 9; }
+bool compb(int a, int b) { return a < b; }
 
 void print(vector<int> vec)
 {
@@ -63,38 +58,31 @@ int main()
 	// mozna wstawic val bez naruszania porzadku sortowania
 	// (iterator na pierwszy element wiekszy/rowny wartosci val
 	// lub last, jesli takiego elementu nie ma)
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	lower_bound(first, last, val);				// (F, F)		iterator
-	lower_bound(first, last, val, predb);		// (F, F, -, 2)	iterator
+
+	lower_bound(first, last, val);				// (F, F)		iterator	<
+	lower_bound(first, last, val, compb);		// (F, F, -, 2)	iterator	compb
 
 	// upper_bound() SORT
 	// zwraca iterator na ostatnia pozycje w [first, last), przed ktora
 	// mozna wstawic val bez naruszania porzadku sortowania
 	// (iterator na pierwszy element wiekszy od wartosci val
 	// lub last, jesli takiego elementu nie ma)
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	upper_bound(first, last, val);				// (F, F)		iterator
-	upper_bound(first, last, val, predb);		// (F, F, -, 2)	iterator
+	upper_bound(first, last, val);				// (F, F)		iterator	<
+	upper_bound(first, last, val, compb);		// (F, F, -, 2)	iterator	compb
 
 	// equal_range() SORT
-	// zwraca pare zlozona z iteratorow okreslajacych najwiekszy zakres
+	// zwraca pare zlozona z iteratorow okreslajacych maksymlany zakres
 	// taki ze przed kazda pozycja w tym zakresie mozna wstawic val
 	// bez naruszania porzadku sortowania
 	// (zwraca pair<lower_bound(), upper_bound()> lub pair<last, last>, jesli
 	// takiego zakresu nie ma)
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	equal_range(first, last, val);				// (F, F)		pair<iterator, iterator>
-	equal_range(first, last, val, predb);		// (F, F, -, 2)	pair<iterator, iterator>
+	equal_range(first, last, val);				// (F, F)		pair<iterator, iterator>	<
+	equal_range(first, last, val, compb);		// (F, F, -, 2)	pair<iterator, iterator>	compb
 
 	// binary_search() SORT
-	// swraca true, jesli [first, last) zawiera val
-	// elementy sa porownywane operatorem < lub, jesli podano
-	// predykatem binarnym predb
-	binary_search(first, last, val);			// (F, F)		bool
-	binary_search(first, last, val, predb);		// (F, F, -, 2)	bool
+	// sprawdza, czy [first, last) zawiera element val
+	binary_search(first, last, val);			// (F, F)		bool	<
+	binary_search(first, last, val, compb);		// (F, F, -, 2)	bool	compb
 	
 	// TEST
 	vector<int> v1 = { 1, 1, 3, 3 };
