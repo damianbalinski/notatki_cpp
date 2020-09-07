@@ -28,10 +28,11 @@ int main()
 {
 	/*
 	 * make_heap		DONE	DONE	DONE
+	 * is_heap			DONE	DONE	DONE
+	 * is_heap_until	DONE	DONE	DONE
 	 * push_heap		DONE	DONE	DONE
 	 * pop_heap			DONE	DONE	DONE
 	 * sort_heap		DONE	DONE	DONE
-	 *
 	 */
 
 	 // kontenery
@@ -55,14 +56,29 @@ int main()
 
 	// make_heap()
 	// przeksztalca [first, last) w kopiec maksymalny (rodzic wiekszy od dziecka)
-	make_heap(first, last);				// (R, R)	void	<
-	make_heap(first, last, predb);		// (R, R)	void	predb (2)
+	make_heap(first, last);						// (R, R)		void		<
+	make_heap(first, last, predb);				// (R, R)		void		predb (2)
+
+	// is_heap()
+	// sprawdza czy [first, last) jest kopcem maksymalnym
+	is_heap(first, last);						// (R, R)		bool		<
+	is_heap(policy, first, last);				// (-, R, R)	bool		<
+	is_heap(first, last, predb);				// (R, R)		bool		predb (2)
+	is_heap(policy, first, last, predb);		// (-, R, R)	bool		predb (2)
+
+	// is_heap_until()
+	// zwraca iterator iter, taki ze [first, iter) jest najwiekszym
+	// mozliwym kopcem maksymalnym
+	is_heap_until(first, last);					// (R, R)		iterator	<
+	is_heap_until(policy, first, last);			// (-, R, R)	iterator	<
+	is_heap_until(first, last, predb);			// (R, R)		iterator	predb (2)
+	is_heap_until(policy, first, last, predb);	// (-, R, R)	iterator	predb (2)
 
 	// push_heap() HEAP
 	// dodaje element do kopca, 
 	// umieszcza w kopcu [first, last-1) element z pozycji last-1
-	push_heap(first, last);				// (R, R)	void	<
-	push_heap(first, last, predb);		// (R, R)	void	predb (2)
+	push_heap(first, last);						// (R, R)		void		<
+	push_heap(first, last, predb);				// (R, R)		void		predb (2)
 
 	// pop_heap() HEAP
 	// zdejmuje najwiekszy element z kopca
@@ -80,9 +96,11 @@ int main()
 	// TEST
 	vector<int> v1 = { 1, 2, 3, -1, -2, -3, 30, 31, 7, 8, 9, 11 };
 	print(v1);
+	cout << is_heap(v1.begin(), v1.end()) << endl;
 	make_heap(v1.begin(), v1.end());
-	print(v1);
+	cout << is_heap(v1.begin(), v1.end()) << endl;
 	sort_heap(v1.begin(), v1.end());
+	cout << is_heap(v1.begin(), v1.end()) << endl;
 	print(v1);
 
 	return 0;
