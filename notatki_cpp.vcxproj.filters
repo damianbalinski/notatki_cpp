@@ -693,9 +693,6 @@
     <ClCompile Include="sequential_nonmodif.cpp">
       <Filter>Pliki źródłowe\algorithms</Filter>
     </ClCompile>
-    <ClCompile Include="algorithms_temp.cpp">
-      <Filter>Pliki źródłowe\algorithms</Filter>
-    </ClCompile>
     <ClCompile Include="sequentional_modif.cpp">
       <Filter>Pliki źródłowe\algorithms</Filter>
     </ClCompile>
@@ -724,6 +721,9 @@
       <Filter>Pliki źródłowe\algorithms\other</Filter>
     </ClCompile>
     <ClCompile Include="min_max.cpp">
+      <Filter>Pliki źródłowe\algorithms\other</Filter>
+    </ClCompile>
+    <ClCompile Include="numeric_operations.cpp">
       <Filter>Pliki źródłowe\algorithms\other</Filter>
     </ClCompile>
   </ItemGroup>

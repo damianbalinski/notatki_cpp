@@ -11,6 +11,7 @@
  * gener - generator
  * gener_rand - rownomierny generator losowy
  * comp - komparator binarny, spelnia reguly scislego uporzadkowania slabego
+ * sumb - sumator binarny
  * policy -
  * search -
  * n - ilosc/dlugosc
@@ -44,7 +45,13 @@
  * <	 - do porownywania elementow uzywa operatora <
  * ==	 - do porownywania elementow uzywa operatora ==
  * predb - do porownywania elementow uzywa predykatu binarnego predb
- * com	 - do porownywania elementow uzywa komparatora binarnego compb
+ * compb - do porownywania elementow uzywa komparatora binarnego compb
+ * +	 - do sumowania elementow uzywa operatora +
+ * sumb  - do sumowania elementow uzywa sumatora binarnego sumb
+ * -	 - do odejmowania elementow uzywa operatora -
+ * diffb - do odejmowania elementow uzywa funktora binarnego diffb
+ * *	 - do mnozenia elementow uzywa operatora *
+ * multb - do mnozenia elementow uzywa multiplikatora binarnego multb
  */
 
 1 - SORTOWANIE
@@ -54,3 +61,4 @@
 5 - PERMUTACJE		PEND, moze usunac OK, NO?
 6 - PARTYCJE
 7 - MIN_MAX			PEND
+8 - NUMERYCZNE
