@@ -12,6 +12,7 @@ using namespace std;
 
 bool pred(int a) { return a <= 3; }
 bool predb(int a, int b) { return true; }
+bool compb(int a, int b) { return a < b; }
 void func(int& a){ /*a *= 10;*/}
 
 void print(vector<int> vec)
@@ -40,6 +41,7 @@ int main()
 	 * equal			DONE	DONE
 	 * search			DONE	DONE
 	 * search_n			DONE	DONE
+	 * lexicographical_compare		
 	 */
 
 	// kontenery
@@ -191,11 +193,11 @@ int main()
 	// lub, jesli podano, predykatem binarnym predb
 	// zwraca iterator na poczatek podciagu lub last, jesli
 	// podciagu nie ma
-	search(first, last, first2, last2);			// (F, F, F, F)			iterator
-	search(policy, first, last, first2, last2);	// (-, F, F, F, F)		iterator
-	search(first, last, first2, last2, predb);	// (F, F, F, F, 2)		iterator
+	search(first, last, first2, last2);				// (F, F, F, F)			iterator
+	search(policy, first, last, first2, last2);		// (-, F, F, F, F)		iterator
+	search(first, last, first2, last2, predb);		// (F, F, F, F, 2)		iterator
 	search(policy, first, last, first2, last2, predb);	// (-, F, F, F, F, 2) iterator
-	search(first, last, searcher);				// (F, F)				iterator
+	search(first, last, searcher);					// (F, F)				iterator
 
 	// search_n()
 	// szuka pierwszego wystapnia n-elementowego ciagu wartosci val
@@ -203,11 +205,18 @@ int main()
 	// lub, jesli podano, predykatem binarnym predb
 	// zwraca iterator na poczatek podciagu lub last, jesli
 	// podciagu nie ma
-	search_n(first, last, n, val);					// (F, F)			iterator
-	search_n(policy, first, last, n, val);			// (-, F, F)		iterator
-	search_n(first, last, n, val, predb);			// (F, F, -, -, 2)	iterator
+	search_n(first, last, n, val);					// (F, F)				iterator
+	search_n(policy, first, last, n, val);			// (-, F, F)			iterator
+	search_n(first, last, n, val, predb);			// (F, F, -, -, 2)		iterator
 	search_n(policy, first, last, n, val, predb);	// (-, F, F, -, -, 2)	iterator
 	
+	// lexicographical_compare()
+	// sprawdza, czy [first, last) jest leksykograficznie mniejszy niz [first2, last2)
+	lexicographical_compare(first, last, first2, last2);				// (I, I, I, I)			bool	<
+	lexicographical_compare(policy, first, last, first2, last2);		// (-, F, F, F, F)		bool	<
+	lexicographical_compare(first, last, first2, last2, compb);			// (I, I, I, I)			bool	compb (2)
+	lexicographical_compare(policy, first, last, first2, last2, compb);	// (-, F, F, F, F)		bool	compb (2)
+
 	// TEST
 	vector<int> v = { 0, 1, 4, 2, 1, 1, 3};
 	vector<int> v2 = { 2, 3};

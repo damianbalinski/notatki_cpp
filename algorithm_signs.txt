@@ -10,6 +10,7 @@
  * funcb - funktor binarny
  * gener - generator
  * gener_rand - rownomierny generator losowy
+ * comp - komparator binarny, spelnia reguly scislego uporzadkowania slabego
  * policy -
  * search -
  * n - ilosc/dlugosc
@@ -41,12 +42,15 @@
  * STABLE - kolejnosc rownowaznych elementow pozostaje zachowana (najpierw pierwszy zakres, potem drugi)
  *
  * <	 - do porownywania elementow uzywa operatora <
+ * ==	 - do porownywania elementow uzywa operatora ==
  * predb - do porownywania elementow uzywa predykatu binarnego predb
+ * com	 - do porownywania elementow uzywa komparatora binarnego compb
  */
 
 1 - SORTOWANIE
 2 - WYSZUKIWANIE BINARNE
 3 - KOPCE
 4 - ZBIORY
-5 - PERMUTACJE
+5 - PERMUTACJE		PEND, moze usunac OK, NO?
 6 - PARTYCJE
+7 - MIN_MAX			PEND

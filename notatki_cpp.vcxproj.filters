@@ -723,6 +723,9 @@
     <ClCompile Include="heap_operations.cpp">
       <Filter>Pliki źródłowe\algorithms\other</Filter>
     </ClCompile>
+    <ClCompile Include="min_max.cpp">
+      <Filter>Pliki źródłowe\algorithms\other</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="container_types.txt">

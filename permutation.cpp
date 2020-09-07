@@ -10,8 +10,7 @@
 
 using namespace std;
 
-bool pred(int a) { return a <= 3; }
-bool predb(int a, int b) { return true; }
+bool compb(int& a, int& b) { return a < b; }
 void func(int& a) { /*a *= 10;*/ }
 
 void print(vector<int> vec)
@@ -23,7 +22,7 @@ void print(vector<int> vec)
 int main()
 {
 	/*
-	 * is_permutation		DONE	DONE
+	 * is_permutation		DONE	DONE	DONE
 	 * next_permutation		DONE	DONE	DONE
 	 * prev_permutation		DONE	DONE	DONE
 	 */
@@ -48,33 +47,29 @@ int main()
 	int val = 3;
 
 	// is_permutaion()
-	// zwraca true, jesli [first, last) jest permutacja zbioru [fist2, last2)
-	// elementy sa porownywanie operatorem == lub, jesli podano, predykatem 
-	// bianrnym predb
-	is_permutation(first, last, first2);	// (F, F, F)	bool
-	is_permutation(first, last, first2, predb);	// (F, F, F, 2)		bool
-	is_permutation(first, last, first2, last2);	// (F, F, F, F)		bool
-	is_permutation(first, last, first2, last2, predb);	// (F, F, F, F, 2) bool
+	// sprawdza, czy [first, last) jest permutacja zbioru [fist2, last2)
+	is_permutation(first, last, first2);				// (F, F, F)		bool	==
+	is_permutation(first, last, first2, compb);			// (F, F, F, 2)		bool	compb (2)
+	is_permutation(first, last, first2, last2);			// (F, F, F, F)		bool	==
+	is_permutation(first, last, first2, last2, compb);	// (F, F, F, F, 2)	bool	compb (2)
 	
 	// next_permutation()
-	// permutuje [first, last) do nastepnej permutacji w porzadku
-	// leksykograficznym, elementy sa porownywane operatorem == lub,
-	// jesli podano, predykatem binarnym pred, 
+	// przeksztalca [first, last) do nastepnej permutacji w porzadku
+	// leksykograficznym
 	// OK zwraca true, jesli nastepna permutacja istnieje
-	// NO zwraca false, jesli nastepna permutacja nie istnieje, permutuje 
+	// NO zwraca false, jesli nastepna permutacja nie istnieje, przeksztalca 
 	// do pierwszej permutacji
-	//next_permutation(first, last);			// (B, B)		bool
-	//next_permutation(first, last, predb);		// (B, B, 2)	bool
+	next_permutation(first, last);				// (B, B)		bool	<
+	next_permutation(first, last, compb);		// (B, B, 2)	bool	compb (2)
 
 	// prev_permutation()
-	// permutuje [first, last) do poprzedniej permutacji w porzadku
-	// leksykograficznym elementu sa porownywane operatorem == lub,
-	// jesli podano, predykatem binarnym pred
+	// przeksztalca [first, last) do poprzedniej permutacji w porzadku
+	// leksykograficznym
 	// OK zwraca true, jesli poprzednia permutacja istnieje
-	// NO zwraca false, jesli poprzednia permutacja nie istnieje, permutuje
+	// NO zwraca false, jesli poprzednia permutacja nie istnieje, przeksztalca
 	// do ostatniej permutacji
-	//prev_permutation(first, last);			// (B, B)		bool
-	//prev_permutation(first, last, predb);		// (B, B, 2)	bool
+	prev_permutation(first, last);				// (B, B)		bool	<
+	prev_permutation(first, last, compb);		// (B, B, 2)	bool	compb (2)
 
 	// TEST
 	vector<int> v1 = { 1, 2, 3, 4, 5 };
