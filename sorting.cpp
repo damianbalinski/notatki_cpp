@@ -23,11 +23,11 @@ int main()
 	/*
 	 * sort					DONE	DONE	DONE	1
 	 * stable_sort			DONE	DONE	DONE	2
-	 * partial_sort			DONE	DONE	DONE
-	 * partial_sort_copy	DONE	DONE	DONE
+	 * partial_sort			DONE	DONE	DONE	5
+	 * partial_sort_copy	DONE	DONE	DONE	6
 	 * is_sorted			DONE	DONE	DONE	3
 	 * is_sorted_unit		DONE	DONE	DONE	4
-	 * nth_element			DONE	DONE	DONE
+	 * nth_element			DONE	DONE	DONE	7
 	 */
 
 	// kontenery
@@ -52,33 +52,13 @@ int main()
 	sort(first, last, compb);			// (R, R, 2)	void	compb
 	sort(policy, first, last, compb);	// (-, R, R, 2)	void	compb
 
-	// stable_sort()
+	// stable_sort() STABLE
 	// sortuje rosnaco zakres [first, last)
 	// zachowuje porzadek elementow rownowaznych
 	stable_sort(first, last);					// (R, R)		void	<
 	stable_sort(policy, first, last);			// (-, R, R)	void	<
 	stable_sort(first, last, compb);			// (R, R, 2)	void	compb
 	stable_sort(policy, first, last, compb);	// (-, R, R, 2)	void	compb
-
-	// partial_sort()
-	// czesciowo sortuje rosnaco zakres [first, last) tak, ze 
-	// [first, middle) jest posortowany oraz 
-	// wszystkie elementy w [first, middle) sa mniejsze/rowne od wszystkich
-	// elementow w [middle, last)
-	partial_sort(first, middle, last);					// (R, R, R)		void	<
-	partial_sort(policy, first, middle, last);			// (-, R, R, R)		void	<
-	partial_sort(first, middle, last, compb);			// (R, R, R, 2)		void	compb
-	partial_sort(policy, first, middle, last, compb);	// (-, R, R, R, 2)	void	compb
-
-	// partial_sort_copy()
-	// kopiuje czesciowo posortowany rosnaco zakres tak, ze
-	// [first2, ...) zawiera n najmniejszych posortowanych elementow, gdzie
-	//  n = min(last-first, last2-first2)
-	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
-	partial_sort_copy(first, last, first2, last2);					// (I, I, R, R)			iterator	<
-	partial_sort_copy(policy, first, last, first2, last2);			// (-, F, F, R, R)		iterator	<
-	partial_sort_copy(first, last, first2, last2, compb);			// (I, I, R, R, 2)		iterator	compb
-	partial_sort_copy(policy, first, last, first2, last2, compb);	// (-, F, F, R, R, 2)	iterator	compb
 
 	// is_sorted()
 	// sprawdza, czy [first, last) jest posortowany rosnaco
@@ -95,10 +75,30 @@ int main()
 	is_sorted_until(first, last, compb);			// (F, F, 2)	iterator	compb
 	is_sorted_until(policy, first, last, compb);	// (-, F, F, 2)	iterator	compb
 
+	// partial_sort()
+	// czesciowo sortuje rosnaco zakres [first, last) tak, ze 
+	// [first, middle) jest posortowany oraz 
+	// wszystkie elementy w [first, middle) sa mniejsze/rowne od wszystkich
+	// elementow w [middle, last)
+	partial_sort(first, middle, last);					// (R, R, R)		void	<
+	partial_sort(policy, first, middle, last);			// (-, R, R, R)		void	<
+	partial_sort(first, middle, last, compb);			// (R, R, R, 2)		void	compb
+	partial_sort(policy, first, middle, last, compb);	// (-, R, R, R, 2)	void	compb
+
+	// partial_sort_copy()
+	// kopiuje oraz czesciowo sortuje rosnaco kopiowany zakres tak, ze
+	// [first2, ...) zawiera n najmniejszych posortowanych elementow, gdzie
+	//  n = min(last-first, last2-first2)
+	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
+	partial_sort_copy(first, last, first2, last2);					// (I, I, R, R)			iterator	<
+	partial_sort_copy(policy, first, last, first2, last2);			// (-, F, F, R, R)		iterator	<
+	partial_sort_copy(first, last, first2, last2, compb);			// (I, I, R, R, 2)		iterator	compb
+	partial_sort_copy(policy, first, last, first2, last2, compb);	// (-, F, F, R, R, 2)	iterator	compb
+
 	// nth_element()
 	// znajduje n-ty najmniejszy element oraz umieszcza go w nth,
-	// wszystkie elementy w [first, nth) sa mniejsze/rowne od kazdego
-	// elementu z [nth, last)
+	// wszystkie elementy w [first, nth) sa mniejsze/rowne od wszystkich
+	// elementow w [middle, last)
 	nth_element(first, nth, last);					// (R, R, R)		void	<
 	nth_element(policy, first, nth, last);			// (-, R, R, R)		void	<
 	nth_element(first, nth, last, compb);			// (R, R, R, 2)		void	compb

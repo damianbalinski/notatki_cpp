@@ -28,34 +28,34 @@ void print(vector<int> vec)
 int main()
 {
 	/*
-	 * copy				DONE	DONE	DONE
-	 * copy_if			DONE	DONE	DONE
-	 * copy_n			DONE	DONE	DONE
-	 * copy_backward	DONE	DONE	DONE
-	 * move				DONE	DONE	DONE
-	 * move_backward	DONE	DONE	DONE
-	 * swap				DONE	DONE	DONE
-	 * iter_swap		DONE	DONE	DONE
-	 * swap_ranges		DONE	DONE	DONE
-	 * transform		DONE	DONE	DONE
-	 * replace			DONE	DONE	DONE
-	 * replace_if		DONE	DONE	DONE
-	 * replace_copy		DONE	DONE	DONE
-	 * replace_copy_if	DONE	DONE	DONE
-	 * fill				DONE	DONE	DONE
-	 * fill_n			DONE	DONE	DONE
-	 * generate			DONE	DONE	DONE
-	 * generate_n		DONE	DONE	DONE
-	 * remove			DONE	DONE	DONE
-	 * remove_if		DONE	DONE	DONE
-	 * remove_copy		DONE	DONE	DONE
-	 * remove_copy_if	DONE	DONE	DONE
-	 * unique			DONE	DONE	DONE
-	 * unique_copy		DONE	DONE	DONE
-	 * reverse			DONE	DONE	DONE
-	 * reverse_copy		DONE	DONE	DONE
-	 * rotate			DONE	DONE	DONE
-	 * rorate_copy		DONE	DONE	DONE	
+	 * copy				DONE	DONE	DONE	1
+	 * copy_if			DONE	DONE	DONE	3
+	 * copy_n			DONE	DONE	DONE	2
+	 * copy_backward	DONE	DONE	DONE	4
+	 * move				DONE	DONE	DONE	5
+	 * move_backward	DONE	DONE	DONE	6
+	 * swap				DONE	DONE	DONE	DONE
+	 * iter_swap		DONE	DONE	DONE	DONE
+	 * swap_ranges		DONE	DONE	DONE	DONE
+	 * transform		DONE	DONE	DONE	DONE
+	 * replace			DONE	DONE	DONE	DONE
+	 * replace_if		DONE	DONE	DONE	DONE
+	 * replace_copy		DONE	DONE	DONE	DONE
+	 * replace_copy_if	DONE	DONE	DONE	DONE
+	 * fill				DONE	DONE	DONE	DONE
+	 * fill_n			DONE	DONE	DONE	DONE
+	 * generate			DONE	DONE	DONE	DONE
+	 * generate_n		DONE	DONE	DONE	DONE
+	 * remove			DONE	DONE	DONE	DONE
+	 * remove_if		DONE	DONE	DONE	DONE
+	 * remove_copy		DONE	DONE	DONE	DONE
+	 * remove_copy_if	DONE	DONE	DONE	DONE
+	 * unique			DONE	DONE	DONE	DON
+	 * unique_copy		DONE	DONE	DONE	DIN
+	 * reverse			DONE	DONE	DONE	DON
+	 * reverse_copy		DONE	DONE	DONE	DONE
+	 * rotate			DONE	DONE	DONE	DONE
+	 * rorate_copy		DONE	DONE	DONE	DONE
 	 * shuffle			DONE	DONE	DONE
 	 * random_shuffle	DONE	DONE	DONE
 	 */
@@ -92,18 +92,18 @@ int main()
 	copy(first, last, first2);					// (I, I, O)		iterator
 	copy(policy, first, last, first2);			// (-, F, F, F)		iterator
 	
-	// copy_if() COPY-LEFT
-	// kopiuje tylko te elementy z [first, last) do [first2, ...)
-	// dla ktorych predykat pred jest prawdziwy,
-	// zwraca iterator za ostani skopiowany element w zakresie docelowym
-	copy_if(first, last, first2, pred);			// (I, I, O, 1)		iterator
-	copy_if(policy, first, last, first2, pred);	// (-. F, F, F, 1)	iterator
-	
-	// copy_n()	COPY
+	// copy_n()	COPY-OK
 	// kopiuje elementy z [first, first+n) do [first, ...)
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
 	copy_n(first, n, first2);					// (I, -, O)		iterator
 	copy_n(policy, first, n, first2);			// (-, F, -, F)		iterator
+
+	// copy_if() COPY-LEFT
+	// kopiuje tylko te elementy z [first, last) do [first2, ...)
+	// spelniajace predykat pred,
+	// zwraca iterator za ostani skopiowany element w zakresie docelowym
+	copy_if(first, last, first2, pred);			// (I, I, O, 1)		iterator
+	copy_if(policy, first, last, first2, pred);	// (-. F, F, F, 1)	iterator
 
 	// copy_backward() COPY-RIGHT
 	// kopiuje elementy z [first, last) do [..., last2),
@@ -134,13 +134,13 @@ int main()
 	swap(val1, val2);							// void
 	
 	// iter_swap()
-	// zamienia miejscami elementy okreslone przez iteratory
+	// zamienia miejscami elementy okreslone iteratorami
 	iter_swap(iter1, iter2);					// (F, F)		void
 
 	// swap_ranges() COPY-NOT
-	// zamienia miejscami odpowiadajace sobie elementy pomiedzy 
-	// zakresami [first, last) oraz [first2, ...)
-	// zwraca iterator za ostani zamieniony element w drugim zakresie
+	// zamienia miejscami odpowiadajace sobie elementy
+	// w [first, last) oraz [first2, ...)
+	// zwraca iterator za ostatni zamieniony element w drugim zakresie
 	swap_ranges(first, last, first2);			// (F, F, F)	iterator
 	swap_ranges(policy, first, last, first2);	// (-, F, F, F)	iterator
 
@@ -165,7 +165,7 @@ int main()
 
 	// replace_if()
 	// zastepuje wszystkie elementy w [first, last) spelniajace
-	// predykat pred na element val2
+	// predykat pred na val2
 	replace_if(first, last, pred, val2);			// (F, F, 1)	void
 	replace_if(policy, first, last, pred, val2);	// (-, F, F, 1) void
 
@@ -173,12 +173,12 @@ int main()
 	// kopiuje elementy z [first, last) do [first2, ...)
 	// zastepuje wszystkie wystapienia val na val2
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
-	replace_copy(first, last, first2, val1, val2);			// (I, I, O)	iterator
-	replace_copy(policy, first, last, first2, val1, val2);	// (-, F, F, F)	iterator
+	replace_copy(first, last, first2, val, val2);			// (I, I, O)	iterator
+	replace_copy(policy, first, last, first2, val, val2);	// (-, F, F, F)	iterator
 
 	// replace_copy_if() COPY-NOT
 	// kopiuje elementy z [first, last) do [first2, ...)
-	// zastepuje elementy spelniajace predykat pred na val2,
+	// zastepuje wszystkie elementy spelniajace predykat pred na val2,
 	// zwraca iterator za ostani skopiowany element w zakresie docelowym
 	replace_copy_if(first, last, first2, pred, val2);			// (I, I, O, 1)		iterator
 	replace_copy_if(policy, first, last, first2, pred, val2);	// (-, F, F, F, 1)	iterator
@@ -208,7 +208,7 @@ int main()
 	generate_n(policy, first, n, gener);	// (- F)		iterator
 
 	// remove() STABLE
-	// usuwa wszystkie elementy val w [first, last)
+	// usuwa wszystkie wystapienia val w [first, last)
 	// nie zmienia rozmiaru kontenera, elementy nieusuwane sa
 	// przesuwane na poczatek zakresu
 	// zwraca iterator za ostatni element nowego zakresu po przesunieciu
@@ -220,26 +220,26 @@ int main()
 	// predykat pred, 
 	// nie zmienia rozmiaru kontenera, elementy nieusuwane sa
 	// przesuwane na poczatek zakresu
-	// zwraca iterator za ostatni element po przesunieciu
+	// zwraca iterator za ostatni element nowego zakresu po przesunieciu
 	remove_if(first, last, pred);			// (F, F, 1)	iterator
 	remove_if(policy, first, last, pred);	// (-, F, F, 1)	iterator
 
 	//remove_copy() COPY-NOT | STABLE
 	// kopiuje elementy z [first, last) do [first2, ...)
-	// pomija wszystkie elementy val
+	// pomija wszystkie wystapienia val
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
 	remove_copy(first, last, first2, val);			// (I, I, O)	iterator
 	remove_copy(policy, first, last, first2, val);	// (-, F, F, F)	iterator
 
 	// remove_copy_if() COPY-NOT | STABLE
 	// kopiuje elementy z [first, last) do [first2, ...)
-	// pomija elementy dla ktorych predykat pred jest prawdziwy,
+	// pomija elementy spelniajace predykat pred,
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
 	remove_copy_if(first, last, first2, pred);			// (I, I, O, 1)		iterator
 	remove_copy_if(policy, first, last, first2, pred);	// (-, I, I, O, 1)	iterator
 
 	// unique()
-	// usuwa zduplikowane sasiednie elementy w [first, last)
+	// usuwa rownowazne sasiednie elementy w [first, last)
 	// nie zmienia rozmiaru kontenera, elementy 
 	// nieusuwane sa przesuwane na poczatek zakresu
 	// zwraca iterator za ostatni element nowego zakresu po przesunieciu
@@ -250,7 +250,7 @@ int main()
 
 	// unique_copy()
 	// kopiuje elementy z [first, last) do [first2, ...)
-	// pomija zduplikowane elementy sasiednie
+	// pomija rownowazne elementy sasiednie
 	// zwraca iterator za ostatni skopiowany element w zakresie docelowym
 	unique_copy(first, last, first2);				// (I, I, O)	iterator		==
 	unique_copy(policy, first, last, first2);		// (-, F, F, F)	iterator		==
@@ -287,7 +287,7 @@ int main()
 	// shuffle
 	// tasuje elementy w zakresie [first, last)
 	// do generowania liczb losowych uzywa generatora gener_rand
-	// dla n elementow w zakresie, func_rand powinno zwracac wartosc
+	// dla n elementow w zakresie, gener_rand powinno zwracac wartosc
 	// z przedzialu [0, n)
 	//shuffle(first, last, gener_rand);				// (R, R)	void
 
@@ -301,15 +301,18 @@ int main()
 	//random_shuffle(first, last, func_rand);		// (R, R)	void
 
 	// TEST
-	vector<int> v1 = { 1, 2, 3, 4, 5, 6};
-	vector<int> v2 = { 7, 7, 7, 7, 8, 9};
+	vector<int> v1 = { 0, 1, 2, 3, 4};
+	vector<int> v2 = { 5, 6, 7, 8, 9};
 	
 	random_device rd;
 	mt19937 g(rd());
 
 	print(v1);
-	shuffle(v1.begin(), v1.end(), g);
+	print(v2);
+	cout << endl;
+	swap_ranges(v1.begin(), v1.end()-1, v1.begin()+1);
 	print(v1);
+	print(v2);
 
 	return 0;
 }

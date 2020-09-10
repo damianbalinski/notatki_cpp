@@ -56,8 +56,8 @@ int main()
 	// lower_bound() SORT
 	// zwraca iterator na pierwsza pozycje w [first, last), przed ktora
 	// mozna wstawic val bez naruszania porzadku sortowania
-	// (iterator na pierwszy element wiekszy/rowny wartosci val
-	// lub last, jesli takiego elementu nie ma)
+	// (iterator na pierwszy element wiekszy/rowny val
+	// lub last, jesli takgo elementu nie ma)
 
 	lower_bound(first, last, val);				// (F, F)		iterator	<
 	lower_bound(first, last, val, compb);		// (F, F, -, 2)	iterator	compb

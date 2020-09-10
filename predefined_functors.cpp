@@ -6,20 +6,20 @@ int main()
 	typedef int Type;
 	
 	// arytmetyczne
-	std::plus<Type>;
-	std::minus<Type>;
-	std::multiplies<Type>;
-	std::divides<Type>;
-	std::modulus<Type>;
-	std::negate<Type>;			// unarny
+	std::plus<Type>();
+	std::minus<Type>();
+	std::multiplies<Type>();
+	std::divides<Type>();
+	std::modulus<Type>();
+	std::negate<Type>();			// unarny
 	
 	// porownania
-	std::equal_to<Type>;
-	std::not_equal_to<Type>;
-	std::greater<Type>;
-	std::greater_equal<Type>;
-	std::less<Type>;
-	std::less_equal<Type>;
+	std::equal_to<Type>();
+	std::not_equal_to<Type>();
+	std::greater<Type>();
+	std::greater_equal<Type>();
+	std::less<Type>();
+	std::less_equal<Type>();
 
 	// logiczne
 	std::logical_and<Type>;
@@ -32,5 +32,10 @@ int main()
 	std::bit_xor<Type>;
 	std::bit_not<Type>;			// unarny
 	
+
+	// TEST
+	using namespace std;
+
+	cout << plus<int>()(10,20);
 	return 0;
 }

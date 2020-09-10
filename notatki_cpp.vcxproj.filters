@@ -181,6 +181,15 @@
     <Filter Include="Pliki źródłowe\algorithms\algorithm_idioms">
       <UniqueIdentifier>{4361cdbd-7102-4a59-9611-4f9d5615f2f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\containers_other">
+      <UniqueIdentifier>{14f6ee28-3c33-4e9c-bcc8-dbacb01a4629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\containers_other\valarray">
+      <UniqueIdentifier>{ece6297c-ba83-4cb0-ac8f-95da24766b13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\selectors">
+      <UniqueIdentifier>{950a4d71-b307-4997-bb9f-7c412a8567d8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -725,6 +734,30 @@
     </ClCompile>
     <ClCompile Include="sequential_modif.cpp">
       <Filter>Pliki źródłowe\algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="temp_test.cpp">
+      <Filter>Pliki źródłowe\containers\methods</Filter>
+    </ClCompile>
+    <ClCompile Include="complex.cpp">
+      <Filter>Pliki źródłowe\containers_other</Filter>
+    </ClCompile>
+    <ClCompile Include="valarray_methods.cpp">
+      <Filter>Pliki źródłowe\containers_other\valarray</Filter>
+    </ClCompile>
+    <ClCompile Include="valarray_operators.cpp">
+      <Filter>Pliki źródłowe\containers_other\valarray</Filter>
+    </ClCompile>
+    <ClCompile Include="valarray_nonmember_methods.cpp">
+      <Filter>Pliki źródłowe\containers_other\valarray</Filter>
+    </ClCompile>
+    <ClCompile Include="gslice_array.cpp">
+      <Filter>Pliki źródłowe\selectors</Filter>
+    </ClCompile>
+    <ClCompile Include="gslice.cpp">
+      <Filter>Pliki źródłowe\selectors</Filter>
+    </ClCompile>
+    <ClCompile Include="slice.cpp">
+      <Filter>Pliki źródłowe\selectors</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

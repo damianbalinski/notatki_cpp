@@ -39,8 +39,8 @@ int main()
 	 * search_n					DONE	DONE	15
 	 * count					DONE	DONE	6
 	 * count_if					DONE	DONE	7
-	 * mismatch					DONE	DONE	5
-	 * equal					DONE	DONE	4
+	 * mismatch					DONE	DONE	5		QQQ
+	 * equal					DONE	DONE	4		QQQ
 	 * lexicographical_compare	DONE	DONE	18
 	 */
 
@@ -94,7 +94,7 @@ int main()
 	for_each_n(policy, first, n, func);		// (-, F, -, 1)	iterator
 
 	// find()
-	// szuka pierwszego wystapienia elementu val w 
+	// szuka pierwszego wystapienia val w 
 	// [first, last), zwraca iterator na ten element 
 	// lub last, jesli elementu nie ma
 	find(first, last, val);					// (I, I);		iterator
@@ -171,8 +171,8 @@ int main()
 	count_if(policy, first, last, pred);	// (-, F, F, 1)	difference_type
 
 	// mismatch()
-	// szuka pierwszego wystapienia elementu w [first, last) niezgodnego
-	// z odpowiadajacym mu elementem w [first2, last2), zwraca pare zlozona 
+	// szuka pierwszego wystapienia pary niezgodnych odpowiadajacych sobie
+	// elementow w [first, last) oraz [first2, last2), zwraca pare zlozona 
 	// z iteratorow na niepasujace elementy w obydwu zakresach
 	mismatch(first, last, first2);						// (I, I, I)		pair<iterator, iterator>	==
 	mismatch(policy, first, last, first2);				// (-, F, F, F)		pair<iterator, iterator>	==
@@ -203,10 +203,9 @@ int main()
 	lexicographical_compare(policy, first, last, first2, last2, compb);	// (-, F, F, F, F)		bool	compb (2)
 
 	// TEST
-	vector<int> v = { 0, 1, 4, 2, 1, 1, 3};
-	vector<int> v2 = { 2, 3};
-	auto it = search_n(v.begin(), v.end(), 2, 1);
-	cout << *(it+2) << endl;
+	vector<int> v1 = { 0, 1, 2};
+	vector<int> v2 = { 0, 1, 2};
+	cout << lexicographical_compare(v1.begin(), v1.end(), v2.begin(), v2.end());
 
 	return 0;
 }

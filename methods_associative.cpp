@@ -37,9 +37,16 @@ int main()
 	std::multiset<int> ms = { 0, 1, 2, 3, 4, 5 };
 	std::multiset<int> multiset = { 0, 1, 2, 3, 4, 5 };
 	std::multiset<int> rmultiset = { 0, 1, 2, 3, 4, 5 };
-	
 	std::map<int, int> m;
 	std::map<int, int> map;
+
+	// iteratory
+	auto iters = set.begin();
+	auto iterm = map.begin();
+	auto iters1 = set.begin();
+	auto iters2 = set.end();
+	auto firstl = set.begin();
+	auto lastl = set.end();
 
 	// dane
 	int key = 3;
@@ -48,10 +55,6 @@ int main()
 	int rval = 3;
 	std::pair<int, int> pair(1, 1);
 	auto args = { 1, 2, 3, 4, 5 };
-	auto iters = set.begin();
-	auto iterm = map.begin();
-	auto iters1 = set.begin();
-	auto iters2 = set.end();
 	auto bucket = uset.bucket(key);
 	int rnode = 10;
 	int i = 0;
@@ -62,7 +65,7 @@ int main()
 	// MODYFIKUJACY		// NIEMODYFIKUJACY
 	// local_iterator	// const_local_iterator
 	us.begin(i);		us.cbegin(i);		// [us uS um uM] do pierwszego elementu w i-tym kubelku
-	us.end(i);			us.cend(i);			// [us uS um uM] za pstatmo element w i-tym kubelku
+	us.end(i);			us.cend(i);			// [us uS um uM] za ostatni element w i-tym kubelku
 	// iterator			// const_iterator
 	s.begin();			s.cbegin();			// [s S m M us uS um uM] do pierwszego elementu
 	s.end();			s.cend();			// [s S m M us uS um uM] za ostatni element
@@ -76,18 +79,18 @@ int main()
 	s.empty();			// [s S m M us uS um uM] (bool) sprawdza, czy kontener jest pusty
 
 	// DOSTEP
-	m.at(key);			// [m um] (reference) referencja do elementu o podanym kluczu, sprawdza poprawnosc indeksowania
+	m.at(key);			// [m um] (T&) referencja do elementu o podanym kluczu, sprawdza poprawnosc klucza
 
 	// ROZNE
-	s.swap(set);			// [s S m M us uS um uM] (void) zamienia miejscami kontenery tego samego typu
+	s.swap(set);			// [s S m M us uS um uM] (void) zamienia miejscami elementy kontenerow tego samego typu
 	s.get_allocator();		// [s S m M us uS um uM] (allocator_type) zwraca kopie alokatora
 	
 	// MODYFIKACJA
 	// insert [s S m M us uS um uM] 
 	// wstawia elemenet/elementy przed iter, dla nieuporzadkowanych iter jest sugestia
-	// dla k. niepowtarzalnych zwraca pare zlozona z iteratora do wstawionego/juz 
-	// istniejacego elementu oraz wartosci logicznej, okreslajacej, czy wstawienie mialo miejsce
-	// dla k. powtarzalnych zwraca iterator do wstawionego elementu
+	// dla unikalnych zwraca pare zlozona z iteratora do wstawionego/juz 
+	// istniejacego elementu oraz wartosci logicznej, okreslajacej, czy wstawienie sie odbylo
+	// dla nieunikalnych zwraca iterator do wstawionego elementu
 	
 	// UNIKALNY					// NIEUNIKALNY
 	// pair<iterator, bool>		// iterator
@@ -97,7 +100,7 @@ int main()
 	s.insert(iters, val);		ms.insert(iters, val);
 	s.insert(iters, rval);		ms.insert(iters, rval);
 	// void						// void
-	s.insert(iters1, iters2);	ms.insert(iters1, iters2);
+	s.insert(firstl, lastl);	ms.insert(firstl, lastl);
 	s.insert(list);				ms.insert(list);
 	// insert_return_type		// iterator
 	s.insert(rnode);			ms.insert(rnode);
@@ -107,7 +110,7 @@ int main()
 	// insert_or_assign [m um]
 	// jesli element o podanym kluczu nie istnieje, wstawia go przed iter
 	// jesli istnieje, zamienia jego wartosc
-	// dla k. niepowtarzalnych zwraca pare zlozona z iteratora do wstawionego/zmodyfikowanego elementu oraz wartosci logicznej, okreslajacej, czy wstawienie mialo miejsce
+	// dla k. niepowtarzalnych zwraca pare zlozona z iteratora do wstawionego/zmodyfikowanego elementu oraz wartosci logicznej, okreslajacej, czy wstawienie sie odbylo
 	// dla k. powtarzalnych zwraca iterator do wstawionego elementu
 
 	// UNIKALNY						// NIEUNIKALNY
@@ -171,19 +174,14 @@ int main()
 	s.count(key);			// [s S m M us uS um uM] (size_type) liczba elementow powiazanych z kluczem
 	s.contains(key);		// [s S m M us uS um uM] (bool) sprawdza, czy kontener zawiera element o podanym kluczu
 
+	// ZAKRES
 	s.lower_bound(key);		// [s S m M] (iterator) iterator na pierwszy element, wiekszy/rowny od podanego klucza
 	s.upper_bound(key);		// [s S m M] (iterator) iterator na pierwszy element, wiekszy od podanego klucza
 	s.equal_range(key);		// [s S m M us uS um uM] (pair<iterator,iterator>) zwraca pair<lower_bound(), upper_bound()> 
-
-	// OBSERWATORZY
-	s.key_comp();			// [s S m M] (key_compare) obiekt funkcyjny porownujacy klucze
-	s.value_comp();			// [s S m M] (value_compare) obiekt funkcyjny porownujacy elementy
-	us.key_eq();			// [us uS um uM] (key_equal) funkcja sprawdzajaca rownosc kluczy
-	us.hash_function();		// [us uS um uM] (hasher) funkcja haszujaca
 	
 	// KUBELKI
 	us.bucket(key);			// [us uS um uM] (size_type) indeks kubelka, zawierajacy podany klucz
-	us.bucket_size(i);		// [us uS um uM] (size_type) liczba elementow w kubelku o podanym indeksie
+	us.bucket_size(i);		// [us uS um uM] (size_type) liczba elementow w i-tym kubelku
 	us.bucket_count();		// [us uS um uM] (size_type) liczba kubelkow
 	us.max_bucket_count();	// [us uS um uM] (size_type) maksymalna liczba kublekow
 	
@@ -199,6 +197,11 @@ int main()
 	us.reserve(n);			// [us uS um uM] (void) ustawia liczbe kubelkow na co najmniej type, aby pomiescic n elementow
 							// nie przekraczajac maksymalnej sredniej liczby elementow na kubelek,
 							// ponownie haszuje kontener
+	// OBSERWATORZY
+	s.key_comp();			// [s S m M] (key_compare) obiekt funkcyjny porownujacy klucze
+	s.value_comp();			// [s S m M] (value_compare) obiekt funkcyjny porownujacy elementy
+	us.key_eq();			// [us uS um uM] (key_equal) funkcja sprawdzajaca rownosc kluczy
+	us.hash_function();		// [us uS um uM] (hasher) funkcja haszujaca
 
 	return 0;
 }

@@ -106,7 +106,7 @@ int main()
 
 	// clamp()
 	// zwraca element srodkowy pomiedzy val1, val2, val3
-	// val2 musi byc mniejsze niz val2
+	// val2 musi byc mniejsze niz val3
 	clamp(val1, val2, val3);						// T&	<
 	clamp(val1, val2, val3, compb);					// T&	compb
 

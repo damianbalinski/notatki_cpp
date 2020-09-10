@@ -54,7 +54,7 @@ int main()
 	
 	// next_permutation()
 	// przeksztalca [first, last) do nastepnej permutacji w porzadku
-	// leksykograficznym
+	// leksykograficznym, otrzymywane permutacje sa unikalne
 	// jesli nastepna permutacja istnieje, zwraca true
 	// jesli nastepna permutacja nie istnieje, zwraca false 
 	// oraz przeksztalca do pierwszej permutacji
@@ -63,7 +63,7 @@ int main()
 
 	// prev_permutation()
 	// przeksztalca [first, last) do poprzedniej permutacji w porzadku
-	// leksykograficznym
+	// leksykograficznym, otrzymywane permutacje sa unikalne
 	// jesli poprzednia permutacja istnieje, zwraca true,
 	// jesli poprzednia permutacja nie istnieje, zwraca false
 	// oraz przeksztalca do ostatniej permutacji

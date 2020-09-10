@@ -34,15 +34,17 @@
  * 2 - predykat/funktor binarny
  *
  * () - zakres zrodlowy, [] - zakres docelowy
- * COPY		  ([  ]) - zakres docelowy moze sie pokrywac z zakresem zrodlowym
+ * COPY-OK	  ([  ]) - zakres docelowy moze sie pokrywac z zakresem zrodlowym
  * COPY-NOT   ()  [] - zakres docelowy nie moze sie pokrywac z zakresem zrodlowym
  * COPY_RIGHT [ (] ) - poczotek zakresu docelowego musi sie znajdowac poza zakresem zrodlowym
  * COPY-RIGHT ( [) ] - koniec zakresu docelowego musi sie znajdowac poza zakresem zrodlowym
  *
+ * STABLE-OK	- gwarantuje zachowanie kolejnosci elementow rownowaznych / gwarantuje sekwencyjne wykonywanie operacji
+ * STABLE-NOT	- nie gwarantuje zachowania kolejnosci elementow rownowaznych / nie gwarantuje sekwencyjnego wykonywania operacji
+ *
  * SORT   - zakres zrodlowy jest posortowany rosnaco
  * HEAP	  - zakres zrodlowy jest kopcem maksymalnym
  * PARTITION - zakres zrodlowy jest podzielony na bazie predykatu
- * STABLE - kolejnosc rownowaznych elementow pozostaje zachowana (najpierw pierwszy zakres, potem drugi)
  * 
  * <	 - do porownywania elementow uzywa operatora <
  * ==	 - do porownywania elementow uzywa operatora ==

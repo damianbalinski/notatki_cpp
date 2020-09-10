@@ -93,8 +93,8 @@ int main()
 	// element e wystapi min(a, b) razy w [first3, ...)
 	set_intersection(first, last, first2, last2, first3);					// (I, I, I, I, O)		iterator	<
 	set_intersection(policy, first, last, first2, last2, first3);			// (-, F, F, F, F, F)	iteraotor	<
-	set_intersection(first, last, first2, last2, first3, compb);			// (I, I, I, I, O)		iterator	predb (2)
-	set_intersection(policy, first, last, first2, last2, first3, compb);	// (-, F, F, F, F, F)	iteraotor	predb (2)
+	set_intersection(first, last, first2, last2, first3, compb);			// (I, I, I, I, O)		iterator	compb
+	set_intersection(policy, first, last, first2, last2, first3, compb);	// (-, F, F, F, F, F)	iteraotor	compb
 	
 	// set_difference() SORT | COPY-NOT | STABLE
 	// umieszcza roznice zbiorow [first, last) oraz [first2, last2) pod [first3, ...)

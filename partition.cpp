@@ -54,7 +54,7 @@ int main()
 
 	// partition()
 	// umieszcza wszystkie elementy z [first, last) spelniajace predykat pred
-	// przed wszystkimi elementami nie spelniajacymi tego predykatu,
+	// przed wszystkimi elementami nie spelniajacymi predykatu,
 	// zwraca iterator za ostatni element spelniajacy predykat
 	// (za ostatni element pierwszej partycji)
 	partition(first, last, pred);				// (F, F, 1)	iterator
@@ -62,7 +62,7 @@ int main()
 	
 	// stable_partition() STABLE
 	// umieszcza wszystkie elementy z [first, last) spelniajaca predykat pred
-	// przed wszystkimi elementami nie spelniajacymi tego predykatu,
+	// przed wszystkimi elementami nie spelniajacymi predykatu,
 	// zachowuje porzadek obydwu grup elementow
 	// zwraca iterator za ostatni element spelniajacy predykat
 	// (za ostatni element pierwszej partycji)
@@ -71,11 +71,11 @@ int main()
 
 	// pratition_copy()
 	// kopiuje wszystkie elementy z [first, last) spelniajace predykat pred
-	// w [first2, ...) oraz wszystkie elementy z [first, last) nie
-	// spelniajace tego predykatu w [first3, ...),
+	// w [first2, ...) oraz wszystkie elementy nie
+	// spelniajace predykatu w [first3, ...),
 	// zwraca pare zlozona z iteratorow za ostatnie kopiowane elemeny
-	// z zakresow docelowych [first2, ...) oraz [first3, ...)
-	partition_copy(first, last, first2, first2, pred);			// (I, I, O, O, 1)		pair<iterator, iterator>
+	// z zakresow docelowych
+	partition_copy(first, last, first2, first3, pred);			// (I, I, O, O, 1)		pair<iterator, iterator>
 	partition_copy(policy, first, last, first2, first3, pred);	// (-, F, F, F, F, 1)	pair<iterator, iterator>
 
 	// partition_point() PARTITION
