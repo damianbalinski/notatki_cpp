@@ -187,7 +187,7 @@
     <Filter Include="Pliki źródłowe\containers_other\valarray">
       <UniqueIdentifier>{ece6297c-ba83-4cb0-ac8f-95da24766b13}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\selectors">
+    <Filter Include="Pliki źródłowe\selectors_masks">
       <UniqueIdentifier>{950a4d71-b307-4997-bb9f-7c412a8567d8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -750,14 +750,17 @@
     <ClCompile Include="valarray_nonmember_methods.cpp">
       <Filter>Pliki źródłowe\containers_other\valarray</Filter>
     </ClCompile>
-    <ClCompile Include="gslice_array.cpp">
-      <Filter>Pliki źródłowe\selectors</Filter>
-    </ClCompile>
     <ClCompile Include="gslice.cpp">
-      <Filter>Pliki źródłowe\selectors</Filter>
+      <Filter>Pliki źródłowe\selectors_masks</Filter>
     </ClCompile>
     <ClCompile Include="slice.cpp">
-      <Filter>Pliki źródłowe\selectors</Filter>
+      <Filter>Pliki źródłowe\selectors_masks</Filter>
+    </ClCompile>
+    <ClCompile Include="valarray_constructors.cpp">
+      <Filter>Pliki źródłowe\containers_other\valarray</Filter>
+    </ClCompile>
+    <ClCompile Include="helped_arrays.cpp">
+      <Filter>Pliki źródłowe\selectors_masks</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
