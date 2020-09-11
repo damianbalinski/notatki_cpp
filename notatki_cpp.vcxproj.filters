@@ -190,6 +190,9 @@
     <Filter Include="Pliki źródłowe\selectors_masks">
       <UniqueIdentifier>{950a4d71-b307-4997-bb9f-7c412a8567d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\initializer_list">
+      <UniqueIdentifier>{37542910-1e64-4a53-a523-04d60f6c98f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -761,6 +764,9 @@
     </ClCompile>
     <ClCompile Include="helped_arrays.cpp">
       <Filter>Pliki źródłowe\selectors_masks</Filter>
+    </ClCompile>
+    <ClCompile Include="initializer_list.cpp">
+      <Filter>Pliki źródłowe\initializer_list</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
