@@ -34,6 +34,5 @@ int main()
 	valarray<int> a2(indirect_array);	// indirect_array
 	valarray<int> a2(list);				// lista inicjalizujaca
 
-
 	return 0;
 }

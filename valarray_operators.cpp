@@ -19,21 +19,6 @@ void print(valarray<bool> arr)
 
 int main()
 {
-	/*
-	 * =
-	 *
-	 * []
-	 *
-	 * + U
-	 * - U
-	 *
-	 * ~
-	 *
-	 * !
-	 *
-	 *
-	 */
-
 	// KONTENERY
 	valarray<int> arr = { 1, 2, 3, 4, 5 };
 	valarray<int> rarr = { 1, 2, 3, 4, 5 };

@@ -1,72 +1,56 @@
 #include <iostream>
 #include <string>
 #include <memory>
-#define ITER "abcdefgh"
 
+using namespace std;
 int main()
 {
-	using std::string;
-	using std::cout;
-	using std::endl;
-	string s0 = "abcdefgh";
-	string ref = s0;
+	// dane
+	int n = 2;
+	int i = 0;
+	char c = 'A';
+	const char* arr = "abc";
+	auto first = arr;
+	auto last = arr + 3;
+	auto list = { 'a', 'b', 'c' };
+	string t;
+	string str = "abc";
+	string rstr = "abc";
+	allocator<char> alloc;
 
-	// OK DOC
-	// string((alloc)) - domyslny, rozmiar alokowanego obszaru jest nieokreslony
-	//string s1(std::allocator<char>());
+	string;						// domyslny, nieokreslony rozmiar alokowanego obszaru
+	string(alloc);
+
+	string(n, c);				// n kopii znaku c
+	string(n, c, alloc);
+
+	string(str);				// kopiujacy/przenoszacy
+	string(rstr);
+	string(str, alloc);
+	string(rstr, alloc);
+
+	string(str, i);				// OK kopiujacy, zaczyna od i-tego indeksu, kopiuje co najwyzej n znakow
+	string(str, i, n);
+	string(str, i, alloc);
+	string(str, i, n, alloc);
+
+	string(arr);				// NOT-OK konwertujacy z lancucha, kopiuje dokladnie n znakow
+	string(arr, n);
+	string(arr, alloc);
+	string(arr, n, alloc);
+
+	string(first, last);		// z zakresu [first, last)
+	string(first, last, alloc);
+
+	string(list);				// z listy inicjalizacyjnej
+	string(list, alloc);
+
+	string(t);					// dedukcja typu szablonowego
+	string(t, i, n);
+	string(t, alloc);
+	string(t, i, n, alloc);						
+
 	
-	// OK DOC
-	// string(n, c, (alloc)) - n kopii znaku c
-	string s4(10, 'A');
-
-	// OK DOC
-	// string(arr, (alloc)) - konwertujacy lancuch znakowy
-	string s2("abc");									
-
-	// OK DOC
-	// string(arr, n, (alloc)) - konwertujacy, kopiuje dokladnie n znakow (nawet jesli n wychodzi poza zakres)
-	string s3("abc", 10);
-
-
-	// OK DOC
-	// string(str) - kopiujacy bez alokatora
-	string s5(s0);
-
-	// OK DOC
-	// string(str, alloc) - kopiujacy z alokatorem
-	string s6(s0, std::allocator<char>());
-
-	// OK DOC
-	// string(str_ref) - przenoszacy bez alokatora
-
-	// OK DOC
-	// string(str_ref, alloc) - przenoszacy z alokatorem
-
-	// OK DOC
-	// string(str, i, (alloc)) - kopiujacy, kopiuje zaczynajac od i-tego indeksu, nie wychodzi poza zakres
-	string s9(s0, 0);
-
-	// OK DOC
-	// string(str, i, n, (alloc)) - kopiujacy, kopiuje co najwyzej n znakow zaczynajac od i-tego indeksu, nie wychodzi poza zakres
-	string s10(s0, 10, 2);
-	
-	// OK DOC
-	// template<class T> 
-	// string(T iter1, T iter2, (alloc)) - pobiera zakres okreslony iteratorami w zbiorze [iter1, iter2)
-	string s11(ITER, ITER + 6);
-
-	// string(list, (alloc)) - lista inicjalizacyjna
-	string s12 = { 'A', 'B', 'C' };
-
-	// OK DOC
-	// template<class T>
-	// string(t, (alloc)) - - dedukcja typu szablonowego klasy
-
-	// OK DOC
-	// template<class T>
-	// string(t, i, n, (alloc)) - dedukcja typu szablonowego klasy z podanym zakresem
-	
-
 	// PARAMETRY
 	// arr === const charT* arr					- lancuch znakowy
 	// str === const string& str				- referencja do string
@@ -78,12 +62,6 @@ int main()
 	// i === size_type i						- indeks poczatkowy
 	// c === charT c							- znak
 	// t === const T& t							- parametr szablonowy
-
-
-	// PARAMETRY DOMYSLNE
-	// (alloc) == = const Allocator & alloc = Allocator()	- alokator domyslny
-	// (n) === size_type n = string::npos
-
 
 	return 0;
 }

@@ -19,14 +19,11 @@ int main()
 	/*
 	 * size
 	 * resize
-	 *
 	 * swap
 	 * apply
-	 *
 	 * min
 	 * max
 	 * sum
-	 *
 	 * shift
 	 * cshift
 	 */
@@ -53,7 +50,7 @@ int main()
 
 	// stosuje funktor func do kazdego elementu tablicy, przypisuje zwrocona 
 	// wartosc odpowiedniemu elementowi nowej tablicy, nie modyfikuje tablicy
-	// wejsciowej, zwraca nowo powstala tablice
+	// zrodlowej, zwraca nowo powstala tablice
 	arr.apply(func);
 
 	// najmniejsza wartosc
@@ -64,16 +61,16 @@ int main()
 
 	// suma elementow
 	arr.sum();
+	
+	// zwraca nowa tablice, w ktorej wszystkie elementy sa przesuniete w lewo
+	// o podana awrtosc, puste pola wypelnia elementem zerowym, nie modyfikuje
+	// tablicy zrodlowej
+	arr.shift(n);
 
-	// TEST
-	valarray<int> a1 = { 1, 2, 3, 4, 5, 6 };
-	valarray<int> a2;
-
-	print(a1);
-	print(a2);
-	a2 = a1.apply(func);
-	print(a1);
-	print(a2);
+	// zwraca nowa tablice, w ktorej wszystkie elementy sa przesuniete cyklicznie w lewo
+	// o podana awrtosc, nie modyfikuje tablicy zrodlowej
+	// (zamienia miejscami [first, first+n) oraz [first+n, last))
+	arr.cshift(n);
 
 	return 0;
 }
