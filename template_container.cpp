@@ -1,11 +1,22 @@
-// ELEMENTS zdefiniowne dla CONTAINERS
 #include <iostream>
-#include <vector>
+
+using namespace std;
 
 int main()
 {
-	std::vector<int> v1;
-	std::vector<int> v2;
+	// KONTENERY
+
+	// DANE
+
+	// KONSTRUKTORY
+
+	// METODY
+
+	// FUNKCJE
+
+	// OPERATORY
+
+	// TEST
 
 	return 0;
 }

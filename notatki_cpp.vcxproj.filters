@@ -768,6 +768,12 @@
     <ClCompile Include="initializer_list.cpp">
       <Filter>Pliki źródłowe\initializer_list</Filter>
     </ClCompile>
+    <ClCompile Include="pair.cpp">
+      <Filter>Pliki źródłowe\containers_other</Filter>
+    </ClCompile>
+    <ClCompile Include="tuple.cpp">
+      <Filter>Pliki źródłowe\containers_other</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="container_types.txt">
