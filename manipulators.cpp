@@ -5,7 +5,7 @@
 /*
  * STANDARDOWE MANIPULATORY WYJSCIA/WEJSCIA
  * manipulatory to funkcje nieskladowe, ktore przyjmuja jako argument strumien
- * WERSJA OPERATOROWA / WERSJA FUNKCYJNA
+ * WERSJA OPERANDOWA / WERSJA FUNKCYJNA
  */
 
 using namespace std;
@@ -61,56 +61,184 @@ int main()
 	ios_base::fmtflags mask = 10;
 
 	// ZMIENNE LOGICZNE
-	//cout << boolalpha;	boolalpha(cout);	// [ios, IN/OUT, MULTI] znakowa reprezentacja zmiennych logicznych
-	//cout << noboolalpha;	noboolalpha(cout);	// [ios, IN/OUT, MULTI] liczbowa reprezentacja zmiennych logicznych
+	// boolalpha [ios, IN/OUT, MULTI] znakowa reprezentacja zmiennych logicznych
+	// cout << boolalpha;
+	// boolalpha(cout);
+	// cout.setf(ios_base::boolalpha);
+
+	// noboolalpha [ios, IN/OUT, MULTI] liczbowa reprezentacja zmiennych logicznych
+	// cout << noboolalpha;
+	// noboolalpha(cout);
+	// cout.unsetf(ios_base::boolalpha);
+
 
 	// SYSTEMY LICZBOWE
-	//cout << oct;			oct(cout);			// [ios, IN/OUT, MULTI] osemkowy 
-	//cout << dec;			dec(cout);			// [ios, IN/OUT, MULTI] dziesietny 
-	//cout << hex;			hex(cout);			// [ios, IN/OUT, MULTI] szesnastkowy 
-	//cout << setbase(n);						// [iomanip, IN/OUT, MULTI] podstawa systemu liczbowego (mozliwe 8, 10, 16)
-	//cout << showbase;		showbase(cout);		// [ios, IN/OUT, MULTI] przedrostek systemu liczbowego
-	//cout << noshowbase;	noshowbase(cout);	// [ios, IN/OUT, MULTI] brak przedrostka systemu liczbowego
+	// oct [ios, IN/OUT, MULTI] osemkowy
+	// cout << oct;
+	// oct(cout);
+	// cout.setf(ios_base::oct, ios_base::basefield);
 
-	// ROZMIAR/WYROWNANIE
-	//cout << left;			left(cout);			// [ios, (IN)/OUT, MULT] wyrownanie do lewej
-	//cout << right;		right(cout);		// [ios, (IN)/OUT, MULT] wyrownanie do prawej
-	//cout << internal;		internal(cout);		// [ios, (IN)/OUT, MULT]  wyrownanie wewnetrzne, do lewej dla znaku i przedrostka, do prawej dla liczby
-	//cout << setfill(c);					cout.fill(c);	// [iomanip, (IN)/OUT, MULT] znak wypelnienia
-	//cout << setw(n);						cout.width(n);	// [iomanip, IN/OUT, SINGLE] szerokosc pola
-	
+	// dec [ios, IN/OUT, MULTI] dziesietny 
+	// cout << dec;
+	// dec(cout);
+	// cout.setf(ios_base::dec, ios_base::basefield);
+
+	// hex [ios, IN/OUT, MULTI] szesnastkowy
+	// cout << hex;
+	// hex(cout);
+	// cout.setf(ios_base::hex, ios_base::basefield);
+
+	// showbase [ios, IN/OUT, MULTI] przedrostek systemu liczbowego
+	// cout << showbase;
+	// showbase(cout);
+	// cout.setf(ios_base::showbase);
+
+	// noshowbase [ios, IN/OUT, MULTI] brak przedrostka systemu liczbowego
+	// cout << noshowbase;
+	// noshowbase(cout); 
+	// cout.unsetf(ios_base::showbase);
+
+	// setbase [iomanip, IN/OUT, MULTI] podstawa systemu liczbowego (mozliwe 8, 10, 16)
+	// cout << setbase(n);
+
+
+	// SZEROKOSC/WYROWNANIE
+	// left [ios, (IN)/OUT, MULT] wyrownanie do lewej
+	// cout << left;
+	// left(cout);
+	// cout.setf(ios_base::internal, ios_base::adjustfield);
+
+	// right [ios, (IN)/OUT, MULT] wyrownanie do prawej
+	// cout << right;
+	// right(cout);
+	// cout.setf(ios_base::right, ios_base::adjustfield);
+
+	// internal [ios, (IN)/OUT, MULT]  wyrownanie wewnetrzne, do lewej dla przedrostka, do prawej dla liczby
+	// cout << internal;
+	// internal(cout);
+	// cout.setf(ios_base::internal, ios_base::adjustfield);
+
+	// setw [iomanip, IN/OUT, SINGLE, DEF=6] szerokosc pola
+	// cout << setw(n);
+	// cout.width(n);
+	// cout.width(); 
+
+	// setfill [iomanip, (IN)/OUT, MULT, DEF=' '] znak wypelnienia
+	// cout << setfill(c);						
+	// cout.fill(c);
+	// cout.fill();
+
+
 	// LICZBY ZMIENNOPRZECINKOWE
-	//cout << showpoint;		showpoint(cout);	// [ios, (IN)/OUT, MULT] kropka dziesietna oraz koncowe zer
-	//cout << noshowpoint;		noshowpoint(cout);	// [ios, (IN)/OUT, MULT] brak kropki dziesietnej oraz koncowych zer
-	//cout << setprecision(n);						// [iomanip, (IN)/OUT, MULT] liczba cyfr znaczacych/cyfr po przecinku
-	//cout << fixed;			fixed(cout);		// [ios, (IN)/OUT, MULT] staloprzecinkowy
-	//cout << scientific;		scientific(cout);	// [ios, (IN)/OUT, MULT] naukowy
-	//cout << hexfloat;			hexfloat(cout);		// [ios, (IN)/OUT, MULT] naukowy szesnastkowy
-	//cout << defaultfloat;		defaultfloat(cout);	// [ios, (IN)/OUT, MULT] domyslny
+	// showpoint [ios, (IN)/OUT, MULT] kropka dziesietna oraz koncowe zer
+	// cout << showpoint;
+	// showpoint(cout);
+	// cout.setf(ios_base::showpoint);
 
-	// INNE
-	//cout << showpos;		showpos(cout);			// [ios, (IN)/OUT, MULT] symbol '+' przed liczbami dodatnimi w systemie dziesietnym
-	//cout << noshowpos;		noshowpos(cout);	// [ios, (IN)/OUT, MULT] brak symbolu '+' przed liczbami dodatnimi w systemie dziesietnym
-	//cout << uppercase;		uppercase(cout);	// [ios, (IN)/OUT, MULT] drukowanie liczb szesnastkowych wielkimi literami
-	//cout << nouppercase;	nouppercase(cout);		// [ios, (IN)/OUT, MULT] drukowanie liczb szesnastkowych malymi literami
+	// noshowpoint [ios, (IN)/OUT, MULT] brak kropki dziesietnej oraz koncowych zer
+	// cout << noshowpoint;
+	// noshowpoint(cout);
+	// cout.unsetf(ios_base::showpoint);
+
+	// setprecision [iomanip, (IN)/OUT, MULT, DEF=6] cyfry znaczace/po przecinku
+	// cout << setprecision(n);
+	// cout.precision(n);
+	// cout.precision();
+	
+	// fixed [ios, (IN)/OUT, MULT] staloprzecinkowy
+	// cout << fixed;
+	// fixed(cout);
+	// cout.setf(ios_base::fixed, ios_base::floatfield);
+
+	// scientific [ios, (IN)/OUT, MULT] naukowy
+	// cout << scientific;
+	// scientific(cout);
+	// cout.setf(ios_base::scientific, ios_base::floatfield);
+
+	// hexfloat [ios, (IN)/OUT, MULT] naukowy szesnastkowy
+	// cout << hexfloat;
+	// hexfloat(cout);
+	// cout.setf(ios_base::fixed | ios_base::scientific, ios_base::floatfield);
+
+	// defaultfloat [ios, (IN)/OUT, MULT] domyslny
+	// cout << defaultfloat;
+	// defaultfloat(cout);
+	// cout.unsetf(ios_base::floatfield);
+
+
+	// ROZNE
+	// showpos [ios, (IN)/OUT, MULT] symbol '+' przed liczbami dodatnimi w systemie dziesietnym
+	// cout << showpos;
+	// showpos(cout);
+	// cout.setf(ios_base::showpos);
+
+	// noshowpos [ios, (IN)/OUT, MULT] brak symbolu '+' przed liczbami dodatnimi w systemie dziesietnym
+	// cout << noshowpos;
+	// noshowpos(cout);
+	// cout.unsetf(ios_base::showpos);
+
+	// uppercase [ios, (IN)/OUT, MULT] drukowanie liczb szesnastkowych wielkimi literami
+	// cout << uppercase;
+	// uppercase(cout);
+	// cout.setf(ios_base::uppercase);
+
+	// nouppercase [ios, (IN)/OUT, MULT] drukowanie liczb szesnastkowych malymi literami
+	// cout << nouppercase;
+	// nouppercase(cout);		
+	// cout.unsetf(ios_base::uppercase);
+
 
 	// BUFOR
-	//cout << endl;			endl(cout);						// [ostream, OUT, SINGLE] oproznia bufor, drukuje znak nowej linii
-	//cout << flush;		flush(cout);	cout.flush();	// [ostream, OUT, SINGLE] oproznia bufor
-	//cout << unitbuf;		unitbuf(cout);					// [ios, (IN)/OUT, MULTI] automatyczne oproznianie bufora po kazdej operacji wyjscia
-	//cout << nounitbuf;	nounitbuf(cout);				// [ios, (IN)/OUT, MULTI] brak automatycznego oprozniania bufora po kazdej operacji wyjscia
+	// endl [ostream, OUT, SINGLE] oproznia bufor, drukuje znak nowej linii
+	// cout << endl;
+	// endl(cout);
+	
+	// flush [ostream, OUT, SINGLE] oproznia bufor
+	// cout << flush;
+	// flush(cout);
+	// cout.flush();
+
+	// unitbuf [ios, (IN)/OUT, MULTI] automatyczne oproznianie bufora po kazdej operacji wyjscia
+	// cout << unitbuf;
+	// unitbuf(cout);
+	// cout.setf(ios_base::unitbuf);
+	
+	// nounitbuf [ios, (IN)/OUT, MULTI] brak automatycznego oprozniania bufora po kazdej operacji wyjscia
+	// cout << nounitbuf;
+	// nounitbuf(cout);
+	// cout.unsetf(ios_base::unitbuf);
+
 
 	// ZNAKI BIALE
-	//cin >> ws;			ws(cin);						// [istream, IN, MULT] pomijanie wiodacych bialych znakow
-	//cout << ends;			ends(cout);						// [ostream, OUT, ??] dodaje na koniec znak pusty
-	//cout << skipws;		skipws(cout);					// [ios. IN/(OUT) ] pomijanie wiodacych bialych znakow
-	//cout << noskipws;		noskipws(cout);					// [ios. IN/(OUT), niepomijanie wiodacych bialych znakow
+	// ws [istream, IN, MULT] pomijanie poprzedzajacych bialych znakow
+	// cin >> ws;
+	// ws(cin);
+
+	// skipws [ios, IN/(OUT), MULT] pomijanie poprzedzajacych bialych znakow
+	// cin >> skipws;
+	// skipws(cin);
+	// cin.setf(ios_base::skipws);
+
+	// noskipws [ios. IN/(OUT), MULT] niepomijanie wiodacych bialych znakow
+	// cin >> noskipws;
+	// noskipws(cin);
+	// cin.unsetf(ios_base::skipws);
+
+	// ends [ostream, OUT, ??] dodaje na koniec znak pusty
+	// cout << ends;
+	// ends(cout);
 	
+
 	// MASKA
-	cout << resetiosflags(mask);							// [iomanip, IN/OUT, MULT] zeruje wszystkie znaczniki zawarte w masce
-	cout << setiosflags(mask);								// [iomanip, IN/OUT, MULT] ustawia wszystkie znaczniki zawarte w masce
-	
-	// CZAS/WALUTA
+	// resetiosflags [iomanip, IN/OUT, MULT] zeruje znaczniki zawarte w masce
+	// cout << resetiosflags(mask);
+	// cout.setf(std::ios_base::fmtflags(0), mask);
+
+	// setiosflags [iomanip, IN/OUT, MULT] ustawia znaczniki zawarte w masce
+	//cout << setiosflags(mask);								
+	//cout.setf(mask);
+
+	// TODO CZAS/WALUTA
 															
 	/*
 	 * MULTI - dziala az do nastepnej zmiany stanu formatowania
@@ -121,8 +249,6 @@ int main()
 	 * (IN) - manipulator strumienia wejsciowego, bez efektu
 	 * (OUT) - manipulator strumienia wyjsciowego, bez efektu
 	 */
-
-	// TEST
 
 	return 0;
 }
