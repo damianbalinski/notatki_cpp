@@ -193,6 +193,9 @@
     <Filter Include="Pliki źródłowe\initializer_list">
       <UniqueIdentifier>{37542910-1e64-4a53-a523-04d60f6c98f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\input_output\ostream">
+      <UniqueIdentifier>{8deb904b-378a-4d43-9204-95bc7663b049}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -773,6 +776,27 @@
     </ClCompile>
     <ClCompile Include="tuple.cpp">
       <Filter>Pliki źródłowe\containers_other</Filter>
+    </ClCompile>
+    <ClCompile Include="streams.cpp">
+      <Filter>Pliki źródłowe\input_output</Filter>
+    </ClCompile>
+    <ClCompile Include="io_specialization.cpp">
+      <Filter>Pliki źródłowe\input_output</Filter>
+    </ClCompile>
+    <ClCompile Include="ostream_operators.cpp">
+      <Filter>Pliki źródłowe\input_output\ostream</Filter>
+    </ClCompile>
+    <ClCompile Include="template_stream.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="ostream_methods.cpp">
+      <Filter>Pliki źródłowe\input_output\ostream</Filter>
+    </ClCompile>
+    <ClCompile Include="configuration.cpp">
+      <Filter>Pliki źródłowe\input_output</Filter>
+    </ClCompile>
+    <ClCompile Include="manipulators.cpp">
+      <Filter>Pliki źródłowe\input_output</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
