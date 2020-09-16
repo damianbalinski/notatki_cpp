@@ -58,7 +58,10 @@ int main()
 	// dane
 	int n = 2;
 	char c = 'A';
-	ios_base::fmtflags mask = 10;
+	ios_base::fmtflags mask;
+	long double mon = 123.45;
+	tm time;
+	char format[100] = "";
 
 	// ZMIENNE LOGICZNE
 	// boolalpha [ios, IN/OUT, MULTI] znakowa reprezentacja zmiennych logicznych
@@ -235,11 +238,24 @@ int main()
 	// cout.setf(std::ios_base::fmtflags(0), mask);
 
 	// setiosflags [iomanip, IN/OUT, MULT] ustawia znaczniki zawarte w masce
-	//cout << setiosflags(mask);								
-	//cout.setf(mask);
+	// cout << setiosflags(mask);								
+	// cout.setf(mask);
 
-	// TODO CZAS/WALUTA
-															
+	// WALUTA/CZAS
+	// get_money [] - parsuje wartosc monetarna do typu long double lub string
+	// jesli intl=false, uzywa symboli walut, w przeciwnym razie uzywa lancuchow walut
+	// cin >> get_money(mon, false);
+
+	// put_money [] - drukuje wartosc monetarna z typu long double lub string,
+	// jesli intl=false, uzywa symboli walut, w przeciwnym razie uzywa lancuchow walut
+	// cout << put_money(mon, false);
+
+	// get_time [] - parsuje data/czas zgodnie z podanym lancuchem formatujacym
+	cin >> get_time(&time, format);
+
+	// put_time [] drukuje date/czas zgodnie z podanym lancuchem formatujacym
+	cout << put_time(&time, format);
+
 	/*
 	 * MULTI - dziala az do nastepnej zmiany stanu formatowania
 	 * SINGLE - dziala tylko na nastepne wyswietlenie, nastepnia przywraca wartosc domyslna

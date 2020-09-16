@@ -31,9 +31,6 @@
     <Filter Include="Pliki źródłowe\structure_union_enum">
       <UniqueIdentifier>{1811ff08-123a-4112-b2f7-e61b78f01072}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\type_inference">
-      <UniqueIdentifier>{56530edd-9e66-4a5b-a810-b51c660eaffb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\loops">
       <UniqueIdentifier>{0c665e78-8daf-4f72-9749-4806a6fb16a6}</UniqueIdentifier>
     </Filter>
@@ -49,17 +46,8 @@
     <Filter Include="Pliki źródłowe\input_output">
       <UniqueIdentifier>{cbb2b973-8029-458f-91e8-a766d39b66c5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\input_output\cin">
-      <UniqueIdentifier>{3e3eda83-f0b5-4b21-b257-8d18b34fd0aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\input_output\cout">
-      <UniqueIdentifier>{fcfcc78b-484c-4143-b992-3c0c69e2d923}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\input_output\ofstream">
       <UniqueIdentifier>{f3e7ba1f-57d1-4f79-a75d-1e6d344ff60f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\input_output\ifstream">
-      <UniqueIdentifier>{e1c8e0cd-d532-4c33-a8f1-a222565238e4}</UniqueIdentifier>
     </Filter>
     <Filter Include="Pliki źródłowe\prototypes">
       <UniqueIdentifier>{fe4a8b17-8da9-4e7c-a5e2-c0d074675ad3}</UniqueIdentifier>
@@ -196,6 +184,24 @@
     <Filter Include="Pliki źródłowe\input_output\ostream">
       <UniqueIdentifier>{8deb904b-378a-4d43-9204-95bc7663b049}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\input_output\constants">
+      <UniqueIdentifier>{4e3d965d-77ad-4be3-8ac8-8cdc3eb78cac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\input_output\methods_functions">
+      <UniqueIdentifier>{733a43b6-a92c-42cf-b3f6-417f86b46d1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\input_output\streams">
+      <UniqueIdentifier>{e1c8e0cd-d532-4c33-a8f1-a222565238e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\RTTI\type_inference">
+      <UniqueIdentifier>{56530edd-9e66-4a5b-a810-b51c660eaffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\input_output\methods_functions\unformated_input_output">
+      <UniqueIdentifier>{c90f86eb-c0fa-4344-a357-36e04a7eb5f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\input_output\files">
+      <UniqueIdentifier>{0c271058-caf9-4ded-874c-41d72b81e010}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -229,7 +235,7 @@
       <Filter>Pliki źródłowe\pointers</Filter>
     </ClCompile>
     <ClCompile Include="auto.cpp">
-      <Filter>Pliki źródłowe\type_inference</Filter>
+      <Filter>Pliki źródłowe\RTTI\type_inference</Filter>
     </ClCompile>
     <ClCompile Include="initialization_variable.cpp">
       <Filter>Pliki źródłowe\initialization</Filter>
@@ -246,12 +252,6 @@
     <ClCompile Include="loop_range_based_for.cpp">
       <Filter>Pliki źródłowe\loops</Filter>
     </ClCompile>
-    <ClCompile Include="cin_get.cpp">
-      <Filter>Pliki źródłowe\input_output\cin</Filter>
-    </ClCompile>
-    <ClCompile Include="cin_fail.cpp">
-      <Filter>Pliki źródłowe\input_output\cin</Filter>
-    </ClCompile>
     <ClCompile Include="loop_while.cpp">
       <Filter>Pliki źródłowe\loops</Filter>
     </ClCompile>
@@ -264,23 +264,8 @@
     <ClCompile Include="switch.cpp">
       <Filter>Pliki źródłowe\switch</Filter>
     </ClCompile>
-    <ClCompile Include="cin_clear.cpp">
-      <Filter>Pliki źródłowe\input_output\cin</Filter>
-    </ClCompile>
-    <ClCompile Include="cin.cpp">
-      <Filter>Pliki źródłowe\input_output\cin</Filter>
-    </ClCompile>
-    <ClCompile Include="cout_manipulators.cpp">
-      <Filter>Pliki źródłowe\input_output\cout</Filter>
-    </ClCompile>
     <ClCompile Include="ofstream.cpp">
       <Filter>Pliki źródłowe\input_output\ofstream</Filter>
-    </ClCompile>
-    <ClCompile Include="ifstream.cpp">
-      <Filter>Pliki źródłowe\input_output\ifstream</Filter>
-    </ClCompile>
-    <ClCompile Include="ifstream_is_open.cpp">
-      <Filter>Pliki źródłowe\input_output\ifstream</Filter>
     </ClCompile>
     <ClCompile Include="conditional_operator.cpp">
       <Filter>Pliki źródłowe\operators</Filter>
@@ -576,9 +561,6 @@
     <ClCompile Include="string_constructor.cpp">
       <Filter>Pliki źródłowe\string</Filter>
     </ClCompile>
-    <ClCompile Include="getline.cpp">
-      <Filter>Pliki źródłowe\input_output</Filter>
-    </ClCompile>
     <ClCompile Include="string_operators.cpp">
       <Filter>Pliki źródłowe\string</Filter>
     </ClCompile>
@@ -777,12 +759,6 @@
     <ClCompile Include="tuple.cpp">
       <Filter>Pliki źródłowe\containers_other</Filter>
     </ClCompile>
-    <ClCompile Include="streams.cpp">
-      <Filter>Pliki źródłowe\input_output</Filter>
-    </ClCompile>
-    <ClCompile Include="io_specialization.cpp">
-      <Filter>Pliki źródłowe\input_output</Filter>
-    </ClCompile>
     <ClCompile Include="ostream_operators.cpp">
       <Filter>Pliki źródłowe\input_output\ostream</Filter>
     </ClCompile>
@@ -792,11 +768,41 @@
     <ClCompile Include="ostream_methods.cpp">
       <Filter>Pliki źródłowe\input_output\ostream</Filter>
     </ClCompile>
-    <ClCompile Include="configuration.cpp">
-      <Filter>Pliki źródłowe\input_output</Filter>
-    </ClCompile>
     <ClCompile Include="manipulators.cpp">
-      <Filter>Pliki źródłowe\input_output</Filter>
+      <Filter>Pliki źródłowe\input_output\methods_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="state_functions.cpp">
+      <Filter>Pliki źródłowe\input_output\methods_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="formatting_constants.cpp">
+      <Filter>Pliki źródłowe\input_output\constants</Filter>
+    </ClCompile>
+    <ClCompile Include="state_constants.cpp">
+      <Filter>Pliki źródłowe\input_output\constants</Filter>
+    </ClCompile>
+    <ClCompile Include="format_functions.cpp">
+      <Filter>Pliki źródłowe\input_output\methods_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="stream_specializations.cpp">
+      <Filter>Pliki źródłowe\input_output\streams</Filter>
+    </ClCompile>
+    <ClCompile Include="formatted_input_functions.cpp">
+      <Filter>Pliki źródłowe\input_output\methods_functions</Filter>
+    </ClCompile>
+    <ClCompile Include="unformatted_input.cpp">
+      <Filter>Pliki źródłowe\input_output\methods_functions\unformated_input_output</Filter>
+    </ClCompile>
+    <ClCompile Include="unformatted_output.cpp">
+      <Filter>Pliki źródłowe\input_output\methods_functions\unformated_input_output</Filter>
+    </ClCompile>
+    <ClCompile Include="predefined_streams.cpp">
+      <Filter>Pliki źródłowe\input_output\streams</Filter>
+    </ClCompile>
+    <ClCompile Include="ifstream.cpp">
+      <Filter>Pliki źródłowe\input_output\files</Filter>
+    </ClCompile>
+    <ClCompile Include="ifstream_is_open.cpp">
+      <Filter>Pliki źródłowe\input_output\files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
