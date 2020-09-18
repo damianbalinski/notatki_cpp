@@ -35,7 +35,7 @@ int main()
 	cout.bad();				// bool, sprawdza, czy ustawiono badbit
 	
 	cout.clear();			// void zmienia stan strumienia na goodbit lub na podana maske, wplywa na wszystkie bity
-	cout.clear(state);
+	cout.clear(state);		// w przypadku niektorych kompilatorow niezbedna przy wielokrotnym dolaczaniu strumienia
 	
 	cout.setstate(state);	// void zmienia stan strumienia tylko dla bitow zawartych w masce, nie wplywa na pozostale bity
 	

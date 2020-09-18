@@ -1,19 +1,19 @@
-#include <iostream>
+//#include <iostream>
 #include <ios>
 
 /*
  * STALE STANU
- * stala/wartosc domyslna
+ * ios_base::iostate
  */
 
 using namespace std;
 
 int main()
 {
-	ios_base::goodbit;		// [-] brak bledu
-	ios_base::eofbit;		// [DEF=0] koniec pliku
-	ios_base::failbit;		// [DEF=0] blad odczytu/zapisu
-	ios_base::badbit;		// [DEF=0] nierozpoznany blad
+	ios_base::goodbit;		// brak bledu
+	ios_base::eofbit;		// koniec pliku
+	ios_base::failbit;		// blad odczytu/zapisu, proba otwarcia nieistniejacego pliku, brak danych wejsciowych lub przekroczenie maksymalnej dlugosci danych wejsciowych
+	ios_base::badbit;		// nierozpoznany blad
 
 	return  0;
 }

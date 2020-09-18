@@ -16,27 +16,26 @@ int main()
 	auto flags2 = ios_base::showpoint;
 
 	// KONFIGURACJA FORMATOWANIA
-	cout.width();		// zwraca aktulane ustawienie szerokosci pol
-	cout.width(n);		// [SINGLE, DOMYSLNIE=0] szerokosc pola, zwraca poprzednia szerokosc pola
-						// jesli drukowane dane nie mieszcza sie, pole jest automatycznie rozszerzane
+	cout.width();		// [streamsize]
+	cout.width(n);		// [streamsize, SINGLE, DEF=0] minimalna szerokosc pola, zwraca poprzednia szerokosc pola
 
 	cout.fill('c');		// [MULTI, DOMYSLNIE=' '] znak wypelnienia
 
-	cout.precision(n);	// [MULTI, DOMYSLNIE=6] liczba cyfr znaczacych, w trybie domyslnym oznacza laczna liczba cyfr
-						// w trybie staloprzecinkowym i naukowym oznacza liczbe cyfr po przecinku
+	cout.precision();	// [streamsize]
+	cout.precision(n);	// [streamsize, MULTI, DEF=6] w trybie domyslnym liczba cyfr znaczacych,
+						// w trybie staloprzecinkowym i naukowym liczba cyfr po przecinku, zwraca poprzednia precyzje
 
-	cout.setf(flags);	// [MULTI] zwracaja aktualna maske bitowa typu fmtflags, okreslajaca dotychczasowe ustawienie znacznikow
-	cout.setf(flags1, flags);	// ustawia opcje sterowalne przez wiecej niz jeden bit, pierwszy argument jest pozadanym ustawieniem
+	cout.setf(flags);	// [fmtflags] wlacza znaczniki zawarte w masce, zwraca poprzednie ustawienia
+	cout.setf(flags1, flags);	// wlacza znaczniki zawarte w masce sterowalne przez wiecej niz jeden bit,  pierwszy argument jest pozadanym ustawieniem
 								// drugi argument zeruje odpowiednie bity
 	
-	cout.unsetf(flags);	// cofa ustawienie podanej flagi, zeruje bity odpowiadajace ustawionym bitom maski
+	cout.unsetf(flags);	// [void] zeruje znaczniki zawarte w masce
 
+	cout.flags();		// [fmtflags] zwraca ustawienia formatowania
+	cout.flags(flags);	// [fmtflags] zmienia ustawienia formatowania na podana maske, zwraca poprzednie ustawienia
 	
 	// TEST
-	cout.precision(5);
-	cout << 10.0 << endl;
-	cout.setf(ios_base::showpoint);
-	cout << 10.0 << endl;
+
 
 	return 0;
 }

@@ -1,7 +1,9 @@
-#include <iostream>
+//#include <iostream>
+#include <ios>
 
 /*
  * STALE FORMATOWANIA
+ * ios_base::fmtflags
  */
 
 using namespace std;

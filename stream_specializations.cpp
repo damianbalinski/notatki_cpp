@@ -15,7 +15,7 @@ int main()
 	streambuf;		stringbuf;		filebuf;		// obsluga bufora
 	istream;		istringstream;	ifstream;		// strumien wejscia
 	ostream;		ostringstream;	ofstream;		// strumien wyjscia
-	iostream;		stringstream;	fstream;		// strumien wejscia/wyjscia
+	iostream;		stringstream;	fstream;		// strumien wejscia/wyjscia, obydwa bufory sa synchronizowane
 
 	// SPECJALIZACJE KLAS POMOCNICZYCH - CHAR
 	ios_base;			// ogolne wlasciwosci strumienia
@@ -26,11 +26,18 @@ int main()
 	wstreambuf;		wstringbuf;		wfilebuf;		// obsluga bufora
 	wistream;		wistringstream;	wifstream;		// strumien wejscia
 	wostream;		wostringstream;	wofstream;		// strumien wyjscia
-	wiostream;		wstringstream;	wfstream;		// strumien wejscia/wyjscia
+	wiostream;		wstringstream;	wfstream;		// strumien wejscia/wyjscia, obydwa bufory sa synchronizowane
 
 	// SPECJALIZACJE KLAS POMOCNICZYCH - WCHAR_T
 	ios_base;			// ogolne wlasciwosci strumienia
 	wios;				// wskaznik na streambuf, stale formatowania (pochodna ios_base)
+
+	// SPECIALIZACJE TYPOW STRUMIENIOWYCH
+	streamoff;
+	streamsize;		// wstreamoff;
+	streampos;		wstreampos;
+
+	iostream::pos_type;
 
 	return 0;
 }
