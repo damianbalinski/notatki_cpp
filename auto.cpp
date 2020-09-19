@@ -1,5 +1,10 @@
 #include <iostream>
 
+/*
+ * AUTOMATYCZNE WNIOSKOWANIE TYPU (type inference)
+ * musi jawnie wystapic wartosc inicjalizujaca zmienna
+ */
+
 struct mystruct
 {
 	int a;

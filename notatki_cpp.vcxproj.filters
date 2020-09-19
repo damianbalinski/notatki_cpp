@@ -187,9 +187,6 @@
     <Filter Include="Pliki źródłowe\input_output\streams">
       <UniqueIdentifier>{e1c8e0cd-d532-4c33-a8f1-a222565238e4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\RTTI\type_inference">
-      <UniqueIdentifier>{56530edd-9e66-4a5b-a810-b51c660eaffb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\input_output_files">
       <UniqueIdentifier>{23e94c88-37dd-42d4-9a79-767e8171f12a}</UniqueIdentifier>
     </Filter>
@@ -201,6 +198,12 @@
     </Filter>
     <Filter Include="Pliki źródłowe\input_output\formatted_unformatted">
       <UniqueIdentifier>{5843673b-35c7-4d6b-9f65-b9ee6ebef9c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\structure_union_enum\enum">
+      <UniqueIdentifier>{6a90266f-100f-49e4-bd0e-d0e691795333}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\value_types">
+      <UniqueIdentifier>{7ab6ce71-dea3-4351-928a-0539d5855f82}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -228,14 +231,8 @@
     <ClCompile Include="comments.cpp">
       <Filter>Pliki źródłowe\other</Filter>
     </ClCompile>
-    <ClCompile Include="enum.cpp">
-      <Filter>Pliki źródłowe\structure_union_enum</Filter>
-    </ClCompile>
     <ClCompile Include="pointers_char.cpp">
       <Filter>Pliki źródłowe\pointers</Filter>
-    </ClCompile>
-    <ClCompile Include="auto.cpp">
-      <Filter>Pliki źródłowe\RTTI\type_inference</Filter>
     </ClCompile>
     <ClCompile Include="initialization_variable.cpp">
       <Filter>Pliki źródłowe\initialization</Filter>
@@ -519,9 +516,6 @@
     <ClCompile Include="template_in_template.cpp">
       <Filter>Pliki źródłowe\class\nested_class_template</Filter>
     </ClCompile>
-    <ClCompile Include="exception_specifications.cpp">
-      <Filter>Pliki źródłowe\exceptions</Filter>
-    </ClCompile>
     <ClCompile Include="handling_exceptions.cpp">
       <Filter>Pliki źródłowe\exceptions</Filter>
     </ClCompile>
@@ -732,9 +726,6 @@
     <ClCompile Include="valarray_operators.cpp">
       <Filter>Pliki źródłowe\containers_other\valarray</Filter>
     </ClCompile>
-    <ClCompile Include="valarray_nonmember_methods.cpp">
-      <Filter>Pliki źródłowe\containers_other\valarray</Filter>
-    </ClCompile>
     <ClCompile Include="gslice.cpp">
       <Filter>Pliki źródłowe\selectors_masks</Filter>
     </ClCompile>
@@ -821,6 +812,36 @@
     </ClCompile>
     <ClCompile Include="string_specializations.cpp">
       <Filter>Pliki źródłowe\string</Filter>
+    </ClCompile>
+    <ClCompile Include="narrowing_conversion.cpp">
+      <Filter>Pliki źródłowe\initialization</Filter>
+    </ClCompile>
+    <ClCompile Include="auto.cpp">
+      <Filter>Pliki źródłowe\RTTI</Filter>
+    </ClCompile>
+    <ClCompile Include="decltype.cpp">
+      <Filter>Pliki źródłowe\RTTI</Filter>
+    </ClCompile>
+    <ClCompile Include="declval.cpp">
+      <Filter>Pliki źródłowe\RTTI</Filter>
+    </ClCompile>
+    <ClCompile Include="noexcept.cpp">
+      <Filter>Pliki źródłowe\operators</Filter>
+    </ClCompile>
+    <ClCompile Include="exception_specifications.cpp">
+      <Filter>Pliki źródłowe\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="enum.cpp">
+      <Filter>Pliki źródłowe\structure_union_enum\enum</Filter>
+    </ClCompile>
+    <ClCompile Include="scoped_enum.cpp">
+      <Filter>Pliki źródłowe\structure_union_enum\enum</Filter>
+    </ClCompile>
+    <ClCompile Include="valarray_nonmember_functions.cpp">
+      <Filter>Pliki źródłowe\containers_other\valarray</Filter>
+    </ClCompile>
+    <ClCompile Include="value_types.cpp">
+      <Filter>Pliki źródłowe\value_types</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

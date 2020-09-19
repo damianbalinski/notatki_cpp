@@ -1,36 +1,42 @@
 #include <iostream>
-#include <exception>
 
-// SPECYFIKACJA WYJATKOW
+/*
+ * SPECYFIKACJA WYJATKOW
+ */
 
-using std::cout;
-using std::endl;
+using namespace std;
 
-void func1() throw(int)
-{
-	cout << "func1" << endl;
-	throw "stding";
-}
+// NIEOKRESLONE
+void func1() {}						// STARY
+void func2() {}						// NOWY
 
-void func2() throw(int)
-{
-	cout << "func2" << endl;
-	throw 10;
-}
+// ZGLASZA DOWOLNY
+void func3() throw(...) {}			// STARY
+void func4() noexcept(false) {}		// NOWY
+
+// ZGLASZA KONKRETNY
+void func5() throw(int) {}			// STARY
+
+// NIE ZGLASZA
+void func6() throw() {}				// STARY
+void func7() noexcept {}			// NOWY
+void func8() noexcept(true) {}		// NOWY
 
 int main()
 {
-	try {
-		//func1();
-		func2();
-	}
+	cout << noexcept(func1()) << endl;
+	cout << noexcept(func2()) << endl;
+	cout << noexcept(func3()) << endl;
+	cout << noexcept(func4()) << endl;
+	cout << noexcept(func5()) << endl;
+	cout << noexcept(func6()) << endl;
+	cout << noexcept(func7()) << endl;
+	cout << noexcept(func8()) << endl;
 
-	catch (int) {
-		cout << "int" << endl;
-	}
-	catch (const char*) {
-		cout << "const char*" << endl;
-	}
+	/*
+	 * STARY - stary standard
+	 * NOWY - nowy standard
+	 */
 
 	return 0;
 }

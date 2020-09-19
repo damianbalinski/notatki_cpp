@@ -33,5 +33,7 @@ int main()
 	cout << (bool)(typeid(val) == typeid(str)) << endl;			// porownywanie obiektow
 	cout << (bool)(typeid(A) == typeid(B)) << endl;				// porownywanie klas
 
+	// TODO typy dla zwyklych zmiennych, wskaznikow, referencji
+	// NP typeid(ref) oraz tpeid((ref))
 	return 0;
 }

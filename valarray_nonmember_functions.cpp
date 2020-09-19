@@ -11,13 +11,6 @@ void print(valarray<int> arr)
 
 int main()
 {
-	/*
-	 * +
-	 *
-	 *
-	 *
-	 */
-
 	 // KONTENERY
 	valarray<int> arr = { 1, 2, 3, 4, 5 };
 	valarray<int> arr1 = { 1, 2, 3, 4, 5 };

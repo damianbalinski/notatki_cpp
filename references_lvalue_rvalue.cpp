@@ -1,39 +1,35 @@
 #include <iostream>
 
+int func() { return 10; }
+
 int main()
 {
 	using namespace std;
 
 	int v1 = 10;
-	int v2 = -10;
+	int v2 = 0;
 
-	int& r1 = v1;			// lvalue reference
-	//int& r2 = 100;		// lvalue reference
+	// LVALUE REFERENCE
+	//int& r1 = 10;			// ERROR
+	int& r2 = v1;			// OK
+	//int& r3 = v1 + v2;	// ERROR
+	//int& r4 = func();		// ERROR
 
-	//int&& r3 = v1;		// rvalue reference
-	int&& r4 = 100;			// rvalue reference
+	// RVALUE REFERENCE
+	int&& rr1 = 10;			// OK
+	//int&& rr2 = v1;		// ERROR
+	int&& rr3 = v1 + v2;	// OK
+	int&& rr4 = func();		// OK
 
-	cout << &v1 << endl;
-	cout << &r1 << endl;
-	cout << &r4 << endl;
+	cout << rr1 << endl;
+	cout << r2 << endl;
+	cout << rr3 << endl;
+	cout << rr4 << endl;
 
-	cout << v1 << endl;
-	cout << r1 << endl;
-	cout << r4 << endl;
-
-	r1 = 20;
-	r1 = v2;
-
-	r4 = 30;
-	r4 = v2;
-
-	cout << &v1 << endl;
-	cout << &r1 << endl;
-	cout << &r4 << endl;
-
-	cout << v1 << endl;
-	cout << r1 << endl;
-	cout << r4 << endl;
+	cout << &rr1 << endl;
+	cout << &r2 << endl;
+	cout << &rr3 << endl;
+	cout << &rr4 << endl;
 
 	return 0;
 }

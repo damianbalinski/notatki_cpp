@@ -18,37 +18,40 @@ class Test
 private:
 	int x;
 public:
-	Test operator=(Test& t) { printf("przypisanie\n"); this->x = t.x; };
+	void operator=(Test& t) { printf("przypisanie\n"); this->x = t.x; };
 public:
-	Test(int x_n = 0);				// DOMYSLNY
+	Test();						// DOMYSLNY
 public:
-	Test(const Test& t);			// KOPIUJACY
+	Test(const Test& t);		// KOPIUJACY
 public:
-	Test(const Test&& t);			// PRZENOSZACY (MOVE CONSTS.)
+	Test(Test&& t);				// PRZENOSZACY
 public:
-	Test(double x_n);				// KONWERTUJACY
+	Test(int x1);				// KONWERTUJACY JEDNOPARAMETROWY
 public:
-	Test(double x_n, double y_n);	// KONWERTUJACY WIELOPARAMETROWY
+	Test(int x1, int x2);		// KONWERTUJACY WIELOPARAMETROWY
 public:
-	~Test();						// DESTRUKTOR
+	~Test();					// DESTRUKTOR
 };
 
 
 /*
- * DOMYSLNY (DEFAULT CONSTR.) - brak parametrow lub wszystkie parametry domyslne.
+ * DOMYSLNY (DEFAULT CONSTRUCTOR)
  * AUTO - nic
+ * (1) - brak/domyslny
+ * (2) - brak/domyslny
  */
-Test::Test(int x_n)
+Test::Test()
 {
-	printf("domyslny %d\n", x_n);
-	x = x_n;
+	x = 1;
+	printf("domyslny %d\n", x);
 }
 
 /*
- * KOPIUJACY (COPY CONSTR.) - przypisanie lwartosci do obiektu podczas inicjalizacji
+ * KOPIUJACY (COPY CONSTRUCTOR)
+ * przypisanie lwartosci do obiektu podczas inicjalizacji, nie modyfikuje obiektu zrodlowego
  * AUTO* - kopiowanie plytkie
- * pierwszy parametr - referencja do obiektu tej samej klasy/podklasy
- * reszta parametrow - brak lub domyslne
+ * (1) - referencja do obiektu tej samej klasy/podklasy
+ * (2) - brak/domyslny
  * (kopiowanie parametrow/zwracanej wartosci)
  */
 Test::Test(const Test& t)
@@ -58,38 +61,43 @@ Test::Test(const Test& t)
 }
 
 /*
- * PRZENOSZACY (MOVE CONSTR.)- przypisanie rwartosci do obiektu podczas inicjalizacji
+ * PRZENOSZACY (MOVE CONSTRUCTOR)
+ * przypisanie tymczasowych rwartosci do obiektu podczas inicjalizacji, moze modyfikowac obiekt zrodlowy
  * AUTO* - kopiowanie plytkie
- * pierwszy parametr - referencja do rwartosci tej samej klasy/podklasy
- * reszta parametrow - brak lub domyslne
+ * (1) - referencja do rwartosci tej samej klasy/podklasy
+ * (2) - brak/domyslny
  * (kopiowanie parametrow/zwracanej wartosci)
  */
-Test::Test(const Test&& t)
+Test::Test(Test&& t)
 {
 	printf("przenoszacy %d\n", t.x);
 	x = t.x;
+	t.x = -1;
 }
 
 /*
- * KONWERTUJACY (CONVERTING CONSTR.)
- * pierwszy parametr - wartosc dowolnego typu
- * reszta parametrow - brak/domyslne
- * umozliwia konwersje wartosci dowolnego typu na obiekt klasy,
+ * KONWERTUJACY (CONVERTING CONSTRUCTOR) 
+ * konwersja pojedynczej wartosci na obiekt klasy,
+ * (1) - wartosc dowolnego typu
+ * (2) - brak/domyslny
  * (konwersja parametrow/zwracanych wartosci),
  */
-Test::Test(double val)
+Test::Test(int x1)
 {
-	printf("konwertujacy %f\n", val);
-	x = (int)val;
+	printf("konwertujacy %d\n", x1);
+	x = x1;
 }
 
 /*
  * KONWERTUJACY WIELOPARAMETROWY
+ * konwersja ciagu wartosci na obiekt klasy
+ * (1) - wartosc dowolnego typu
+ * (2) - wartosc dowolnego typu
  */
-Test::Test(double x_n, double y_n)
+Test::Test(int x1, int x2)
 {
-	printf("konwertujacy wieloargumentowy %f %f\n", x_n, y_n);
-	x = (int)(x_n + y_n);
+	printf("konwertujacy wieloargumentowy %d %d\n", x1, x2);
+	x = x1 + x2;
 }
 
 /*
@@ -97,12 +105,17 @@ Test::Test(double x_n, double y_n)
  */
 Test::~Test()
 {
-	printf("destruktor\n");
+	printf("destruktor %d\n", x);
 }
 
 void foo(Test test)
 {
 	printf("OK\n");
+}
+
+Test spawn(int val) {
+	Test temp(val);
+	return temp;
 }
 
 int main()
@@ -112,54 +125,37 @@ int main()
 
 	// WIAZANIE STATYCZNE
 
-	// DOMYSLNY
-	//Test a1;
-	////Test a2();		// ERROR - function declaration
-	//Test a3{};
-	//Test a4 = {};
-	//Test a5 = Test();
-	//Test a6 = Test{};
-
+	//// DOMYSLNY
+	//Test a1;					Test a4 = {};					/**/
+	///**/						Test a5 = Test();				/**/
+	//Test a3{};				Test a6 = Test{};				/**/
+	
 	// KOPIUJACY
-	//Test b1(t);
-	//Test b2{ t };
-	//Test b3 = Test(t);
-	//Test b4 = Test{ t };
-	//Test b5 = t;
-	//Test b6 = { t };
+	//Test b1(t);				Test b3 = Test(t);				Test b5 = t;
+	//Test b2{ t };				Test b4 = Test{ t };			Test b6 = { t };
 
 	// PRZENOSZACY
-	Test e1(Test());
-	//Test t1;
-	Test t1{ Test() };
-	Test t2 = {Test() };
-	Test t3 = Test();
-	//Test e2{ Test() };
-	//Test e3 = Test(t2);
-	//Test e4 = Test{ t2 };
-	//Test e5 = t2;
-	cout << "test" << endl;
+	//Test t1(spawn(1));		Test t3 = Test(spawn(3));		Test t5 = spawn(5);
+	//Test t2{ spawn(2) };		Test t4 = Test{ spawn(3) };		Test t6 = { spawn(6) };
 
 	// KOWERTUJACY
-	//Test c1(10.0);
-	//Test c5{ 10.0 };
-	//Test c3 = Test(10.0);
-	//Test c6 = Test{ 10.0 };
-	//Test c2 = 10.0;
-	//Test c9 = (10.0);
-	//Test c4 = { 10.0 };
+	//Test c1(10);				Test c3 = Test(10);				Test c5 = 10;
+	//Test c2{ 10 };			Test c4 = Test{ 10 };			Test c6 = { 10 };
 
 	// KONWERTUJACY WIELOPARAMETROWY
-	//Test f1(1.0, 2.0);
-	//Test f2{ 1.0, 2.0 };
-	//Test f3 = Test(1.0, 2.0);
-	//Test f4 = Test{ 1.0, 2.0 };
-	//Test f5 = { 1.0, 2.0 };
+	//Test f1(1, 2);			Test f3 = Test(1, 2);			/**/
+	//Test f2{ 1, 2 };			Test f4 = Test{ 1, 2 };			Test f5 = { 1, 2 };
+	
 
 	// TEST
 	//Test h1 = { .x_n = 20 };
 
 	// TODO WIAZANIE DYNAMICZNE
+
+	/*
+	 * (1)     - pierwszy parametr
+	 * (2,...) - pozostale parametry
+	 */
 
 	return 0;
 }
