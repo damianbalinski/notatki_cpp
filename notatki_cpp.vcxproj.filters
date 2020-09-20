@@ -214,6 +214,9 @@
     <Filter Include="Pliki źródłowe\qualifiers_specifiers_identifiers">
       <UniqueIdentifier>{8f8f9e3d-d385-4ace-8afd-225ac8760c2d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\lambda">
+      <UniqueIdentifier>{b8ce62b8-f757-45a0-a88b-f3ec7f10d7b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -872,6 +875,12 @@
     </ClCompile>
     <ClCompile Include="identifier_final.cpp">
       <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="lambda_data_access.cpp">
+      <Filter>Pliki źródłowe\lambda</Filter>
+    </ClCompile>
+    <ClCompile Include="lambda_expression.cpp">
+      <Filter>Pliki źródłowe\lambda</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
