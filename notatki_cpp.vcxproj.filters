@@ -217,6 +217,12 @@
     <Filter Include="Pliki źródłowe\lambda">
       <UniqueIdentifier>{b8ce62b8-f757-45a0-a88b-f3ec7f10d7b5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\wrappers_adaptors">
+      <UniqueIdentifier>{dca6a439-654f-4d58-a36b-ae4367a5d11e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\namespace\predefined_namespaces">
+      <UniqueIdentifier>{364d0114-b0de-4472-8344-06d040a47da0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -684,9 +690,6 @@
     <ClCompile Include="predefined_functors.cpp">
       <Filter>Pliki źródłowe\functors</Filter>
     </ClCompile>
-    <ClCompile Include="binders.cpp">
-      <Filter>Pliki źródłowe\functors</Filter>
-    </ClCompile>
     <ClCompile Include="binary_search.cpp">
       <Filter>Pliki źródłowe\algorithms\other</Filter>
     </ClCompile>
@@ -881,6 +884,24 @@
     </ClCompile>
     <ClCompile Include="lambda_expression.cpp">
       <Filter>Pliki źródłowe\lambda</Filter>
+    </ClCompile>
+    <ClCompile Include="deprecated_binders.cpp">
+      <Filter>Pliki źródłowe\wrappers_adaptors</Filter>
+    </ClCompile>
+    <ClCompile Include="bind.cpp">
+      <Filter>Pliki źródłowe\wrappers_adaptors</Filter>
+    </ClCompile>
+    <ClCompile Include="placeholders.cpp">
+      <Filter>Pliki źródłowe\namespace\predefined_namespaces</Filter>
+    </ClCompile>
+    <ClCompile Include="reference_wrapper.cpp">
+      <Filter>Pliki źródłowe\wrappers_adaptors</Filter>
+    </ClCompile>
+    <ClCompile Include="mem_fn.cpp">
+      <Filter>Pliki źródłowe\wrappers_adaptors</Filter>
+    </ClCompile>
+    <ClCompile Include="function.cpp">
+      <Filter>Pliki źródłowe\wrappers_adaptors</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
