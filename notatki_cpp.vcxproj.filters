@@ -61,9 +61,6 @@
     <Filter Include="Pliki źródłowe\storage_classes">
       <UniqueIdentifier>{9402de8c-e80c-4e1e-b25c-3e7559d8bc06}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\type_qualifiers">
-      <UniqueIdentifier>{8f8f9e3d-d385-4ace-8afd-225ac8760c2d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\operators_overloading">
       <UniqueIdentifier>{6278c8ec-83f2-4ff6-854f-7cf7478d103a}</UniqueIdentifier>
     </Filter>
@@ -78,9 +75,6 @@
     </Filter>
     <Filter Include="Pliki źródłowe\class\constructor">
       <UniqueIdentifier>{8dab17f4-9010-4d7b-95a7-16b5cd72fa42}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\class\constructor_initializer_list">
-      <UniqueIdentifier>{94cbff49-5315-4650-b9fb-f46e958e5799}</UniqueIdentifier>
     </Filter>
     <Filter Include="Pliki źródłowe\friend">
       <UniqueIdentifier>{71d99f64-e8a4-428e-b6e3-95135f94b50b}</UniqueIdentifier>
@@ -204,6 +198,21 @@
     </Filter>
     <Filter Include="Pliki źródłowe\value_types">
       <UniqueIdentifier>{7ab6ce71-dea3-4351-928a-0539d5855f82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\algorithms\utility">
+      <UniqueIdentifier>{eb9e8530-4239-4026-af28-1509429d1b2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\class\constructor_initializer_list">
+      <UniqueIdentifier>{94cbff49-5315-4650-b9fb-f46e958e5799}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\class\default_delete">
+      <UniqueIdentifier>{c09ba810-446e-4389-846f-50ae150b9bf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\class\shared_class_members">
+      <UniqueIdentifier>{22442f5e-16e6-4351-9944-b718e9eb777b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\qualifiers_specifiers_identifiers">
+      <UniqueIdentifier>{8f8f9e3d-d385-4ace-8afd-225ac8760c2d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -337,10 +346,10 @@
       <Filter>Pliki źródłowe\storage_classes</Filter>
     </ClCompile>
     <ClCompile Include="qualifier_const.cpp">
-      <Filter>Pliki źródłowe\type_qualifiers</Filter>
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers</Filter>
     </ClCompile>
     <ClCompile Include="qualifier_mutable.cpp">
-      <Filter>Pliki źródłowe\type_qualifiers</Filter>
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers</Filter>
     </ClCompile>
     <ClCompile Include="new_in_place.cpp">
       <Filter>Pliki źródłowe\operators\new_delete</Filter>
@@ -416,9 +425,6 @@
     </ClCompile>
     <ClCompile Include="copy_constructor_or_assignment.cpp">
       <Filter>Pliki źródłowe\class</Filter>
-    </ClCompile>
-    <ClCompile Include="generated_non_generated_constructos.cpp">
-      <Filter>Pliki źródłowe\class\constructor</Filter>
     </ClCompile>
     <ClCompile Include="compatibility.cpp">
       <Filter>Pliki źródłowe\class</Filter>
@@ -842,6 +848,30 @@
     </ClCompile>
     <ClCompile Include="value_types.cpp">
       <Filter>Pliki źródłowe\value_types</Filter>
+    </ClCompile>
+    <ClCompile Include="move.cpp">
+      <Filter>Pliki źródłowe\algorithms\utility</Filter>
+    </ClCompile>
+    <ClCompile Include="default_delete.cpp">
+      <Filter>Pliki źródłowe\class\default_delete</Filter>
+    </ClCompile>
+    <ClCompile Include="delegating_constructors.cpp">
+      <Filter>Pliki źródłowe\class\constructor_initializer_list</Filter>
+    </ClCompile>
+    <ClCompile Include="shared_methods.cpp">
+      <Filter>Pliki źródłowe\class\shared_class_members</Filter>
+    </ClCompile>
+    <ClCompile Include="constructors_inheritance.cpp">
+      <Filter>Pliki źródłowe\class\shared_class_members</Filter>
+    </ClCompile>
+    <ClCompile Include="shared_private_members.cpp">
+      <Filter>Pliki źródłowe\class\shared_class_members</Filter>
+    </ClCompile>
+    <ClCompile Include="identifier_override.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="identifier_final.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
