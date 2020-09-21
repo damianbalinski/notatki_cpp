@@ -223,6 +223,9 @@
     <Filter Include="Pliki źródłowe\namespace\predefined_namespaces">
       <UniqueIdentifier>{364d0114-b0de-4472-8344-06d040a47da0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\variadic">
+      <UniqueIdentifier>{62f0c1bc-66df-4ee5-9f8d-d92f29704c6c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -902,6 +905,18 @@
     </ClCompile>
     <ClCompile Include="function.cpp">
       <Filter>Pliki źródłowe\wrappers_adaptors</Filter>
+    </ClCompile>
+    <ClCompile Include="variadic_function_templates.cpp">
+      <Filter>Pliki źródłowe\variadic</Filter>
+    </ClCompile>
+    <ClCompile Include="variadic_class_template.cpp">
+      <Filter>Pliki źródłowe\variadic</Filter>
+    </ClCompile>
+    <ClCompile Include="pack_expansion.cpp">
+      <Filter>Pliki źródłowe\variadic</Filter>
+    </ClCompile>
+    <ClCompile Include="sizeof_variadic.cpp">
+      <Filter>Pliki źródłowe\operators</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
