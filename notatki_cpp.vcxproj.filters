@@ -882,9 +882,6 @@
     <ClCompile Include="identifier_final.cpp">
       <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers</Filter>
     </ClCompile>
-    <ClCompile Include="lambda_data_access.cpp">
-      <Filter>Pliki źródłowe\lambda</Filter>
-    </ClCompile>
     <ClCompile Include="lambda_expression.cpp">
       <Filter>Pliki źródłowe\lambda</Filter>
     </ClCompile>
@@ -917,6 +914,18 @@
     </ClCompile>
     <ClCompile Include="sizeof_variadic.cpp">
       <Filter>Pliki źródłowe\operators</Filter>
+    </ClCompile>
+    <ClCompile Include="lambda_variable_capture.cpp">
+      <Filter>Pliki źródłowe\lambda</Filter>
+    </ClCompile>
+    <ClCompile Include="lambda_variable_capture2.cpp">
+      <Filter>Pliki źródłowe\lambda</Filter>
+    </ClCompile>
+    <ClCompile Include="lambda_mutable.cpp">
+      <Filter>Pliki źródłowe\lambda</Filter>
+    </ClCompile>
+    <ClCompile Include="lambda_generic.cpp">
+      <Filter>Pliki źródłowe\lambda</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

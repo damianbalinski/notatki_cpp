@@ -5,6 +5,8 @@
  *
  * PARAMETRY SZABLONU
  * Args...		int E1, double E2, char E3
+ * Args&...		int& E1, double& E2, char& E3
+ * Args&&...	int&& E1, double&& E2, char&& E3
  * <Args,Args>...
  *
  * PARAMETRY FUNKCJI
@@ -26,9 +28,6 @@ int h(int v1, int v2, int v3)
 	return 100;
 }
 
-template<class T, class... Args>
-void goo(T t, Args... args);
-
 using namespace std;
 
 void foo() {}
@@ -38,23 +37,29 @@ void goo() {}
 template<class... Args>
 void foo(Args... args)
 {
-	goo(args(10)...);
-}
-
-template<class T, class... Args>
-void goo(T t, Args... args)
-{
-	cout << t << ", ";
 	goo(args...);
 }
 
-int temp(int val) { return 10; };
+template<class T, class... Args>
+void goo(T& t, Args&... args)
+{
+	cout << t << ", ";
+	t = -1;
+	goo(args...);
+}
+
+void PRINT(int a, int b, int c)
+{
+	cout << "(" << a << ", " << b << ", " << c << ")" << endl;
+}
 
 int main()
 {
-	//foo(1, 2, 3);
+	int a = 1, b = 2, c = 3;
 
-	foo(temp, temp, temp);
+	PRINT(a, b, c);
+	goo(a, b, c);
+	PRINT(a, b, c);
 
 	return 0;
 }
