@@ -1,0 +1,4 @@
+SPECYFIKATOR - 
+inline
+friend		DONE
+virtual		DONE

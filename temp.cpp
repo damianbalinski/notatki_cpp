@@ -3,6 +3,8 @@
 // #include <cfloat>
 #include <iostream>
 #include <string>
+#include <chrono>
+#include <ratio>
 
 using namespace std;
 
@@ -25,8 +27,10 @@ int foo2(int tab[], int n)
 }
 
 typename void func() { return; }
-
 class A {};
+
+
+
 int main()
 {
 	typename char mychar;
@@ -42,6 +46,7 @@ int main()
 	//foo1(tab, n);
 	//foo2(tab, n);
 
+	thread_local int val;
 	//const int val = 100;
 	//const int* p1 = &val;
 	//int* p2 = &val;		// ERROR

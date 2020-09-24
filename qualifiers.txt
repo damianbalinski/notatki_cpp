@@ -1,0 +1,3 @@
+KWALIFIKATOR - przypisaywany do donago typu, powstaje nowy typ kwalifikowany
+const
+volatile

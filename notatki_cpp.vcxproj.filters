@@ -211,9 +211,6 @@
     <Filter Include="Pliki źródłowe\class\shared_class_members">
       <UniqueIdentifier>{22442f5e-16e6-4351-9944-b718e9eb777b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\qualifiers_specifiers_identifiers">
-      <UniqueIdentifier>{8f8f9e3d-d385-4ace-8afd-225ac8760c2d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\lambda">
       <UniqueIdentifier>{b8ce62b8-f757-45a0-a88b-f3ec7f10d7b5}</UniqueIdentifier>
     </Filter>
@@ -225,6 +222,24 @@
     </Filter>
     <Filter Include="Pliki źródłowe\variadic">
       <UniqueIdentifier>{62f0c1bc-66df-4ee5-9f8d-d92f29704c6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\threads">
+      <UniqueIdentifier>{40ccb047-4e2b-446e-95e4-95dbaddc3e81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\qualifiers_specifiers_identifiers_attributes">
+      <UniqueIdentifier>{8f8f9e3d-d385-4ace-8afd-225ac8760c2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\qualifiers">
+      <UniqueIdentifier>{bb74072f-aa6a-4bb7-802d-29a32762f3db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\specifiers">
+      <UniqueIdentifier>{f008d7f3-559d-4444-b21c-e89246c698e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\identifiers">
+      <UniqueIdentifier>{9e951cc7-35ec-4416-95ff-4777ac6d6515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\attributes">
+      <UniqueIdentifier>{a11c7c7a-bda1-4f98-80ac-80d277c643f6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -356,12 +371,6 @@
     </ClCompile>
     <ClCompile Include="extern.cpp">
       <Filter>Pliki źródłowe\storage_classes</Filter>
-    </ClCompile>
-    <ClCompile Include="qualifier_const.cpp">
-      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers</Filter>
-    </ClCompile>
-    <ClCompile Include="qualifier_mutable.cpp">
-      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers</Filter>
     </ClCompile>
     <ClCompile Include="new_in_place.cpp">
       <Filter>Pliki źródłowe\operators\new_delete</Filter>
@@ -642,9 +651,6 @@
     <ClCompile Include="output_iterator.cpp">
       <Filter>Pliki źródłowe\iterators</Filter>
     </ClCompile>
-    <ClCompile Include="template_container.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
     <ClCompile Include="container_operators.cpp">
       <Filter>Pliki źródłowe\containers\operators</Filter>
     </ClCompile>
@@ -877,10 +883,10 @@
       <Filter>Pliki źródłowe\class\shared_class_members</Filter>
     </ClCompile>
     <ClCompile Include="identifier_override.cpp">
-      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers</Filter>
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes</Filter>
     </ClCompile>
     <ClCompile Include="identifier_final.cpp">
-      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers</Filter>
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes</Filter>
     </ClCompile>
     <ClCompile Include="lambda_expression.cpp">
       <Filter>Pliki źródłowe\lambda</Filter>
@@ -927,10 +933,52 @@
     <ClCompile Include="lambda_generic.cpp">
       <Filter>Pliki źródłowe\lambda</Filter>
     </ClCompile>
+    <ClCompile Include="threads_headers.cpp">
+      <Filter>Pliki źródłowe\threads</Filter>
+    </ClCompile>
+    <ClCompile Include="specifier_alignas.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="specifier_constexpr.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="qualifier_const.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\qualifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="qualifier_volatile.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\qualifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="template_specifier.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="virtual_specifier.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\specifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="mutable_specifier.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\specifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="inline_specifier.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\specifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="friend_specifier.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\specifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="noreturn_attribute.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\attributes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="container_types.txt">
       <Filter>Pliki źródłowe\containers</Filter>
+    </Text>
+    <Text Include="qualifiers.txt">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\qualifiers</Filter>
+    </Text>
+    <Text Include="specifiers.txt">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\specifiers</Filter>
+    </Text>
+    <Text Include="attributes.txt">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\attributes</Filter>
     </Text>
   </ItemGroup>
 </Project>
