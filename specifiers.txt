@@ -1,4 +1,5 @@
 SPECYFIKATOR - 
-inline
+inline		DONE
 friend		DONE
 virtual		DONE
+explicit	DONE

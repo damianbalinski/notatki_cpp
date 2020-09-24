@@ -241,6 +241,9 @@
     <Filter Include="Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\attributes">
       <UniqueIdentifier>{a11c7c7a-bda1-4f98-80ac-80d277c643f6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\user_defined_literals">
+      <UniqueIdentifier>{32060766-47b2-45df-9d18-9645167c4682}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -965,6 +968,15 @@
     </ClCompile>
     <ClCompile Include="noreturn_attribute.cpp">
       <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\attributes</Filter>
+    </ClCompile>
+    <ClCompile Include="explicit_specifier.cpp">
+      <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\specifiers</Filter>
+    </ClCompile>
+    <ClCompile Include="predefines_user_defined_literals.cpp">
+      <Filter>Pliki źródłowe\user_defined_literals</Filter>
+    </ClCompile>
+    <ClCompile Include="user_defined_literals.cpp">
+      <Filter>Pliki źródłowe\user_defined_literals</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

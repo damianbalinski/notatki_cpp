@@ -3,13 +3,17 @@
 /*
  * SPECYFIKATOR INLINE
  * 
- * ZMIENNA POZA BLOKIEM / WEWNATRZ BLOKU (TYLKO STATYCZNA W KLASIE)
- * ma automatycznie lacznosc wewnetrzna, moze byc zadeklarowana wielokrotnie, ale w
- * roznych jednostkach translacji, wszystkie deklaracje musza byc jednakowe
- *
  * FUNKCJA / METODA
  * sugestia dla kompilatora aby przeprowadzil optymalizacje wywolania funkcji/metody
  * (np. poprzez wstawienie ciala metody/funkcji w miejscu wywolania), funkcja inline
+ * ma automatycznie lacznosc wewnetrzna, moze byc zadeklarowana wielokrotnie, ale w
+ * roznych jednostkach translacji, wszystkie deklaracje musza byc jednakowe
+
+ * ZMIENNA POZA BLOKIEM
+ * ma automatycznie lacznosc wewnetrzna, moze byc zadeklarowana wielokrotnie, ale w
+ * roznych jednostkach translacji, wszystkie deklaracje musza byc jednakowe
+ *
+ * ZMIENNA WEWNATRZ BLOKU (TYLKO STATYCZNA W KLASIE)
  * ma automatycznie lacznosc wewnetrzna, moze byc zadeklarowana wielokrotnie, ale w
  * roznych jednostkach translacji, wszystkie deklaracje musza byc jednakowe
  */

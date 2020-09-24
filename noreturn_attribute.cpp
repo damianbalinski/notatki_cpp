@@ -6,9 +6,10 @@
 
 using namespace std;
 
-[[noreturn]] void func()
+[[noreturn]] int func()
 {
 	cout << "hi" << endl;
+	return 10;
 }
 
 int main()
