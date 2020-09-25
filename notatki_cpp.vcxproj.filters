@@ -996,6 +996,9 @@
     <ClCompile Include="digit_separator.cpp">
       <Filter>Pliki źródłowe\literals</Filter>
     </ClCompile>
+    <ClCompile Include="pointer_literal.cpp">
+      <Filter>Pliki źródłowe\literals</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="container_types.txt">
