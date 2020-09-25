@@ -247,6 +247,9 @@
     <Filter Include="Pliki źródłowe\operators\new_delete">
       <UniqueIdentifier>{47146846-78d1-4808-900b-5af152c0a54a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\literals\predefined_user_defined_literals">
+      <UniqueIdentifier>{18635b51-3d6c-46ac-af46-1e744ebde538}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -975,9 +978,6 @@
     <ClCompile Include="explicit_specifier.cpp">
       <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\specifiers</Filter>
     </ClCompile>
-    <ClCompile Include="predefines_user_defined_literals.cpp">
-      <Filter>Pliki źródłowe\literals\user_defined_literals</Filter>
-    </ClCompile>
     <ClCompile Include="user_defined_literals.cpp">
       <Filter>Pliki źródłowe\literals\user_defined_literals</Filter>
     </ClCompile>
@@ -998,6 +998,18 @@
     </ClCompile>
     <ClCompile Include="pointer_literal.cpp">
       <Filter>Pliki źródłowe\literals</Filter>
+    </ClCompile>
+    <ClCompile Include="cooked_raw_literals.cpp">
+      <Filter>Pliki źródłowe\literals\user_defined_literals</Filter>
+    </ClCompile>
+    <ClCompile Include="character_ud_literals.cpp">
+      <Filter>Pliki źródłowe\literals\user_defined_literals</Filter>
+    </ClCompile>
+    <ClCompile Include="string_ud_literals.cpp">
+      <Filter>Pliki źródłowe\literals\user_defined_literals</Filter>
+    </ClCompile>
+    <ClCompile Include="predefined_user_defined_literals.cpp">
+      <Filter>Pliki źródłowe\literals\predefined_user_defined_literals</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
