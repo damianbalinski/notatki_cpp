@@ -37,9 +37,6 @@
     <Filter Include="Pliki źródłowe\string">
       <UniqueIdentifier>{ed467c39-6a78-4299-b31b-3308ce3fbb29}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\operators">
-      <UniqueIdentifier>{32d3cdd4-2ed2-4c35-b71b-3c94990d2c1e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\switch">
       <UniqueIdentifier>{b7540fba-3b7c-4c50-84a3-fd0dabda13c2}</UniqueIdentifier>
     </Filter>
@@ -90,9 +87,6 @@
     </Filter>
     <Filter Include="Pliki źródłowe\class_templates">
       <UniqueIdentifier>{58f66d5a-f8d6-4f79-9fa6-e4aa0bf50f2f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\operators\new_delete">
-      <UniqueIdentifier>{47146846-78d1-4808-900b-5af152c0a54a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Pliki źródłowe\function">
       <UniqueIdentifier>{ce5d640c-6f98-4e9a-b680-ff0298cdcb1b}</UniqueIdentifier>
@@ -241,8 +235,17 @@
     <Filter Include="Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\attributes">
       <UniqueIdentifier>{a11c7c7a-bda1-4f98-80ac-80d277c643f6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\user_defined_literals">
+    <Filter Include="Pliki źródłowe\literals">
+      <UniqueIdentifier>{522b3e7d-4f08-4ee9-be06-ef24a1a2786e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\literals\user_defined_literals">
       <UniqueIdentifier>{32060766-47b2-45df-9d18-9645167c4682}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\operators">
+      <UniqueIdentifier>{32d3cdd4-2ed2-4c35-b71b-3c94990d2c1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\operators\new_delete">
+      <UniqueIdentifier>{47146846-78d1-4808-900b-5af152c0a54a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -973,10 +976,25 @@
       <Filter>Pliki źródłowe\qualifiers_specifiers_identifiers_attributes\specifiers</Filter>
     </ClCompile>
     <ClCompile Include="predefines_user_defined_literals.cpp">
-      <Filter>Pliki źródłowe\user_defined_literals</Filter>
+      <Filter>Pliki źródłowe\literals\user_defined_literals</Filter>
     </ClCompile>
     <ClCompile Include="user_defined_literals.cpp">
-      <Filter>Pliki źródłowe\user_defined_literals</Filter>
+      <Filter>Pliki źródłowe\literals\user_defined_literals</Filter>
+    </ClCompile>
+    <ClCompile Include="boolean_literals.cpp">
+      <Filter>Pliki źródłowe\literals</Filter>
+    </ClCompile>
+    <ClCompile Include="template_literals.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="character_literals.cpp">
+      <Filter>Pliki źródłowe\literals</Filter>
+    </ClCompile>
+    <ClCompile Include="string_literals.cpp">
+      <Filter>Pliki źródłowe\literals</Filter>
+    </ClCompile>
+    <ClCompile Include="digit_separator.cpp">
+      <Filter>Pliki źródłowe\literals</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
