@@ -250,6 +250,9 @@
     <Filter Include="Pliki źródłowe\literals\predefined_user_defined_literals">
       <UniqueIdentifier>{18635b51-3d6c-46ac-af46-1e744ebde538}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\operators\alternative_operator_names">
+      <UniqueIdentifier>{3b68ef3f-56e6-4ce2-9c11-9ecab8fb44ef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -299,9 +302,6 @@
     </ClCompile>
     <ClCompile Include="loop_do_while.cpp">
       <Filter>Pliki źródłowe\loops</Filter>
-    </ClCompile>
-    <ClCompile Include="alternative_operator_names.cpp">
-      <Filter>Pliki źródłowe\operators</Filter>
     </ClCompile>
     <ClCompile Include="switch.cpp">
       <Filter>Pliki źródłowe\switch</Filter>
@@ -1010,6 +1010,12 @@
     </ClCompile>
     <ClCompile Include="predefined_user_defined_literals.cpp">
       <Filter>Pliki źródłowe\literals\predefined_user_defined_literals</Filter>
+    </ClCompile>
+    <ClCompile Include="literal_operator_template.cpp">
+      <Filter>Pliki źródłowe\literals\user_defined_literals</Filter>
+    </ClCompile>
+    <ClCompile Include="alternative_operator_names.cpp">
+      <Filter>Pliki źródłowe\operators\alternative_operator_names</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
