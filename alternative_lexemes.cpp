@@ -18,8 +18,8 @@ int main()
 
 	// BITOWE
 	1 bitand 0;			1 & 0;
-	1 bitor 0;			1 | 0;
 	1 xor 0;			1 ^ 0;
+	1 bitor 0;			1 | 0;
 	compl 1;			~1;
 
 	// PRZYPISANIE BITOWE

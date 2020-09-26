@@ -49,12 +49,6 @@
     <Filter Include="Pliki źródłowe\const">
       <UniqueIdentifier>{80551ebe-0fc2-4b8b-b940-b552a4981405}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\references">
-      <UniqueIdentifier>{f233da9a-28c3-4ab7-ab61-aac3b95a4655}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pliki źródłowe\pointers">
-      <UniqueIdentifier>{e1bd0d84-0aee-4356-a0b6-4d0f0e3eb3c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Pliki źródłowe\storage_classes">
       <UniqueIdentifier>{9402de8c-e80c-4e1e-b25c-3e7559d8bc06}</UniqueIdentifier>
     </Filter>
@@ -256,6 +250,15 @@
     <Filter Include="Pliki źródłowe\operators\poiter_to_member">
       <UniqueIdentifier>{557c7503-5800-4e60-b62a-534c29262a7b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Pliki źródłowe\pointer_reference">
+      <UniqueIdentifier>{ba05192c-28df-40ba-9e4e-400500f8baf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\pointer_reference\pointers">
+      <UniqueIdentifier>{e1bd0d84-0aee-4356-a0b6-4d0f0e3eb3c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\pointer_reference\references">
+      <UniqueIdentifier>{f233da9a-28c3-4ab7-ab61-aac3b95a4655}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="using_namespace.cpp">
@@ -283,7 +286,7 @@
       <Filter>Pliki źródłowe\other</Filter>
     </ClCompile>
     <ClCompile Include="pointers_char.cpp">
-      <Filter>Pliki źródłowe\pointers</Filter>
+      <Filter>Pliki źródłowe\pointer_reference\pointers</Filter>
     </ClCompile>
     <ClCompile Include="initialization_variable.cpp">
       <Filter>Pliki źródłowe\initialization</Filter>
@@ -328,22 +331,13 @@
       <Filter>Pliki źródłowe\other</Filter>
     </ClCompile>
     <ClCompile Include="pointers_to_functions.cpp">
-      <Filter>Pliki źródłowe\pointers</Filter>
+      <Filter>Pliki źródłowe\pointer_reference\pointers</Filter>
     </ClCompile>
     <ClCompile Include="reference_to_structure.cpp">
-      <Filter>Pliki źródłowe\references</Filter>
-    </ClCompile>
-    <ClCompile Include="references_const.cpp">
-      <Filter>Pliki źródłowe\references</Filter>
-    </ClCompile>
-    <ClCompile Include="references_lvalue_rvalue.cpp">
-      <Filter>Pliki źródłowe\references</Filter>
+      <Filter>Pliki źródłowe\pointer_reference\references</Filter>
     </ClCompile>
     <ClCompile Include="reference_to_const.cpp">
-      <Filter>Pliki źródłowe\references</Filter>
-    </ClCompile>
-    <ClCompile Include="pointers_references_return.cpp">
-      <Filter>Pliki źródłowe\references</Filter>
+      <Filter>Pliki źródłowe\pointer_reference\references</Filter>
     </ClCompile>
     <ClCompile Include="default_arguments.cpp">
       <Filter>Pliki źródłowe\function</Filter>
@@ -419,12 +413,6 @@
     </ClCompile>
     <ClCompile Include="exterm_const2.cpp">
       <Filter>Pliki źródłowe\storage_classes</Filter>
-    </ClCompile>
-    <ClCompile Include="pointer_reference_value.cpp">
-      <Filter>Pliki źródłowe\references</Filter>
-    </ClCompile>
-    <ClCompile Include="pointer_reference_value2.cpp">
-      <Filter>Pliki źródłowe\references</Filter>
     </ClCompile>
     <ClCompile Include="interfix_operator_overloading.cpp">
       <Filter>Pliki źródłowe\operators_overloading</Filter>
@@ -1025,6 +1013,24 @@
     </ClCompile>
     <ClCompile Include="pointer_to_member_variables.cpp">
       <Filter>Pliki źródłowe\operators\poiter_to_member</Filter>
+    </ClCompile>
+    <ClCompile Include="reference_const.cpp">
+      <Filter>Pliki źródłowe\pointer_reference\references</Filter>
+    </ClCompile>
+    <ClCompile Include="reference_lvalue_rvalue.cpp">
+      <Filter>Pliki źródłowe\pointer_reference\references</Filter>
+    </ClCompile>
+    <ClCompile Include="pointer_reference_return.cpp">
+      <Filter>Pliki źródłowe\pointer_reference</Filter>
+    </ClCompile>
+    <ClCompile Include="pointer_reference_value2.cpp">
+      <Filter>Pliki źródłowe\pointer_reference</Filter>
+    </ClCompile>
+    <ClCompile Include="pointer_reference_value.cpp">
+      <Filter>Pliki źródłowe\pointer_reference</Filter>
+    </ClCompile>
+    <ClCompile Include="pointer_to_members.cpp">
+      <Filter>Pliki źródłowe\pointer_reference\pointers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
