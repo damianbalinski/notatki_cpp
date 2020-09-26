@@ -250,8 +250,11 @@
     <Filter Include="Pliki źródłowe\literals\predefined_user_defined_literals">
       <UniqueIdentifier>{18635b51-3d6c-46ac-af46-1e744ebde538}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Pliki źródłowe\operators\alternative_operator_names">
+    <Filter Include="Pliki źródłowe\operators\alternative_lexemes">
       <UniqueIdentifier>{3b68ef3f-56e6-4ce2-9c11-9ecab8fb44ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\operators\poiter_to_member">
+      <UniqueIdentifier>{557c7503-5800-4e60-b62a-534c29262a7b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -1014,8 +1017,14 @@
     <ClCompile Include="literal_operator_template.cpp">
       <Filter>Pliki źródłowe\literals\user_defined_literals</Filter>
     </ClCompile>
-    <ClCompile Include="alternative_operator_names.cpp">
-      <Filter>Pliki źródłowe\operators\alternative_operator_names</Filter>
+    <ClCompile Include="alternative_lexemes.cpp">
+      <Filter>Pliki źródłowe\operators\alternative_lexemes</Filter>
+    </ClCompile>
+    <ClCompile Include="pointer_to_member_functions.cpp">
+      <Filter>Pliki źródłowe\operators\poiter_to_member</Filter>
+    </ClCompile>
+    <ClCompile Include="pointer_to_member_variables.cpp">
+      <Filter>Pliki źródłowe\operators\poiter_to_member</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

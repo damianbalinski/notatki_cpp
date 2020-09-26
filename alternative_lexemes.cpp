@@ -2,7 +2,7 @@
 
 /*
  * LEKSEMY ALTERNATYWNE
- * alternatywne nazwy dla operatorow
+ * alternatywne tokeny dla operatorow
  */
 
 int main()
